@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[dvips]{epsfig}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{graphicx}
+\setlength{\textheight}{235mm}
+\setlength{\textwidth}{168mm}
+\setlength{\oddsidemargin}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+	\mbox{}\vspace*{-45mm}
+	
+	{\centering
+		{\small\sc Escuela Técnica Superior de Ingenieros de Caminos, Canales y
+			Puertos (Madrid)}\\*[4mm]
+		{\Large\bf Método de los Elementos Finitos (2022-2023)}\\*[4mm]
+		PRÁCTICA 10: Ejercicio sobre modelos de vigas y cálculo estático \\*[2mm]
+		José M.ª Goicolea, Nicola Tarque \\*[4mm]
+	}
+
+Se considera un viaducto para ferrocarril de tablero continuo y recto, con cinco vanos de luces $L_{1}$ y $L_{5}=33$ m, y $L_{2}$, $L_{3}$, y $L_{4}=45$ m. La sección del tablero es del tipo cajón de hormigón armado cuyas propiedades geométricas son área $A=10,13\,\text{m}^{2}$, inercias según las direcciones locales (principales) $I_{1}=12,83\,\text{m}^{4}$, $I_{2}=94,22\,\text{m}^{4}$, módulo de torsión $J=20,54\,\text{m}^{4}$. 
+
+\begin{center}
+	\includegraphics[width=1.\textwidth]{figs/viaducto.jpg}\\
+	Esquema del viaducto\\
+	\vspace{3mm}
+	\includegraphics[width=0.3\textwidth]{figs/seccion}\\
+	Sección del tablero
+\end{center}
+
+\vspace{3mm}
+Las propiedades mecánicas son módulo de elasticidad $E=35\,\text{GPa}$, y coeficiente de Poisson $\nu=0.2$.
+La masa y peso específico del material son $\rho=2548\,\text{kg/m}^{3}$ y $\gamma=25000\,\text{N/m}^{3}$, respectivamente. Las masas inerciales correspondientes a las cargas muertas debidas al balasto, carriles, traviesas, muretes guarda-balasto, canaletas y cables de comunicaciones, impostas y barandillas se estima en $m=15800\,\text{kg/m}$
+
+\vspace{3mm}
+Considerar para el modelo la dirección de los ejes mostrados en la figura, con el origen en el extremo izquierdo, la dirección $x$ longitudinal al tablero, $y$ vertical y $z$ transversal a la estructura. 
+El estribo izquierdo $x=0$ restringe los desplazamientos en todas las direcciones. Los apoyos intermedios tienen restricciones en las direcciones $y, z$, pero es deslizante en la dirección longitudinal $x$. Además, todos los apoyos tienen unión perfecta para la torsión $\theta_{x}$ pero permite giros relativos del tablero en las componentes $\theta_{y}, \theta_{z}$.
+
+\vspace{3mm}
+Para el análisis estructural estático, considerar las siguientes cargas: 
+\begin{itemize}
+	\item Carga de peso propio
+	\item Carga producto del balasto y demás
+	\item Carga de tren según el modelo LM71 como se indica en la figura, con las cargas puntuales verticales $P=250\,\text{kN}$ situadas en el eje central del vano central, y la carga distribuida $q=80\,\text{kN/m}$ 
+
+\end{itemize}
+
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{figs/LM71}\\
+	Esquema de carga LM71
+\end{center}
+
+El tablero se discretizará con elementos de $1$m de longitud en general ({\em Global Size}, especial atención en la discretización de la zona donde se colocan las cuatro cargas puntuales). Se recomienda crear un set de los puntos centrales de cada vano denominándolos {\em CDV1} hasta {\em CDV5}, y un set llamado {\em ejevia} que contenga todos los nudos del viaducto.
+
+\vspace{3mm}
+Se pide ejecutar el cálculo estático y:
+\begin{itemize}
+	\item Determinar el desplazamiento vertical en el medio de cada vano, las reacciones verticales en cada apoyo, el momento flector vertical en el centro del vano central. Obtener gráficos del contorno de desplazamiento vertical.
+	\item Comparar los resultados de desplazamiento considerando modelos con y sin deformación por cortante.
+	\item Repetir el análisis pero considerar una excentricidad de 2.35m de la carga de tren según el modelo LM71. Para la creación de los momentos puntuales debido a las cargas de $250$ kN, usar directamente la opción $Create Load/Moment$. Para la creación de los momentos debido a la carga distribuida, en el módulo $Load$ activar $View/Assembly display options$ $/ Mesh/Show node labels$, crear un set de nudos seleccionando los nudos de interés de acuerdo a la discretización de la malla. Luego, crear momentos puntuales seleccionando el set anterior. 
+\end{itemize}
+%\noindent
+
+
+
+\clearpage
+\section*{Ejercicios propuestos}
+\subsection*{Ejercicio propuesto 1}
+Sea un puente isostático de un vano de 16 m de la luz. La sección del tablero es constante y de tipo cajón de hormigón pretensado, cuyas caráctristicas son: área $A=1,58$ m$^2$; inercias según las direcciones locales (principales) definidas arriba  $I_{1}=0,4987\,\text{m}^{4}$, $I_{2}=3,034\,\text{m}^{4}$, módulo de torsión $J=1,7067\,\text{m}^{4}$. 
+Las propiedades mecánicas son: módulo de elasticidad $E=32,0\,\text{GPa}$,  coeficiente de Poisson $\nu=0,25$.
+Las cargas aplicadas sobre el puente son peso propio y 3 cargas puntuales ($P=250$ kN) situadas tal como se muestra en la siguiente figura:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/croquis1.pdf}
+	\label{fig.eje1}
+\end{figure}
+
+Se pide:
+\begin{itemize}
+	\item Determinar el momento flector en el centro de vano y los giros en los dos apoyos
+\end{itemize}
+\clearpage
+
+\subsection*{Ejercicio propuesto 2}
+Sea un paso inferior de tipo pórtico rectangular de hormigón armado con una luz de $8,0$ m. Se considera que el dintel tiene una sección transversal de $14,0\times1,0$ m y los muros hastiales tienen una de $14,0\times0,5$ m. Las propiedades mecánicas para el material de hormigón armado son módulo de elasticidad $E=32,0\,\text{GPa}$,  coeficiente de Poisson $\nu=0,25$. 
+Las cargas aplicadas sobre el paso inferior son peso propio, cargas distribuidas ($q=80$ kN/m) y una carga longitudinal $Q=100$ kN como se muestra en la siguiente figura:
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figs/croquis2.pdf}
+\end{figure}
+
+Se pide:
+\begin{itemize}
+	\item Determinar el momento flector y desplazamiento vertical en el centro de vano, desplazamiento horizontal en la esquina en la cual se aplica la carga horizontal, momento de reacción en las cimentaciones.
+\end{itemize}
+
+\end{document}

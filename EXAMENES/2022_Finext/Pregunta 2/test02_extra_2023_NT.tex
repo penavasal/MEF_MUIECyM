@@ -1,0 +1,241 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+\usepackage[box,completemulti,separateanswersheet]{automultiplechoice}    
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Pregunta #1:} }    
+\def\AMCbeginQuestion#1#2{\par\noindent{\bf Pregunta #1}#2\hspace*{1em}}
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+
+\begin{document}
+
+\AMCrandomseed{1237893}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p1}
+La diferencia entre los valores máximo y mínimo de la altura piezométrica vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$6.0$ m}
+	\wrongchoice{$3.5$ m}
+	\wrongchoice{$12.0$ m}
+	\wrongchoice{$2.0$ m}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p2}
+El valor de la velocidad vertical en la zona próxima a la pantalla, justo en el contacto agua-terreno y situada a la derecha de la misma, vale aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$2.2 \cdot 10^{-3}$ cm/s en sentido ascendente}
+	\wrongchoice{$12.2 \cdot 10^{-3}$ cm/s en sentido ascendente.}
+	\wrongchoice{$2.2 \cdot 10^{-3}$ m/s en sentido descendente.}
+	\wrongchoice{$12.2 \cdot 10^{-3}$ cm/s en sentido descendente.}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p3}
+El valor máximo del módulo de la velocidad vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$7 \cdot 10^{-3}$ cm/s}
+	\wrongchoice{$26 \cdot 10^{-3}$ cm/s}
+	\wrongchoice{$2 \cdot 10^{-3}$ cm/s}
+	\wrongchoice{$15 \cdot 10^{-3}$ cm/s}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p4}
+Tomando como peso específico del agua $\gamma=10000$ N/m$^3$, el valor de la presión
+del fluido en el punto más bajo de la pantalla vale aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$11.5$ kPa}
+	\wrongchoice{$11.5$ Pa}
+	\wrongchoice{$23.5$ Pa}
+	\wrongchoice{$23.5$ kPa}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p5}
+El número de nodos de la malla es:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$8830$}
+	\wrongchoice{$752$}
+	\wrongchoice{$526$}
+	\wrongchoice{$1276$} 
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p6}
+El valor absoluto más alto del flujo vertical se obtiene:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{En uno de los paramentos verticales de la pantalla}
+	\wrongchoice{En el extremo inferior de la pantalla)}
+	\wrongchoice{En el substrato rocoso}
+	\wrongchoice{Bajo la capa de agua de $9$ m de profundidad)}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p7}
+El caudal que se filtra, en régimen estacionario, bajo la pantalla impermeable
+vale aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$0.30$ l/s}
+	\wrongchoice{$0.20$ m$^3$ l/s}
+	\wrongchoice{$0.45$ l/s}
+	\wrongchoice{$0.10$ l/h}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p8}
+En la formulación débil de un problema de contorno, la derivada del
+campo incógnita que aparecen en dicha formulación:
+\begin{multicols}{2}
+	\begin{choices}
+		\correctchoice{Es de un orden menor que su derivada en la formulación fuerte}
+		\wrongchoice{Es de un orden mayor que su derivada en la formulación fuerte}
+		\wrongchoice{Es del mismo orden que su derivada en la formulación fuerte}
+		\wrongchoice{Depende del tamaño de la malla de elementos finitos}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p9}
+En un problema de conducción de calor, la condición natural de contorno:
+$$\bm{q} \cdot \bm{n} = \overline{q}, \textrm{ en } \partial_t \Omega$$
+se interpreta como:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{El valor impuesto, de tipo escalar, que corresponde al
+	flujo de la temperatura dirección normal al contorno $\partial_t \Omega$}
+	\wrongchoice{El valor impuesto, de tipo vectorial, que corresponde al
+	flujo de la temperatura en el contorno $\partial_t \Omega$}
+	\wrongchoice{El valor impuesto, de tipo escalar, que corresponde al
+	gradiente de la temperatura en dirección normal al contorno $\partial_t \Omega$}
+	\wrongchoice{El valor impuesto, de tipo vectorial, que corresponde al
+	gradiente de la temperatura en el contorno $\partial_t \Omega$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p10}
+En los modelos de difusión, la ecuación constitutiva relaciona:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{El vector flujo con el gradiente de la variable primaria}
+	\wrongchoice{La tensión con la deformación}
+	\wrongchoice{El flujo en dirección normal con la temperatura impuesta}
+	\wrongchoice{Las deformaciones con los desplazamientos}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\scoringDefaultS{b=1,m=-1/(N-1)}
+
+\onecopy{1}{    
+
+%%% beginning of the test sheet header:    
+
+\noindent{\large\bf Método de los Elementos Finitos  \hfill MUECYM \hfill TEST \# 1}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering 26 enero 2023
+\end{minipage}
+
+\begin{center}\em
+Tiempo: 60 minutos.
+
+  %Está prohibido el uso de teléfonos móviles.
+
+  %Se atribuirá puntuación negativa a las respuestas incorrectas.
+
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\shufflegroup{test1}
+\insertgroup{test1}
+
+\AMCcleardoublepage    
+%\clearpage
+
+\AMCformBegin    
+
+%%% beginning of the answer sheet header
+
+\noindent\AMCcode{nummat}{2}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+$\longleftarrow{}$ Escriba su número de matrícula marcando los dígitos
+en los recuadros (con ceros a la izquierda si el número es de menos de dos dígitos) y el nombre y apellidos debajo.
+
+\vspace{3ex}
+
+\namefield{\fbox{
+   \begin{minipage}{.9\linewidth}
+     Apellidos, Nombre:
+
+     \vspace*{.5cm}\dotfill
+     \vspace*{1mm}
+   \end{minipage}
+ }}
+\end{minipage}
+
+\begin{center}
+ \bf\em Debe dar las respuestas exclusivamente en esta hoja (las respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+%%% end of the answer sheet header
+
+
+\AMCform    
+
+\AMCcleardoublepage    
+
+}  
+
+\end{document}

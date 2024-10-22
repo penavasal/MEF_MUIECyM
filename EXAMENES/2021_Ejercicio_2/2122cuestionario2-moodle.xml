@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- This file was generated on 2021-10-07 by pdfLaTeX -->
+<!-- running on Windows with the package moodle v0.9 -->
+
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/MEF2-21-22</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En un problema lineal de conducci&oacute;n de calor (modelo de difusi&oacute;n) discretizado con una malla de \(N\) nodos, con \(n_u\) valores conocidos de la temperatura en los nodos, y \(n_t\) valores conocidos del flujo en direcci&oacute;n normal, el sistema lineal de ecuaciones resultante de la formulaci&oacute;n de elementos finitos: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Tiene \(N-n_u\) ecuaciones</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Tiene \(N-n_t\) ecuaciones</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Tiene \(N-n_u-n_t\) ecuaciones</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Tiene \(N+n_u-n_t\) ecuaciones</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En los modelos de difusi&oacute;n, la ecuaci&oacute;n constitutiva relaciona: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El vector flujo con el gradiente de la variable primaria</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>La tensi&oacute;n con la deformaci&oacute;n</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>El flujo en direcci&oacute;n normal con la temperatura impuesta</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Las deformaciones con los desplazamientos</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para garantizar la convergencia del m&eacute;todo de los elementos finitos es necesario: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Verificar el requisito de complitud</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Que las funciones de forma sean compatibles</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Que todos los elementos tengan el mismo n&uacute;mero de nodos</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Ninguna de las respuestas es correcta</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p4]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La diferencia entre los valores m&aacute;ximo y m&iacute;nimo de la altura piezom&eacute;trica vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(6\) m.</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(3.5\) m.</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(12\) m.</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(2\) m.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p5]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de la velocidad vertical en la zona pr&oacute;xima a la pantalla, justo en el contacto agua-terreno y situada a la derecha de la misma, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(2.2 \cdot 10^{-3}\) cm/s en sentido ascendente.</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(12.2 \cdot 10^{-3}\) cm/s en sentido ascendente.</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(2.2 \cdot 10^{-3}\) m/s en sentido descendente.</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(12.2 \cdot 10^{-3}\) cm/s en sentido descendente.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p6]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor m&aacute;ximo del m&oacute;dulo de la velocidad vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(7 \cdot 10^{-3}\) cm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(26 \cdot 10^{-3}\) cm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(2 \cdot 10^{-3}\) cm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(15 \cdot 10^{-3}\) cm/s</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p7]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Tomando como peso espec&iacute;fico del agua \(\gamma =10000\) N/m\(^3\), el valor de la presi&oacute;n del fluido en el punto m&aacute;s bajo de la pantalla, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(11.5\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(11.5\) Pa</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(23.5\) Pa</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(23.5\) kPa</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p8]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El n&uacute;mero de nodos de la malla es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(883\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(752\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(526\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(1276\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p9]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor absoluto m&aacute;s alto del flujo vertical se obtiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>En uno de los paramentos verticales de la pantalla</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>En el extremo inferior de la pantalla</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>En el substrato rocoso</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>Bajo la capa de agua de \(9\) m de profundidad</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[p10]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El caudal que se filtra, en r&eacute;gimen estacionario, bajo la pantalla impermeable vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0.3\) l/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(0.2\) m\(^3\)/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(0.35\) l/h</p>]]></text>
+  </answer>
+  <answer fraction="-33.33333" format="html">
+    <text><![CDATA[<p>\(9.6\) l/s</p>]]></text>
+  </answer>
+</question>
+ 
+</quiz>

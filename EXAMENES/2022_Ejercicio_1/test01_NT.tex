@@ -1,0 +1,235 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+\usepackage[box,completemulti,separateanswersheet]{automultiplechoice}    
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Pregunta #1:} }    
+\def\AMCbeginQuestion#1#2{\par\noindent{\bf Pregunta #1}#2\hspace*{1em}}
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+
+\begin{document}
+
+\AMCrandomseed{1237893}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p1}
+El movimiento vertical máximo (en valor absoluto) vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$1.279$ mm}
+	\wrongchoice{$2.558$ mm}
+	\wrongchoice{$0.639$ mm}
+	\wrongchoice{$1.125$ mm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p2}
+El movimiento horizontal máximo (en valor absoluto) vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$7.741$ mm}
+	\wrongchoice{$3.354$ mm}
+	\wrongchoice{$15.566$ mm}
+	\wrongchoice{$8.411$ mm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p3}
+El movimiento horizontal del nodo $D$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$5.429$ mm}
+	\wrongchoice{$10.849$ mm}
+	\wrongchoice{$2.221$ mm}
+	\wrongchoice{$9.248$ cm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p4}
+La reacción vertical en el nodo $A$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$400$ kN}
+	\wrongchoice{$350$ kN}
+	\wrongchoice{$-200$ kN}
+	\wrongchoice{$-250$ kN}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p5}
+La fuerza de tracción máxima vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$266.6$ kN}
+	\wrongchoice{$222.2$ kN}
+	\wrongchoice{$102.0$ kN}
+	\wrongchoice{$313.3$ kN} 
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p6}
+La tensión en la barra $KB$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$6.164$ MPa (de tracción)}
+	\wrongchoice{$2.428$ MPa (de tracción)}
+	\wrongchoice{$9.134$ MPa (de compresión)}
+	\wrongchoice{$12.524$ MPa (de compresión)}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p7}
+La tensión en la barra $HM$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$7.991$ MPa (de tracción)}
+	\wrongchoice{$9.450$ MPa (de tracción)}
+	\wrongchoice{$9.134$ MPa (de compresión)}
+	\wrongchoice{$10.524$ MPa (de compresión)}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p8}
+El método de elementos finitos resuelve de forma aproximada:
+\begin{multicols}{2}
+\begin{choices}
+\correctchoice{La formulación débil de un problema de contorno}
+\wrongchoice{La formulación fuerte de un problema de contorno}
+\wrongchoice{Un sistema lineal de ecuaciones algebráicas}
+\wrongchoice{Únicamente modelos de mecánica estructural cuya solución
+es imposible obtener por otros métodos exactos o aproximados}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p9}
+Un elemento ``truss'' (barra articulada):
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Sólo transmite esfuerzos axiles}
+	\wrongchoice{Sólo transmite esfuerzos axiles y cortantes}
+	\wrongchoice{Sólo transmite esfuerzos axiles y momentos flectores}
+	\wrongchoice{Transmite esfuerzos axiles, cortantes y momentos flectores}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p10}
+Un modelo de elementos finitos de una estructura plana de barras articulada
+tiene $n$ nodos y $m$ movimientos impuestos de valor conocido. El número de
+grados de libertad (número de incógnitas) del modelo es:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$2n-m$}
+	\wrongchoice{$3n-m$}
+	\wrongchoice{$n+m$}
+	\wrongchoice{$n-m$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\scoringDefaultS{b=1,m=-1/(N-1)}
+
+\onecopy{1}{    
+
+%%% beginning of the test sheet header:    
+
+\noindent{\large\bf Método de los Elementos Finitos  \hfill MUECYM \hfill TEST \# 1}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering 23 sep 2022
+\end{minipage}
+
+\begin{center}\em
+Tiempo: 60 minutos.
+
+  %Está prohibido el uso de teléfonos móviles.
+
+  %Se atribuirá puntuación negativa a las respuestas incorrectas.
+
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\shufflegroup{test1}
+\insertgroup{test1}
+
+\AMCcleardoublepage    
+%\clearpage
+
+\AMCformBegin    
+
+%%% beginning of the answer sheet header
+
+\noindent\AMCcode{nummat}{2}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+$\longleftarrow{}$ Escriba su número de matrícula marcando los dígitos
+en los recuadros (con ceros a la izquierda si el número es de menos de dos dígitos) y el nombre y apellidos debajo.
+
+\vspace{3ex}
+
+\namefield{\fbox{
+   \begin{minipage}{.9\linewidth}
+     Apellidos, Nombre:
+
+     \vspace*{.5cm}\dotfill
+     \vspace*{1mm}
+   \end{minipage}
+ }}
+\end{minipage}
+
+\begin{center}
+ \bf\em Debe dar las respuestas exclusivamente en esta hoja (las respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+%%% end of the answer sheet header
+
+
+\AMCform    
+
+\AMCcleardoublepage    
+
+}  
+
+\end{document}

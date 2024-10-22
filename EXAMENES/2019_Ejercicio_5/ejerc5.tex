@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\setlength{\textheight}{235mm}
+\setlength{\textwidth}{168mm}
+\setlength{\oddsidemargin}{0pt}
+\pagestyle{empty}
+\begin{document}
+\mbox{}\vspace*{-45mm}
+
+{\centering
+{\small\sc Escuela Técnica Superior de Ingenieros de Caminos, Canales y
+Puertos (Madrid)}\\*[4mm]
+{\Large\bf Método de los Elementos Finitos (Curso 19-20)}\\*[4mm]
+Ejercicio 5: Tecnología de elementos \\*[4mm]
+
+}
+
+\vspace{3mm}
+
+%%%%%
+\parbox{0.50\textwidth}{
+Se considera una lámina cilíndrica de radio medio $R=300$,
+longitud $L=600$ y espesor $t=3$, cuyo material es elástico lineal con
+propiedades mecánicas $E=300$ y $\nu=0.3$. Los extremos del cilindro están
+fijos y en dos puntos diametralmente
+opuestos de la sección transversal media están aplicadas sendas cargas radiales
+de compresión de valor $P=1.0$ cada una de ellas.
+Para la discretización se tendrán en cuenta las condiciones de
+simetría existentes, y se utilizará una discretización de $32 \times 32$,
+elementos en dirección meridional y circunferencial, y $1$ elementos en el
+espesor. Las
+formulaciones a considerar son hexaedros de $8$ nodos con formulación
+isoparámetrica, con formulación mixta y con deformaciones mejoradas supuestas.
+}\hfill
+\parbox{0.50\textwidth}{ \hfill
+\includegraphics[width=0.45\textwidth]{pinched}
+}
+\end{document}

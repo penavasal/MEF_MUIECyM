@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="es" > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="ejerc3.tex"> 
+<link rel="stylesheet" type="text/css" href="ejerc3.css"> 
+</head><body 
+>
+<!--l. 12--><p class="noindent" ><!--l. 15--><p class="noindent" ><span 
+class="cmcsc-10x-x-109">E<span 
+class="small-caps">s</span><span 
+class="small-caps">c</span><span 
+class="small-caps">u</span><span 
+class="small-caps">e</span><span 
+class="small-caps">l</span><span 
+class="small-caps">a</span> T</span>é<span 
+class="cmcsc-10x-x-109"><span 
+class="small-caps">c</span><span 
+class="small-caps">n</span><span 
+class="small-caps">i</span><span 
+class="small-caps">c</span><span 
+class="small-caps">a</span> S<span 
+class="small-caps">u</span><span 
+class="small-caps">p</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">i</span><span 
+class="small-caps">o</span><span 
+class="small-caps">r</span> <span 
+class="small-caps">d</span><span 
+class="small-caps">e</span> I<span 
+class="small-caps">n</span><span 
+class="small-caps">g</span><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">i</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">o</span><span 
+class="small-caps">s</span> <span 
+class="small-caps">d</span><span 
+class="small-caps">e</span> C<span 
+class="small-caps">a</span><span 
+class="small-caps">m</span><span 
+class="small-caps">i</span><span 
+class="small-caps">n</span><span 
+class="small-caps">o</span><span 
+class="small-caps">s</span>, C<span 
+class="small-caps">a</span><span 
+class="small-caps">n</span><span 
+class="small-caps">a</span><span 
+class="small-caps">l</span><span 
+class="small-caps">e</span><span 
+class="small-caps">s</span> <span 
+class="small-caps">y</span> P<span 
+class="small-caps">u</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">t</span><span 
+class="small-caps">o</span><span 
+class="small-caps">s</span> (M<span 
+class="small-caps">a</span><span 
+class="small-caps">d</span><span 
+class="small-caps">r</span><span 
+class="small-caps">i</span><span 
+class="small-caps">d</span>)</span><br /><br />
+<span 
+class="cmbx-12x-x-144">M</span>é<span 
+class="cmbx-12x-x-144">todo de los Elementos Finitos (Curso 19-20)</span><br /><br />
+Ejercicio 3: Elasticidad lineal<br /><br />
+<!--l. 25--><p class="indent" >   Se considera una viga biapoyada con las dimensiones y geometría indicadas en la figura, siendo
+<span 
+class="cmmi-12">L </span>= 9 m y <span 
+class="cmmi-12">h </span>= 0<span 
+class="cmmi-12">,</span>8 m. El valor de la carga vertical es <span 
+class="cmmi-12">P </span>= 150 kN. El módulo elástico es <span 
+class="cmmi-12">E </span>= 21 GPa y
+el coeficiente de Poison <span 
+class="cmmi-12">&#x03BD; </span>= 0. Se considerará la hipótesis correspondiente a tensión plana, con un
+espesor <span 
+class="cmmi-12">t </span>= 1 m.
+<!--l. 31--><p class="indent" >   Para resolver el correspondiente modelo de elementos finitos, con el programa <span 
+class="cmtt-12">FEAP</span>, se considerará
+una malla con 10 <span 
+class="cmsy-10x-x-120">&#x00D7; </span>3 <span 
+class="cmbx-12">nodos</span>, discretizada con elementos cuadriláteros de 4 nodos, y elementos
+triangulares de 3 nodos. <br 
+class="newline" />
+<!--l. 37--><p class="indent" >   <span 
+class="cmbx-12">NOTAS:</span>
+      <ol  class="enumerate1" >
+<li 
+  class="enumerate" id="x1-3x1">
+      <!--l. 39--><p class="noindent" >La malla se generará con la instrucción <span 
+class="cmtt-12">block</span>, tomando las esquinas en el orden indicado
+      en la siguiente figura.
+      </li>
+<li 
+  class="enumerate" id="x1-5x2">
+      <!--l. 41--><p class="noindent" >Los elementos triangulares tendrán la hipotenusa en la dirección 1 <span 
+class="cmsy-10x-x-120">- </span>3 de las esquinas del
+      bloque.
+      </li>
+<li 
+  class="enumerate" id="x1-7x3">
+      <!--l. 43--><p class="noindent" >La fórmula de Resistencia de Materiales que permite calcular la flecha en el punto donde
+      está aplicada la carga es: <span 
+class="cmmi-12">f </span>= <img 
+src="ejerc30x.png" alt="-4-
+243"  class="frac" align="middle"><img 
+src="ejerc31x.png" alt="P-L3
+ EI"  class="frac" align="middle">.</li></ol>
+<div class="center" 
+>
+<!--l. 46--><p class="noindent" >
+<!--l. 47--><p class="noindent" > <img 
+src="bloque3-.png" alt="PIC"  
+width="286" height="286" ></div>
+    
+</body></html> 
+
+
+

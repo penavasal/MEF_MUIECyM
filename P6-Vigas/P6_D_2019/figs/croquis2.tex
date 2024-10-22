@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns,arrows.meta,calc}
+% Use preview.sty to crop the page
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+%\usepackage{xifthen}
+%\usetikzlibrary{arrows,shapes}
+\setlength\PreviewBorder{2pt}%
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw[ultra thick] (0,0) --++ (0,6.5) --++ (8, 0) --++ (0,-6.5);
+\draw[very thick] (-0.35,0) -- (0.35,0);
+\fill [pattern=north east lines] (-0.35,-0.15) rectangle (0.35,0.);
+\draw[very thick] (7.65,0) --++ (0.7,0);
+\fill [pattern=north east lines] (7.65,-0.15) rectangle (8.35,0.);
+
+\draw[thin] (0,-1.0) --++ (0,-0.5);
+\draw[thin] (8.,-1.0) --++ (0,-0.5);
+\draw[<->, thick] (0,-1.25) -- (8,-1.25) node [midway, above, font=\Large] {$8.0$ m};
+
+\foreach \s in {0,...,10}{
+	\draw[<-, >=latex, very thick, color=blue] ({0.+\s*0.8},6.5) --++(0,2.0);
+}
+\draw[thick, color=blue] (0,8.5) --++ (8.,0.) node [midway, above, color=blue, font=\Large] {$q=80$ kN/m};
+\draw[->, >=latex, ultra thick, color=blue] (-2,6.50) node [left, color=blue, font=\Large] {$Q=100$ kN} --++(2,0);
+
+\draw[thin] (9,0) --++(0.5,0);
+\draw[thin] (9,6.5) --++(0.5,0);
+\draw[<->,thin] (9.25,0) -- (9.25,6.5) node[midway, right, font=\Large] {$6.5$ m};
+
+\end{tikzpicture}
+
+
+
+
+\end{document}

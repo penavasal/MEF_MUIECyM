@@ -1,0 +1,232 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+\usepackage[box,completemulti,separateanswersheet]{automultiplechoice}    
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Pregunta #1:} }    
+\def\AMCbeginQuestion#1#2{\par\noindent{\bf Pregunta #1}#2\hspace*{1em}}
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+
+\begin{document}
+
+\AMCrandomseed{1237893}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p1}
+El movimiento horizontal máximo (en valor absoluto) vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$1.5$ cm}
+	\wrongchoice{$3.1$ cm}
+	\wrongchoice{$1.5$ mm}
+	\wrongchoice{$3.1$ mm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p2}
+El movimiento vertical máximo (en valor absoluto) vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$3.8$ cm}
+	\wrongchoice{$1.1$ cm}
+	\wrongchoice{$1.1$ mm}
+	\wrongchoice{$3.8$ mm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p3}
+El movimiento horizontal del nodo $7$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$5.8$ mm}
+	\wrongchoice{$2.3$ mm}
+	\wrongchoice{$1.6$ mm}
+	\wrongchoice{$1.2$ cm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p4}
+La reacción vertical en el nodo $2$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$20.0$ kN}
+	\wrongchoice{$60.0$ kN}
+	\wrongchoice{$30.0$ kN}
+	\wrongchoice{$40.0$ kN}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p5}
+Con las cargas impuestas, las barras que no trabajan son:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$2$, $3$, $6$, $10$ y $11$}
+	\wrongchoice{$1$ y $4$}
+	\wrongchoice{$2$, $3$ y $11$}
+	\wrongchoice{Todas las barras están en tracción o en compresión}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p6}
+Las barras que están en tracción son:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$5$, $7$, $8$ y $13$}
+	\wrongchoice{$2$, $3$ y $11$}
+	\wrongchoice{$1$, $4$, $6$ $9$ y $12$}
+	\wrongchoice{Todas las barras trabajan a compresión}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p7}
+El esfuerzo de tracción máxima es:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$89$ kN}
+	\wrongchoice{$50.$ kN}
+	\wrongchoice{$102$ kN}
+	\wrongchoice{No hay barras con esfuerzos de tracción}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p8}
+El esfuerzo de compresión máxima es:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$-113$ kN}
+	\wrongchoice{$-430$ kN}
+	\wrongchoice{$-265$ kN}
+	\wrongchoice{$-531$ kN}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p9}
+La tensión en la barra $4$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$81$ N/mm$^2$ (de compresión)}
+	\wrongchoice{$81$ N/mm$^2$ (de tracción)}
+	\wrongchoice{$40$ N/mm$^2$ (de tracción)}
+	\wrongchoice{$40$ N/mm$^2$ (de compresión)}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p10}
+La tensión en la barra $7$ vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$182$ N/mm$^2$ (de tracción)}
+	\wrongchoice{$182$ N/mm$^2$ (de compresión)}
+	\wrongchoice{$900$ N/mm$^2$ (de tracción)}
+	\wrongchoice{$900$ N/mm$^2$ (de compresión)}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\scoringDefaultS{b=1,m=-1/(N-1)}
+
+\onecopy{1}{    
+
+%%% beginning of the test sheet header:    
+
+\noindent{\large\bf Método de los Elementos Finitos  \hfill MUECYM \hfill TEST \# 1}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering 26 sep 2019
+\end{minipage}
+
+\begin{center}\em
+Tiempo: 60 minutos.
+
+  %Está prohibido el uso de teléfonos móviles.
+
+  %Se atribuirá puntuación negativa a las respuestas incorrectas.
+
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\shufflegroup{test1}
+\insertgroup{test1}
+
+\AMCcleardoublepage    
+%\clearpage
+
+\AMCformBegin    
+
+%%% beginning of the answer sheet header
+
+\noindent\AMCcode{nummat}{2}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+$\longleftarrow{}$ Escriba su número de matrícula marcando los dígitos
+en los recuadros (con ceros a la izquierda si el número es de menos de dos dígitos) y el nombre y apellidos debajo.
+
+\vspace{3ex}
+
+\namefield{\fbox{
+   \begin{minipage}{.9\linewidth}
+     Apellidos, Nombre:
+
+     \vspace*{.5cm}\dotfill
+     \vspace*{1mm}
+   \end{minipage}
+ }}
+\end{minipage}
+
+\begin{center}
+ \bf\em Debe dar las respuestas exclusivamente en esta hoja (las respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+%%% end of the answer sheet header
+
+
+\AMCform    
+
+\AMCcleardoublepage    
+
+}  
+
+\end{document}

@@ -1,0 +1,251 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+\usepackage[box,completemulti,separateanswersheet]{automultiplechoice}    
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Pregunta #1:} }    
+\def\AMCbeginQuestion#1#2{\par\noindent{\bf Pregunta #1}#2\hspace*{1em}}
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+
+\begin{document}
+
+\AMCrandomseed{1237893}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p1}
+En la formulación de elementos finitos con integración selectiva-reducida:
+\begin{choices}
+	\correctchoice{La parte de la matriz de rigidez correspondiente al
+comportamiento volumétrico se subintegra, y en el resto se realiza una
+integración completa.}
+	\wrongchoice{En las zonas de la malla que se deforman por flexión
+las matrices de rigidez elementales se subintegran.}
+	\wrongchoice{En una parte reducida de la malla, las matrices de
+rigidez elementales se integran con una cuadratura selectiva.}
+	\wrongchoice{Ninguna de las respuestas anteriores es correcta.}
+\end{choices}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p2}
+La formulación $\overline{\bm{B}}$ de elementos finitos:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Se basa en modificar la matriz de interpolación de
+deformaciones estándar}
+	\wrongchoice{Se basa en remplazar la matriz de interpolación de
+deformaciones por un vector de deformaciones libre de bloqueo}
+	\wrongchoice{Evita el problema de bloqueo por flexión pero no el
+bloqueo por incompresibilidad}
+	\wrongchoice{Evita el problema de bloqueo, pero no pasa la prueba de
+la parcela}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p3}
+El fenómeno del ``hourglassing'':
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Puede aparecer cuando las matrices de rigidez
+se calculan con una regla de integración reducida}
+	\wrongchoice{Consiste en el cambio del signo de la presión en elementos
+adyacentes, denominándose también problema del ``tablero de damas'' o 
+``checkerboard''}
+	\wrongchoice{Puede aparecer en problemas de incompresibilidad,
+con independecia del orden que tenga la regla de integración (o cuadratura)
+empleada}
+	\wrongchoice{Sólo puede aparecer cuando el material es incompresible}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p4}
+El desplazamiento bajo la carga puntual en dirección de la misma, obtenido con los elementos
+isoparamétricos, vale
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$5.0 \cdot 10^{-2}$}
+	\wrongchoice{$3.1 \cdot 10^{-2}$}
+	\wrongchoice{$2.5 \cdot 10^{-2}$}
+	\wrongchoice{$9.7 \cdot 10^{-2}$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p5}
+El desplazamiento bajo la carga puntual en dirección de la misma, obtenido con los elementos
+mixtos, vale
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$5.4 \cdot 10^{-2}$}
+	\wrongchoice{$3.5 \cdot 10^{-2}$}
+	\wrongchoice{$2.9 \cdot 10^{-2}$}
+	\wrongchoice{$1.1 \cdot 10^{-1}$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p6}
+El desplazamiento bajo la carga puntual, obtenido con los elementos
+de modos incompatibles, vale
+\begin{multicols}{2}
+\begin{choices}
+        \correctchoice{$1.5 \cdot 10^{-1}$}
+        \wrongchoice{$9.2 \cdot 10^{-2}$}
+        \wrongchoice{$3.2 \cdot 10^{-1}$}
+        \wrongchoice{$8.4 \cdot 10^{-2}$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p7}
+Al dibujar los contornos de la tensión de Von Mises,
+el valor máximo se obtiene:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Bajo la carga puntual}
+	\wrongchoice{En el punto más alto del empotramiento}
+	\wrongchoice{En el punto más bajo del empotramiento}
+	\wrongchoice{En algún punto de la generatriz que es un eje de simetría
+y no contiene a la carga puntual}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p8}
+El valor máximo de la tensión de Von Mises, calculado con los elementos
+isoparamétricos, vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$3.9 \cdot 10^{-2}$}
+	\wrongchoice{$4.7 \cdot 10^{-2}$}
+	\wrongchoice{$5.1 \cdot 10^{-2}$}
+	\wrongchoice{$1.6 \cdot 10^{-2}$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p9}
+El valor máximo de la tensión de Von Mises, calculado con los elementos
+mixtos, vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$4.2 \cdot 10^{-2}$}
+	\wrongchoice{$5.1 \cdot 10^{-2}$}
+	\wrongchoice{$5.6 \cdot 10^{-2}$}
+	\wrongchoice{$1.9 \cdot 10^{-2}$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p10}
+El valor máximo de la tensión de Von Mises, calculado con los elementos
+incompatibles, vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$5.0 \cdot 10^{-2}$}
+	\wrongchoice{$4.7 \cdot 10^{-2}$}
+	\wrongchoice{$5.6 \cdot 10^{-2}$}
+	\wrongchoice{$2.7 \cdot 10^{-2}$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\scoringDefaultS{b=1,m=-1/(N-1)}
+
+\onecopy{1}{    
+
+%%% beginning of the test sheet header:    
+
+\noindent{\large\bf Método de los Elementos Finitos  \hfill MUECYM \hfill TEST \# 1}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering 2 oct 2015
+\end{minipage}
+
+\begin{center}\em
+Tiempo: 60 minutos.
+
+  %Está prohibido el uso de teléfonos móviles.
+
+  %Se atribuirá puntuación negativa a las respuestas incorrectas.
+
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\shufflegroup{test1}
+\insertgroup{test1}
+
+\AMCcleardoublepage    
+%\clearpage
+
+\AMCformBegin    
+
+%%% beginning of the answer sheet header
+
+\noindent\AMCcode{nummat}{4}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+$\longleftarrow{}$ Escriba su número de matrícula marcando los dígitos
+en los recuadros (con ceros a la izquierda si el número es de menos de tres dígitos) y el nombre y apellidos debajo.
+
+\vspace{3ex}
+
+\namefield{\fbox{
+   \begin{minipage}{.9\linewidth}
+     Apellidos, Nombre:
+
+     \vspace*{.5cm}\dotfill
+     \vspace*{1mm}
+   \end{minipage}
+ }}
+\end{minipage}
+
+\begin{center}
+ \bf\em Debe dar las respuestas exclusivamente en esta hoja (las respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+%%% end of the answer sheet header
+
+
+\AMCform    
+
+\AMCcleardoublepage    
+
+}  
+
+\end{document}

@@ -1,0 +1,272 @@
+\documentclass[a4paper]{article}
+
+%\usepackage[utf8x]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{bm}
+\usepackage{amsxtra}
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+\usepackage[box,completemulti,separateanswersheet]{automultiplechoice}
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Pregunta #1:} }
+\def\AMCbeginQuestion#1#2{\par\noindent{\bf Pregunta #1}#2\hspace*{1em}}
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+
+\spanishdecimal{.}
+
+\begin{document}
+
+\AMCrandomseed{1237893}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque1}{
+\begin{question}{11}
+En un modelo 3D de conducción de calor, el número de grados de libertad de un nodo
+es:
+\begin{multicols}{2}
+\begin{choices}
+     \correctchoice{$1$}
+     \wrongchoice{$2$}
+     \wrongchoice{$3$}
+     \wrongchoice{Depende del número de nodos del elemento utilizado en la malla}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque2}{
+\begin{question}{21}
+En un  modelo de flujo en medios porosos, la interpretación de la variable primaria,
+$u$, es:
+\begin{multicols}{2}
+\begin{choices}
+     \correctchoice{La altura piezométrica, que es la suma de la altura geométrica
+     y la altura de presión ($p/\gamma$)}
+     \wrongchoice{La presión intersticial $p$}
+     \wrongchoice{La velocidad}
+     \wrongchoice{El gradiente de presión}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque3}{
+\begin{question}{31}
+La formulación de elementos finitos proporciona:
+\begin{multicols}{2} 
+\begin{choices}
+     \correctchoice{La solución aproximada de la formulación débil de un problema
+     de contorno}
+     \wrongchoice{La solución aproximada de un sistema lineal de ecuaciones}
+     \wrongchoice{La solución exacta de un sistema de ecuaciones diferenciales ordinarias}
+     \wrongchoice{La solución exacta de un sistema de ecuaciones diferenciales en derivadas parciales}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque4}{
+	\begin{question}{41}
+		El número de nodos de la malla es:
+		\begin{multicols}{2} 
+			\begin{choices}
+				\correctchoice{$857$}
+				\wrongchoice{$634$}
+				\wrongchoice{$431$}
+				\wrongchoice{$912$}
+			\end{choices}
+		\end{multicols}
+	\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque5}{
+	\begin{question}{51}
+		El número de elementos de la malla es:
+		\begin{multicols}{2}
+			\begin{choices}
+				\correctchoice{$804$}
+				\wrongchoice{$582$}
+				\wrongchoice{$404$}
+				\wrongchoice{$902$}
+			\end{choices}
+		\end{multicols}
+	\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque6}{
+\begin{question}{61}
+La diferencia entre el valor máximo y el valor mínimo de la variable primaria $u$ vale:
+\begin{multicols}{2}
+\begin{choices}
+     \correctchoice{$9$}
+     \wrongchoice{$6$}
+     \wrongchoice{$10$}
+     \wrongchoice{$1$}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque7}{
+\begin{question}{71}
+El valor máximo del módulo de la velocidad vale:
+\begin{multicols}{2}
+\begin{choices}
+     \correctchoice{$7.22 \cdot 10^{-5}$ N}
+     \wrongchoice{$1.4 \cdot 10^{-5}$ kN}
+     \wrongchoice{$3.2 \cdot 10^{-5}$ N}
+     \wrongchoice{$5.7 \cdot 10^{-5}$ kN}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque8}{
+\begin{question}{81}
+Tomando como peso específico del agua $\gamma=10000$ N/m$^3$, el valor más aproximado
+para la presión en el punto más bajo de la pantalla es:
+\begin{multicols}{2}
+\begin{choices}
+     \correctchoice{$10^5$ Pa}
+     \wrongchoice{$3 \cdot 10^3$ Pa}
+     \wrongchoice{$15$ Pa}
+     \wrongchoice{$21$ MPa}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque9}{
+\begin{question}{91}
+La velocidad ascendente, a la derecha de la pantalla, justo en el contacto agua terreno vale aproximadamente:
+\begin{multicols}{2} 
+\begin{choices}
+     \correctchoice{$3.5 \cdot 10^{-5}$ m/s}
+     \wrongchoice{$1.3 \cdot 10^{-3}$ m/s}
+     \wrongchoice{$4.6 \cdot 10^{-4}$ m/s}
+     \wrongchoice{$0.3$ m/s}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{bloque10}{
+\begin{question}{10}
+El valor máximo del flujo en dirección horizontal vale:
+\begin{multicols}{2} 
+\begin{choices}
+     \correctchoice{$5.9 \cdot 10^{-5}$ m/s}
+     \wrongchoice{$8.3 \cdot 10^{-4}$ m/s}
+     \wrongchoice{$3.4 \cdot 10^{-3}$ m/s}
+     \wrongchoice{$1.7 \cdot 10^{-5}$ m/s}
+    \end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\scoringDefaultS{b=1,m=-1/(N-1)}
+
+\onecopy{1}{
+
+%%% beginning of the test sheet header:    
+
+\noindent{\large\bf Método de los Elementos Finitos  \hfill MUIECYM}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering 27 de enero 2022
+\end{minipage}
+
+\begin{center}\em
+Tiempo: 60 minutos.
+
+%  No se permite ninguna otra hoja sobre la mesa. Está prohibido el uso de calculadoras programables y teléfonos móviles.
+
+  Se atribuirá puntuación negativa a las respuestas incorrectas.
+
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\vspace{4mm}
+
+%\includegraphics{ej1_graf.pdf}
+%\includegraphics{ej1a_graf.pdf}
+%\begin{center}
+%\includegraphics[width=0.5\textwidth]{pizarra1.pdf}
+%\end{center}
+
+
+%%\shufflegroup{tema01}
+%%\insertgroup{tema01}
+
+\cleargroup{all}
+\copygroup[1]{bloque1}{all}
+\copygroup[1]{bloque2}{all}
+\copygroup[1]{bloque3}{all}
+\copygroup[1]{bloque4}{all}
+\copygroup[1]{bloque5}{all}
+\copygroup[1]{bloque6}{all}
+\copygroup[1]{bloque7}{all}
+\copygroup[1]{bloque8}{all}
+\copygroup[1]{bloque9}{all}
+\copygroup[1]{bloque10}{all}
+%\shufflegroup{bloque1}\copygroup[1]{bloque1}{all}
+%\shufflegroup{bloque2}\copygroup[1]{bloque2}{all}
+%\shufflegroup{bloque3}\copygroup[1]{bloque3}{all}
+%\shufflegroup{bloque4}\copygroup[1]{bloque4}{all}
+%\shufflegroup{bloque5}\copygroup[1]{bloque5}{all}
+%\shufflegroup{bloque6}\copygroup[1]{bloque6}{all}
+%\shufflegroup{bloque7}\copygroup[1]{bloque7}{all}
+%\shufflegroup{bloque8}\copygroup[1]{bloque8}{all}
+%\shufflegroup{bloque9}\copygroup[1]{bloque9}{all}
+%\shufflegroup{bloque10}\copygroup[1]{bloque10}{all}
+%\shufflegroup{all}
+\insertgroup{all}
+
+%\AMCcleardoublepage
+\clearpage
+
+\AMCformBegin
+
+%%% beginning of the answer sheet header
+
+\noindent\AMCcode{nummat}{4}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+$\longleftarrow{}$ Escriba su número de matrícula marcando los dígitos
+en los recuadros (con ceros a la izquierda si el número es de menos de cuatro dígitos) y el nombre y apellidos debajo.
+
+\vspace{3ex}
+
+\namefield{\fbox{
+   \begin{minipage}{.9\linewidth}
+     Apellidos, Nombre:
+
+     \vspace*{.5cm}\dotfill
+     \vspace*{1mm}
+   \end{minipage}
+ }}
+\end{minipage}
+
+\begin{center}
+ \bf\em Debe dar las respuestas exclusivamente en esta hoja (las respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+%%% end of the answer sheet header
+
+
+\AMCform
+\AMCcleardoublepage
+}
+
+\end{document}
+

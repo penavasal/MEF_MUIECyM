@@ -1,0 +1,246 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+\usepackage[box,completemulti,separateanswersheet]{automultiplechoice}    
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Pregunta #1:} }    
+\def\AMCbeginQuestion#1#2{\par\noindent{\bf Pregunta #1}#2\hspace*{1em}}
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+
+\begin{document}
+
+\AMCrandomseed{1237893}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p1}
+El método de los elementos finitos proporciona la solución aproximada de:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{La formulación débil de un problema de contorno}
+	\wrongchoice{La formulación fuerte de un problema de contorno}
+	\wrongchoice{Un sistema lineal de ecuaciones}
+	\wrongchoice{Ninguna de las otras respuestas es correcta}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p2}
+En un problema lineal de conducción de calor (modelo de difusión) discretizado con
+una malla de $N$ nodos, con $n_u$ valores conocidos de la temperatura en los
+nodos, y $n_t$ valores conocidos del flujo en direccion normal, el sistema
+lineal de ecuaciones resultante de la formulación de elementos finitos:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Tiene $N-n_u$ ecuaciones}
+	\wrongchoice{Tiene $N-n_t$ ecuaciones}
+	\wrongchoice{Tiene $N-n_u-n_t$ ecuaciones}
+	\wrongchoice{Tiene $N+n_u-n_t$ ecuaciones}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p3}
+En la formulación débil de un problema de contorno, la derivada del
+campo incógnita que aparecen en dicha formulación:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Es de un orden menor que su derivada en la formulación fuerte}
+	\wrongchoice{Es de un orden mayor que su derivada en la formulación fuerte}
+	\wrongchoice{Es del mismo orden que su derivada en la formulación fuerte}
+	\wrongchoice{Depende del tamaño de la malla de elementos finitos}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p4}
+El valor mínimo de la temperatura se alcanza en:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Los bordes del taladro}
+	\wrongchoice{Los bordes exteriores de la chapa}
+	\wrongchoice{En el interior de la chapa}
+	\wrongchoice{Hay varias zonas en los bordes exteriores y los
+bordes del taladro, en los que se alcanza la temperatura mínima}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p5}
+El valor de la temperatura en la chapa:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Está comprendido entre $300^{\circ}$ K y
+$473^{\circ}$ K}
+	\wrongchoice{Está comprendido entre $350^{\circ}$ K y
+$450^{\circ}$ K}
+	\wrongchoice{Está comprendido entre $373^{\circ}$ K y
+$473^{\circ}$ K}
+	\wrongchoice{Está comprendido entre $0^{\circ}$ K y
+$100^{\circ}$ K}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p6}
+Los valores del flujo de calor en dirección horizontal están
+comprendidos aproximadamente entre:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$40.8$ y $1111$ kW/m$^2$}
+	\wrongchoice{$300$ y $473$ kW/m$^2$}
+	\wrongchoice{$40.8$ y $1111$ W/m$^2$}
+	\wrongchoice{$300$ y $473$ W/m$^2$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p7}
+Los valores del flujo de calor en dirección vertical están
+comprendidos aproximadamente entre:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$-944.1$ y $-1.31$ kW/m$^2$}
+	\wrongchoice{$-0.3$ y $37.5$ kW/m$^2$}
+	\wrongchoice{$-944$ y $-1.31$ W/m$^2$}
+	\wrongchoice{$-0.3$ y $37.5$ W/m$^2$}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p8}
+Los valores más bajos del flujo en dirección vertical
+se obtienen:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{En lo bordes del taladro}
+	\wrongchoice{En los bordes verticales de la chapa}
+	\wrongchoice{El flujo en dirección vertical es constante}
+	\wrongchoice{Ninguna de las respuestas anteriores es correcta}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p9}
+En un problema general de conducción de calor, el flujo en dirección normal
+a los ejes o planos de simetría:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Es nulo}
+	\wrongchoice{Está indeterminado}
+	\wrongchoice{Coincide con la divergencia de la temperatura}
+	\wrongchoice{Ninguna de las respuestas anteriores es correcta}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p10}
+En el punto medio del borde horizontal inferior de la malla (perteneciente
+a un eje de simetría), la temperatura vale:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$403.3^{\circ}$ K}
+	\wrongchoice{$450.1^{\circ}$ K}
+	\wrongchoice{$320.6^{\circ}$ K}
+	\wrongchoice{$386.5^{\circ}$ K}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\scoringDefaultS{b=1,m=-1/(N-1)}
+
+\onecopy{1}{    
+
+%%% beginning of the test sheet header:    
+
+\noindent{\large\bf Método de los Elementos Finitos  \hfill MUECYM \hfill TEST \# 2}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering 11 oct 2019
+\end{minipage}
+
+\begin{center}\em
+Tiempo: 60 minutos.
+
+  %Está prohibido el uso de teléfonos móviles.
+
+  %Se atribuirá puntuación negativa a las respuestas incorrectas.
+
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\shufflegroup{test1}
+\insertgroup{test1}
+
+\AMCcleardoublepage    
+%\clearpage
+
+\AMCformBegin    
+
+%%% beginning of the answer sheet header
+
+\noindent\AMCcode{nummat}{2}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+$\longleftarrow{}$ Escriba su número de matrícula marcando los dígitos
+en los recuadros (con ceros a la izquierda si el número es de menos de tres dígitos) y el nombre y apellidos debajo.
+
+\vspace{3ex}
+
+\namefield{\fbox{
+   \begin{minipage}{.9\linewidth}
+     Apellidos, Nombre:
+
+     \vspace*{.5cm}\dotfill
+     \vspace*{1mm}
+   \end{minipage}
+ }}
+\end{minipage}
+
+\begin{center}
+ \bf\em Debe dar las respuestas exclusivamente en esta hoja (las respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+%%% end of the answer sheet header
+
+
+\AMCform    
+
+\AMCcleardoublepage    
+
+}  
+
+\end{document}

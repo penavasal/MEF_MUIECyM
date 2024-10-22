@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+\usepackage{moodle}
+
+\usepackage[utf8]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+
+\spanishdecimal{.}
+\makeatletter
+\def\moodle@shortanswer@latexprocessing{\relax}
+\def\moodle@numerical@latexprocessing{\relax}
+\let\origmultiprocessing\moodle@multi@latexprocessing
+\def\moodle@multi@latexprocessing{\let\checkmark\relax\origmultiprocessing}
+%\def\moodle@matching@latexprocessing{\relax} % it's complicated
+\def\moodle@essay@latexprocessing{\relax}
+\makeatother
+\begin{document}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{MEF1-21-22}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+El movimiento vertical m\'aximo (en valor absoluto) vale:
+	\item[fraction=-33.333] $1.1$ cm
+	\item[fraction=-33.333] $1.1$ mm
+	\item* $3.8$ cm
+	\item[fraction=-33.333] $3.8$ mm
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+	El movimiento horizontal m\'aximo (en valor absoluto) vale:
+	\item[fraction=-33.333]  $3.1$ cm
+	\item* $1.5$ cm
+	\item[fraction=-33.333]  $1.5$ mm
+	\item[fraction=-33.333]  $3.1$ mm
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+	La reacci\'on vertical en el nodo $2$ vale:
+	\item* $20.0$ kN
+	\item[fraction=-33.333] $60.0$ kN
+	\item[fraction=-33.333] $30.0$ kN
+	\item[fraction=-33.333] $40.0$ kN
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+El movimiento horizontal del nodo $7$ vale:
+	\item[fraction=-33.333] $2.3$ mm
+	\item[fraction=-33.333] $1.6$ mm
+	\item[fraction=-33.333] $1.2$ cm
+	\item* $5.8$ mm
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+El n\'umero de grados de libertad del modelo de elementos finitos es:
+	\item[fraction=-33.333] $6$
+	\item[fraction=-33.333] $16$
+	\item* $12$
+	\item[fraction=-33.333] $13$
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+El esfuerzo de tracci\'on m\'axima es:
+	\item[fraction=-33.333] $50.$ kN
+	\item* $89$ kN
+	\item[fraction=-33.333] $102$ kN
+	\item[fraction=-33.333] No hay barras con esfuerzos de tracci\'on
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+El esfuerzo de compresi\'on m\'axima es:
+	\item* $-113$ kN
+	\item[fraction=-33.333] $-430$ kN
+	\item[fraction=-33.333] $-265$ kN
+	\item[fraction=-33.333] $-531$ kN
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+	En el modelo de barras articuladas, la formulaci\'on d\'ebil del problema
+	de contorno se puede interpretar como:
+	\item[fraction=-33.333] La nulidad de la suma de fuerzas y la suma de momentos
+	\item[fraction=-33.333] La formulaci\'on de Galerkin expresada en forma integral
+	\item* El principio de los trabajos virtuales
+	\item[fraction=-33.333] La relaciones tensi\'on-deformaci\'on y deformaci\'on-desplazamiento
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+	La tensi\'on en la barra $7$ vale:
+	\item* $182$ N/mm$^2$ (de tracci\'on)
+	\item[fraction=-33.333] $182$ N/mm$^2$ (de compresi\'on)
+	\item[fraction=-33.333] $900$ N/mm$^2$ (de tracci\'on)
+	\item[fraction=-33.333] $900$ N/mm$^2$ (de compresi\'on)
+\end{multi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}{}
+La tensi\'on en la barra $4$ vale:
+	\item[fraction=-33.333] $81$ N/mm$^2$ (de tracci\'on)
+	\item* $81$ N/mm$^2$ (de compresi\'on)
+	\item[fraction=-33.333] $40$ N/mm$^2$ (de tracci\'on)
+	\item[fraction=-33.333] $40$ N/mm$^2$ (de compresi\'on)
+\end{multi}
+
+\end{quiz}
+\end{document}
