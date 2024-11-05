@@ -1,0 +1,15 @@
+<?xml version="1.0"?><msgwrapper><Started><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">P5A-10-I</jobName><clientHost type="string">DESKTOP-RS36UH2</clientHost><handle type="integer">0</handle></Started>
+<Odb_File><file type="string">D:\OneDrive - Universidad Politécnica de Madrid\00_CLASES\Elementos_finitos\MEF_MUIECyM\P5-T-Elementos\P5-C-CAE\P5A-10-I.odb</file><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">P5A-10-I</jobName></Odb_File>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">P5A-10-I</jobName></Completed>
+<Started><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName><clientHost type="string">DESKTOP-RS36UH2</clientHost><handle type="integer">11012</handle></Started>
+<Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></Step>
+<Odb_Frame><step type="integer">0</step><frame type="integer">0</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></Odb_Frame>
+<MEMORY_ESTIMATE><memory type="float">25</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">16281</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">17</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></MINIMUM_MEMORY>
+<Warning><message type="string">Solver problem. Numerical singularity when processing node PART-1-1.65 D.O.F. 2 ratio = 2.27691E+15.</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></Warning>
+<Odb_Frame><step type="integer">0</step><frame type="integer">1</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></Odb_Frame>
+<Status><step type="integer">1</step><increment type="integer">1</increment><attempts type="integer">1</attempts><severe type="integer">0</severe><equilibrium type="integer">1</equilibrium><iterations type="integer">1</iterations><totalTime type="float">1</totalTime><stepTime type="float">1</stepTime><timeIncrement type="float">1</timeIncrement><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></Status>
+<End_Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></End_Step>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">P5A-10-I</jobName></Completed>
+<JOB_COMPLETED><jobName type="string">P5A-10-I</jobName><time type="string">Wed Oct 30 15:00:12 2024</time></JOB_COMPLETED></msgwrapper>
