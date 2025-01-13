@@ -56,7 +56,7 @@ La zona de mínima tensión principal se encuentra en:
 El máximo desplazamiento horizontal es:
 \begin{multicols}{2}
 \begin{choices}
-	\correctchoice{$0.0558$ mm}
+	\correctchoice{$0.0556$ mm}
 	\wrongchoice{$0.0142$ mm}
 	\wrongchoice{$0.0253$ mm}
 	\wrongchoice{$0.0672$ mm}
@@ -70,7 +70,7 @@ El máximo desplazamiento horizontal es:
 El máximo desplazamiento absoluto vertical es:
 \begin{multicols}{2}
 \begin{choices}
-	\correctchoice{$0.0142$ mm}
+	\correctchoice{$0.0138$ mm}
 	\wrongchoice{$0.000$ mm}
 	\wrongchoice{$0.0284$ mm}
 	\wrongchoice{$0.0104$ mm}
@@ -109,13 +109,13 @@ La suma de las reacciones horizontales del lado izquierdo de la cuarta parte mod
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \element{test1}{
 \begin{question}{p7}
-Si consideramos un mallado del tipo Element {\em Shape/Quad-dominated/Structured} con elementos CPS4 y CPS3, las tensiones horizontales se encuentran entre:
+Las tensiones horizontales se encuentran entre:
 \begin{multicols}{2}
 \begin{choices}
-	\correctchoice{$-6.50$ y $170.00$ MPa}
+	\correctchoice{$-4.00$ y $140.00$ MPa}
 	\wrongchoice{$-50.00$ y $100.00$ MPa}
 	\wrongchoice{$-48.00$ y $25.00$ MPa}
-	\wrongchoice{$-4.50$ y $185.00$ MPa}
+	\wrongchoice{$1.50$ y $185.00$ MPa}
 \end{choices}
 \end{multicols}
 \end{question}
@@ -185,7 +185,7 @@ elástico se interpreta como:
 %\vspace*{.1cm}
 %Se atribuirá puntuación negativa a las respuestas incorrectas.\\
 \vspace*{.1cm}
-21 oct 2022. \hspace{7cm} Tiempo: 60 minutos.\\
+2 dic 2024. \hspace{7cm} Tiempo: 60 minutos.\\
 
 
 \end{center}
@@ -197,9 +197,8 @@ Una placa de aluminio, con módulo de elasticidad $E=70$ GPa y coeficiente de Po
 
 {\bf NOTAS:}
 \begin{enumerate}
-\item Para el cuarto de círculo, usar un mallado {\em Seed Edges, Method/By number, Bias/none, Sizing Controls/Number of elements: 15}
-\item Para los bordes izquierdo, superior e inferior usar un mallado {\em Seed Edges, Method/By number, Bias/single, Sizing Controls/Number of elements: 20,  Sizing Controls/Bias ratio: 5}
-\item Para el borde derecho, usar un mallado {\em Seed Edges, Method/By number, Bias/none,$ $Sizing Controls/Number of elements: 20}
+\item Para el cuarto de círculo, usar un mallado {\em Seed Edges, Method/By number, Bias/none, Sizing Controls/Number of elements: 12}
+\item Para el resto de bordes, usar un mallado {\em Seed Edges, Method/By size, Bias/none,$ $Sizing Controls/Approximate Element Size: 20}
 \item En {\em Mesh Controls}, usar una forma de elemento triangular y malla estructurada.
 \item El tipo de elemento a utilizar será {\em CPS3}.
 \end{enumerate}

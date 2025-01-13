@@ -5,3 +5,10 @@
 *.odb
 *.rec
 .DS_Store
+*.log
+*.msg
+*.prt
+*.sta
+*.com
+*.dat
+*.ipm
