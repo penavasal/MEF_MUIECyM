@@ -40,19 +40,19 @@ El valor del desplazamiento en direcci\'on $x$ del punto I vale aprox:
 \end{question}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\element{test1}{
-%\begin{question}{p2}
-%El valor del giro en direcci\'on $z$ del apoyo de la primera columna vale aprox:
-%\begin{multicols}{2}
-%\begin{choices}
-%	\correctchoice{$-4.0\cdot10^{-4}$ rad}
-%	\wrongchoice{$-1.1\cdot10^{-4}$ rad}
-%	\wrongchoice{$-5.6\cdot10^{-3}$ rad}
-%	\wrongchoice{$2.1\cdot10^{-4}$ rad}
-%\end{choices}
-%\end{multicols}
-%\end{question}
-%}
+\element{test1}{
+\begin{question}{p2}
+El valor del giro en direcci\'on $z$ del punto C vale aprox:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$-2.5\cdot10^{-3}$ rad}
+	\wrongchoice{$-1.1\cdot10^{-4}$ rad}
+	\wrongchoice{$-5.6\cdot10^{-3}$ rad}
+	\wrongchoice{$2.1\cdot10^{-4}$ rad}
+\end{choices}
+\end{multicols}
+\end{question}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \element{test1}{
 \begin{question}{p3}
@@ -70,7 +70,7 @@ El valor de la máxima flecha vertical en el vano CF vale aprox.:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \element{test1}{
 \begin{question}{p4}
-El valor máximo de la componente vertical de la reacción en el apoyo de la columna central vale aprox.:
+El valor de la componente vertical de la reacción en el apoyo de la columna central vale aprox.:
 \begin{multicols}{2}
 \begin{choices}
 	\correctchoice{$620.9$ kN}
@@ -83,11 +83,25 @@ El valor máximo de la componente vertical de la reacción en el apoyo de la col
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \element{test1}{
+\begin{question}{p4b}
+El valor de la componente horizontal de la reacción en el apoyo izquierdo vale aprox.:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$-29.0$ kN}
+	\wrongchoice{$ -12.4$ kN}
+	\wrongchoice{$ 93.1$ kN}
+	\wrongchoice{$ -8.90$ kN}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
 \begin{question}{p5}
 El valor del momento máximo en direcci\'on $z$ en el centro del vano FI, en valor absoluto, vale aprox.:
 \begin{multicols}{2}
 \begin{choices}
-	\correctchoice{$ 83.6$ kN m}
+	\correctchoice{$ 73.3$ kN m}
 	\wrongchoice{$34.1$ kN m}
 	\wrongchoice{$51.9$ kN m}
 	\wrongchoice{$104.9$ kN m}
@@ -124,47 +138,46 @@ El valor del axil máximo en el vano FI, en valor absoluto, vale aprox.:
 \end{question}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\element{test1}{
-%\begin{question}{p8}
-%En la formulación de vigas de Euler-Bernoulli, el esfuerzo cortante:
-%%\begin{multicols}{2}
-%\begin{choices}
-%       \correctchoice{Se calcula con la ecuación de equilibrio de momentos}
-%        \wrongchoice{Se calcula a partir de la deformación angular $\gamma_{xz}$}
-%        \wrongchoice{Por hipótesis, se toma iguaL a $0$}
-%        \wrongchoice{Ninguna de las otras respuestas es correcta}
-%\end{choices}
-%%\end{multicols}
-%\end{question}
-%}
+\element{test1}{
+\begin{question}{p8}
+En la formulación de vigas de Timoshenko, el esfuerzo cortante:
+%\begin{multicols}{2}
+\begin{choices}
+       \wrongchoice{Sólo se puede calcular con la ecuación de equilibrio de momentos
+       ya que no interviene en las ecuaciones constitutivas}
+        \correctchoice{Se calcula a partir de la deformación angular $\gamma_{xz}$}
+        \wrongchoice{Por hipótesis, se toma iguaL a $0$}
+        \wrongchoice{Ninguna de las otras respuestas es correcta}
+\end{choices}
+%\end{multicols}
+\end{question}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\element{test1}{
-%\begin{question}{p9}
-%Los elementos finitos de viga de Bernoulli \ldots
-%%\begin{multicols}{2}
-%\begin{choices}
-%        \correctchoice{Incorporan la hipótesis de que las secciones normales se mantienen indeformables, planas y normales a la directriz}
-%        \wrongchoice{Incorporan la hipótesis de que las secciones normales se mantienen indeformables, planas pero no necesariamente normales a la directriz}
-%        \wrongchoice{Incorporan la hipótesis de que las secciones normales se mantienen planas y normales a la directriz, pero pueden deformarse en dirección transversal por las cargas aplicadas}
-%        \wrongchoice{Las funciones de interpolación de los elementos finitos \(N_a(x)\) pueden ser lineales}
-%\end{choices}
-%%\end{multicols}
-%\end{question}
-%}
+\element{test1}{
+\begin{question}{p9}
+Los elementos finitos de viga de Bernoulli:
+\begin{choices}
+        \correctchoice{No consideran la deformación por esfuerzo cortante}
+        \wrongchoice{Incorporan la hipótesis de que las secciones normales a la directriz pueden deformarse}
+        \wrongchoice{Las funciones de interpolación de los elementos finitos \(N_a(x)\) necesariamente son cuadráticas}
+        \wrongchoice{Las funciones de interpolación de los elementos finitos \(N_a(x)\) pueden ser lineales}
+\end{choices}
+\end{question}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\element{test1}{
-%\begin{question}{p10}
-%Los elementos finitos de viga de Timoshenko \ldots
-%%\begin{multicols}{2}
-%\begin{choices}
-%        \correctchoice{Incorporan deformación por cortante de la viga}
-%        \wrongchoice{Incorporan la hipótesis de que las secciones normales se mantienen indeformables, planas y normales a la directriz}
-%        \wrongchoice{Para vigas muy poco esbeltas pueden producir bloqueo de la solución numérica}
-%        \wrongchoice{Las funciones de interpolación de los elementos finitos \(N_a(x)\) deben ser al menos cúbicas}
-%\end{choices}
-%%\end{multicols}
-%\end{question}
-%}
+\element{test1}{
+\begin{question}{p10}
+Una oficina de ingeniería presenta un informe de un cálculo de elementos finitos
+realizado con elementos triangulares de deformación constante (triángulo isoparamétrico de tres nodos). Esos cálculos sólo son admisibles si:
+\begin{choices}
+        \correctchoice{Están referidos a un problema lineal de conducción de calor}
+        \wrongchoice{Están referidos a la respuesta un material elástico lineal incompresible}
+        \wrongchoice{Están referidos a la respuesta mecánica lineal  de una estructura que trabaja
+        a flexión}
+        \wrongchoice{Están referidos al análisis de una estructura laminar no lineal}
+\end{choices}
+\end{question}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \scoringDefaultS{b=1,m=-1/(N-1)}
@@ -191,9 +204,9 @@ Se pide realizar un modelo de vigas con elementos tipo B23, tamaño de elementos
 
 Las longitudes del pórtico son tal como sigue: $l_{1}= 6$ m, $l_{2}= 5$ m, $l_{3}= 3$ m, $l_{4}$ y $l_{5}= 5$ m. Las cargas son $V_{1}= 70$ kN, $V_{2}= 50$ kN, $H_{1}= 488.40$ kN, y $q_{1}= 100$ kN/m. Las dimensiones de los elementos estructurales son $a= 0.40$ m, $b= 0.30$ m y $c= 0.60$ m.
 \\
-\begin{center}
-	\includegraphics[width=1.05\textwidth]{figuraNT2023}
-\end{center}
+%\begin{center}
+%	\includegraphics[width=1.05\textwidth]{figuraNT2023}
+%\end{center}
 
 
 \hrulefill
