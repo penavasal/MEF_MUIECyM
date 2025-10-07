@@ -1,9 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\select@language {spanish}
-\beamer@sectionintoc {1}{Introducci\'on}{3}{0}{1}
-\beamer@sectionintoc {2}{Formulaci\'on del problema de contorno}{5}{0}{2}
-\beamer@sectionintoc {3}{Formulaciones variacionales}{12}{0}{3}
-\beamer@sectionintoc {4}{Formulaci\'on de Galerkin}{14}{0}{4}
-\beamer@sectionintoc {5}{Formulaci\'on de Elementos Finitos}{15}{0}{5}
-\beamer@sectionintoc {6}{Formulaci\'on matricial}{17}{0}{6}
-\beamer@sectionintoc {7}{Elasticidad lineal}{22}{0}{7}
