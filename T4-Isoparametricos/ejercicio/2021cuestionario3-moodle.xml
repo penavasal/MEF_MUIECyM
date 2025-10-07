@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$module$/MEF3-20-21</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name>
+    <text>p1</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La flecha en el extremo libre, calculada con la Resistencia de Materiales, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(3.0\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.0\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.5\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3.5\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p2</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El modelo con menor n&uacute;mero de grados de libertad es el de: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Cuadril&aacute;teros de \(8\) nodos</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Tri&aacute;ngulos de \(3\) nodos</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Tri&aacute;ngulos de \(6\) nodos</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Cuadril&aacute;teros de \(4\) nodos</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p3</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En la malla de cuadril&aacute;teros de \(4\) nodos, la flecha en el extremo en el que est&aacute; aplicada la carga vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(1.8\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.5\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1.5\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p4</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En la malla de cuadril&aacute;teros de \(8\) nodos, la flecha en el extremo en el que est&aacute; aplicada la carga vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(3.0\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.5\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3.5\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.9\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p5</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En la malla de tri&aacute;ngulos de \(6\) nodos, la flecha en el extremo en el que est&aacute; aplicada la carga vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(3.0\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.9\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.8\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p6</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En la malla de tri&aacute;ngulos de \(3\) nodos, la flecha en el extremo en el que est&aacute; aplicada la carga vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0.9\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3.0\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.0\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p7</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de la reacci&oacute;n horizontal en la esquina inferior izquierda, calculada con la malla de cuadril&aacute;teros de \(4\) nodos vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(115.8\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(75.4\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(215.4\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(165.4\) kN</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p8</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de la reacci&oacute;n horizontal en la esquina inferior izquierda, calculada con la malla de cuadril&aacute;teros de \(8\) nodos vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(117.1\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(73.2\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(211.6\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(163.3\) kN</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p9</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de la reacci&oacute;n horizontal en la esquina inferior izquierda, calculada con la malla de tri&aacute;ngulos de \(3\) nodos vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(118.3\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(77.2\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(217.7\) kN</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(167.2\) kN</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p10</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La suma de las reacciones verticales en el empotramiento coincide con la carga aplicada el extremo con un error inferior al \(0.1\)\%: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Con todos los elementos</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>S&oacute;lo con el cuadril&aacute;tero de \(8\) nodos</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>S&oacute;lo con el tri&aacute;ngulo de \(6\) nodos</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>S&oacute;lo con el cuadril&aacute;tero de \(8\) nodos y con el tri&aacute;ngulo de \(6\) nodos</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+ 
+</quiz>

@@ -1,0 +1,54 @@
+feap  ** cilindro indefinido en deformacion plana
+,,,2,2,4
+
+parameter     !geometría
+a = 0.5       !radio interior
+b = 1.0       !radio exterior
+
+parameter     !discretización
+m1 = 10       !número de elementos en dirección radial 
+n1 = 10       !número de elementos en dirección circunferencial
+
+block,1
+pola,m1,n1,,,1,,0    !los vértices en coordenadas polares
+1,a,0                !vértice 1: radio = a;  ángulo =  0 grados
+2,b,0                !vértice 2: radio = b;  ángulo =  0 grados
+3,b,90               !vértice 3: radio = b;  ángulo = 90 grados
+4,a,90               !vértice 4: radio = a;  ángulo = 90 grados
+
+csurface            !impongo carga superficial
+normal              !la carga es normal a la superficie (tracciones)      
+pola
+quadratic           !la curva sobre la que impongo carga es cuadrática
+1,a,90,-300         !punto inicial de la curva cuadrática
+2,a,0,-300          !punto final de la curva cuadrática
+3,a,45,-300         !punto medio de la curva cuadrática
+
+eboundary     !en el eje x, impongo el movimiento en dirección y
+1,0.0,1,0     !línea cuya coordenada y = 0.0, impongo restricción en y     
+
+eboundary     !en el eje y, impongo el movimiento en dirección x
+2,0.0,0,1     !línea cuya coordenada x = 0.0, impongo restricción en x
+
+
+material,1
+solid
+small deformation
+plane strain                  !deformación plana
+elastic,isotropic,2.1e5,0.3   !módulo de elasticidad (MPa), coef.de Poisson 
+
+end
+
+opti
+
+interactive
+
+batch
+tang,,1
+stre,node,1,m1+1,1
+disp,,1,m1+1,1
+end
+
+interactive
+
+stop

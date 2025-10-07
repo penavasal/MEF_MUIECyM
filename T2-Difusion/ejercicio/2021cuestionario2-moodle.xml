@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$module$/MEF2-20-21</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name>
+    <text>p1</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El caudal que se filtra, en r&eacute;gimen estacionario, a la salida del t&uacute;nel vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(1.1\) l/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.6\) l/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(9.2\) l/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(4.7\) l/s</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p21</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor m&iacute;nimo de la altura piezom&eacute;trica se alcanza en: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>En la salida del t&uacute;nel</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>En un punto de sustrato rocoso situado bajo el r&iacute;o</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>En la zona de contacto del agua con el medio permeable</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>En el punto inferior de alguna de las pantallas impermeables</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p22</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor m&aacute;ximo de la altura piezom&eacute;trica se alcanza en: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>En el medio permeable situado bajo el r&iacute;o</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>En la salida del t&uacute;nel</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>En la parte superior de la entrada del t&uacute;nel</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>En la parte inferior de la entrada del t&uacute;nel</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p31</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Los valores de la velocidad horizontal est&aacute;n comprendidos aproximadamente entre: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0\) y \(2.1\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-0.5\) y \(1.5\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1.0\) y \(3.0\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.0\) y \(3.5\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p32</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Los valores de la velocidad en direcci&oacute;n vertical est&aacute;n comprendidos aproximadamente entre: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-1.2\) y \(1.2\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-1.2\) y \(1.2\) cm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0\) y \(-1.5\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-0.1\) y \(0.1\) m/s</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p4</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Los valores m&aacute;s altos de la velocidad en direcci&oacute;n horizontal se obtienen: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>En la salida del t&uacute;nel</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Bajo alguna de las pantallas impermeable</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>En el contacto del medio permeable con el agua del r&iacute;o</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Ninguna de las respuestas anteriores es correcta</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p51</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El n&uacute;mero de grados de libertad del modelo es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(1166\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(534\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(268\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3524\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p52</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El n&uacute;mero de nodos (sin descontar los que se eliminan con el comando {\tt tie}) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(1227\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1125\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1374\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(980\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p61</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor m&aacute;ximo de la altura piezom&eacute;trica \(u\) en la entrada del t&uacute;nel (secci&oacute;n \(AA&rsquo;\)) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(7.3\) m</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(6.9\) m</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(9\) m</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.2\) m</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p62</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor m&iacute;nimo de la altura piezom&eacute;trica \(u\) en la entrada del t&uacute;nel (secci&oacute;n \(AA&rsquo;\)) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(6.9\) m</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(7.3\) m</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(9\) m</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.2\) m</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p71</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Tomando como peso espec&iacute;fico del agua \(\gamma =10000\) N/m\(^3\), la presi&oacute;n en el punto m&aacute;s alto de la entrada del t&uacute;nel (secci&oacute;n AA&rsquo;) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(63\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(7.3\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(6.3\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(73\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p72</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Tomando como peso espec&iacute;fico del agua \(\gamma =10000\) N/m\(^3\), la presi&oacute;n en el punto m&aacute;s bajo de la entrada del t&uacute;nel (secci&oacute;n AA&rsquo;) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(69\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(6.9\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(63\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(6.3\) kPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p8</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En un modelo de conducci&oacute;n de calor en el que existe un plano de simetr&iacute;a, la condici&oacute;n de contorno a imponer en los nodos de dicho plano es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Flujo en direcci&oacute;n normal al plano igual a \(0\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Todas las componentes del vector flujo igual a \(0\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Flujo en direcci&oacute;n paralela al plano igual a \(0\)</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Las dem&aacute;s respuestas son incorrectas</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p9</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En la formulaci&oacute;n d&eacute;bil de un problema de contorno, la derivada del campo inc&oacute;gnita que aparece en dicha formulaci&oacute;n es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Es de un orden menor que su derivada en la formulaci&oacute;n fuerte</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Es de un orden mayor que su derivada en la formulaci&oacute;n fuerte</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Es del mismo orden que su derivada en la formulaci&oacute;n fuerte</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Depende del tama&ntilde;o de la malla de elementos finitos</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p101</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor m&aacute;ximo de la velocidad horizontal en la salida del t&uacute;nel (secci&oacute;n \(BB&rsquo;\)) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(2.0\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.4\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1.0\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3.1\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p102</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor m&iacute;nimo de la velocidad horizontal en la salida del t&uacute;nel (secci&oacute;n \(BB&rsquo;\)) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0.4\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.0\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1.1\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3.4\) mm/s</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+ 
+</quiz>

@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cuadraturas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Integración numérica}
+\begin{itemize}
+\item La integración numérica es un ingrediente imprescindible en el
+cálculo de las integrales elementales
+\item Existen diversas cuadraturas: Gauss, Simpson, Lobatto, etc.
+\item Las cuadraturas de Gauss proporcionan mayor exactitud que otras reglas
+para un determinado número de puntos de integración
+\item En cada punto de Gauss se realiza un número importante de operaciones
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Integración numérica}
+\begin{itemize}
+\item Cuadraturas de Gauss en una dimensión:
+\begin{equation}
+\int_{-1}^1 F(\xi) d \xi=\sum_{1}^p w_i F(\xi_i)
+\end{equation}
+siendo $p$ el número de puntos de integración, $\xi_i$ las coordenadas de
+cada punto $i$ y $w_i$ los pesos correspondientes.
+\item Algunas cuadraturas:
+\end{itemize}
+\begin{small}
+\begin{tabular}{lccl}
+1 punto: & $\int_{-1}^1 F(\xi) d \xi $ & $\approx$ & $2 F(0)$ \\
+2 puntos: & $\int_{-1}^1 F(\xi) d \xi $ & $\approx$ &
+$F(-1/\sqrt{3})+F(1/\sqrt{3})$ \\
+3 puntos: & $\int_{-1}^1 F(\xi) d \xi $ & $\approx$ &
+$\frac{5}{9}F(-\sqrt{3/5})+\frac{8}{9}F(0)+\frac{5}{9}F(\sqrt{3/5})$ \\
+4 puntos: & $\int_{-1}^1 F(\xi) d \xi $ & $\approx$ & $w_1F(\xi_1)+
+w_2F(\xi_2)+w_3F(\xi_3)+w_4F(\xi_4)$
+\end{tabular}
+\end{small}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Integración numérica}
+\begin{itemize}
+\item Para la regla de $4$ puntos:
+\begin{small}
+\begin{alignat*}{2}
+w_1&=w_4=\frac{1}{2}-\frac{1}{6}\sqrt{5/6}, \; &
+w_2&=w_3=\frac{1}{2}+\frac{1}{6}\sqrt{5/6}  \\
+\xi_1&=-\xi_4=-\sqrt{(3+2\sqrt{6/5})/7}, \; &
+\xi_2&=-\xi_3=-\sqrt{(3-2\sqrt{6/5})/7}
+\end{alignat*}
+\end{small}
+\item Las cuatro reglas descritas integran de manera exacta polinomios de hasta
+grado $1$, $3$, $5$ y $7$, respectivamente.
+\item En general, una cuadratura 1D de Gauss con $p$ puntos integra
+exactamente polinomios de orden $2p-1$
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Integración numérica}
+\begin{itemize}
+\item Para calcular la integral de $F(x)$ en el intervalo $[a,b]$ se hace
+un cambio de variable definiendo $\xi$ en el intervalo biunitario:
+$$
+\int_a^b F(x) \, dx = \int_{-1}^1 F(\xi) \, J d\xi
+$$
+siendo:
+\begin{alignat*}{2}
+\xi&=\frac{2}{b-a} \left( x-\frac{1}{2} (a+b) \right), \qquad &
+J&=\frac{dx}{d\xi}=\frac{b-a}{2}
+\end{alignat*}
+\item Las cuadraturas de Gauss de orden más alto están tabuladas en los
+libros de cálculo numérico (en {\sc Handbook of Mathematical Functions.
+Abramowitz \& Stegun} hasta 96 puntos). No obstante, las cuadraturas de 
+orden superior a $4$ no se pueden expresar de manera cerrada.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Integración numérica}
+\begin{itemize}
+\item Cuadraturas de Gauss en dos dimensiones
+\begin{itemize}
+\item Las cuadraturas de Gauss más simples se obtienen aplicando las
+cuadraturas 1D a cada variable. Para ello las integrales han de transformarse
+al cuadrilátero biunitario.
+\end{itemize}
+\begin{multline*}
+\int_{-1}^1 \int_{-1}^1 F(\xi,\eta) \, d \xi d\eta=
+\int_{-1}^1 d \eta \int_{-1}^1 F(\xi,\eta) \, d \xi \approx \\
+\sum_{i=1}^{p_1} \sum_{i=1}^{p_2} w_i w_j F(\xi_i,\eta_j)
+\end{multline*}
+siendo $p_1$ y $p_2$ el número de puntos en cada dirección (que son
+iguales si las funciones de forma también lo son).
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Integración numérica}
+\begin{itemize}
+\item Cuadraturas de Gauss en dos dimensiones
+
+\begin{center}
+\includegraphics{gauss2d}
+\end{center}
+
+\begin{alignat*}{3}
+1 \textrm{ punto:}& & 2 \textrm{ puntos:}& & &3\textrm{ puntos:}         \\
+w_1&=4,\quad &    w_{2\times2}&=1,\quad &   w_1&=w_3=w_7=w_9=\frac{25}{81}\\
+   &   \quad &                &   \quad &
+w_2&=w_4=w_6=w_8=\frac{40}{81} \\
+   &   \quad &                &   \quad &   w_5&=\frac{64}{81}
+\end{alignat*}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

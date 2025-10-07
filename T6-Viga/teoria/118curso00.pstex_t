@@ -1,0 +1,41 @@
+\begin{picture}(0,0)%
+\includegraphics{118curso00.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2454,2830)(-146,-2041)
+\put(974,-826){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$z,w$}%
+}}}
+\put(1199,-1231){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$x,u$}%
+}}}
+\put(1064,-2041){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$dx$}%
+}}}
+\put(1514,-196){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$q_z$}%
+}}}
+\put(1846,-781){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$M+dM$}%
+}}}
+\put( 91,-736){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$M$}%
+}}}
+\put(1514,-1411){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$V+dV$}%
+}}}
+\put(451,-1411){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$V$}%
+}}}
+\put(1856,214){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$y$}%
+}}}
+\put(2061,624){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$z$}%
+}}}
+\put(2126,444){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$x$}%
+}}}
+\put(991,-556){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$q_x$}%
+}}}
+\put( 46,-1186){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$N$}%
+}}}
+\put(1891,-1141){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$N+dN$}%
+}}}
+\end{picture}

@@ -1,0 +1,7 @@
+\babel@toc {american}{}
+\beamer@sectionintoc {1}{Introducci\'on}{3}{0}{1}
+\beamer@sectionintoc {2}{Formulaci\'on del problema de contorno}{12}{0}{2}
+\beamer@sectionintoc {3}{Formulaci\'on de Galerkin}{18}{0}{3}
+\beamer@sectionintoc {4}{Formulaci\'on de elementos finitos}{22}{0}{4}
+\beamer@sectionintoc {5}{Ensamblaje de las ecuaciones}{23}{0}{5}
+\beamer@sectionintoc {6}{Convergencia}{26}{0}{6}

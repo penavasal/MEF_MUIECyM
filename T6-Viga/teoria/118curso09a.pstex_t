@@ -1,0 +1,31 @@
+\begin{picture}(0,0)%
+\includegraphics{118curso09a.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3938,4530)(-11,-4033)
+\put(631,-2131){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$w(x)$}%
+}}}
+\put(1891,-2401){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$z,w$}%
+}}}
+\put(1891,-1929){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}{\color{red} $\theta\ne\frac{dw}{dx}$}}%
+}}}
+\put( 91,-3481){\makebox(0,0)[lb]{\smash{\SetFigFont{20}{24.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}directriz}%
+}}}
+\put(1441,201){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$\theta$}%
+}}}
+\put(1981,-3481){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$x,u$}%
+}}}
+\put(1891,-331){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$\frac{dw}{dx}$}%
+}}}
+\put(2431,-691){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$x$}%
+}}}
+\put(1171,-527){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$z$}%
+}}}
+\end{picture}

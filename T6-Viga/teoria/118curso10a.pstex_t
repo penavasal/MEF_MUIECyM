@@ -1,0 +1,25 @@
+\begin{picture}(0,0)%
+\includegraphics{118curso10a.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2816,1910)(438,-1284)
+\put(496,-1275){\makebox(0,0)[b]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}1}%
+}}}
+\put(3196,-1275){\makebox(0,0)[b]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}2}%
+}}}
+\put(1306,-1185){\makebox(0,0)[b]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$x$}%
+}}}
+\put(2026,-555){\makebox(0,0)[b]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$l$}%
+}}}
+\put(766,-286){\makebox(0,0)[rb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}1}%
+}}}
+\put(1846, 74){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$N_1(x)=1-\dfrac{x}{l}$}%
+}}}
+\end{picture}

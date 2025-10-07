@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$module$/MEF4-20-21</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name>
+    <text>p11</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor del desplazamiento en direcci&oacute;n \(X\) del nodo \(A\), calculado con los elementos isoparam&eacute;tricos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-12.1\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-7.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-0.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(23.6\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p12</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor del desplazamiento en direcci&oacute;n \(Y\) del nodo \(B\), calculado con los elementos isoparam&eacute;tricos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(12.1\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(7.8\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(21.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p21</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor del desplazamiento en direcci&oacute;n \(X\) del nodo \(A\), calculado con los elementos mixtos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-15.8\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-6.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-23.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-0.9\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p22</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor del desplazamiento en direcci&oacute;n \(Y\) del nodo \(B\), calculado con los elementos mixtos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(15.8\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(21.4\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.6\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p31</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor del desplazamiento en direcci&oacute;n \(X\) del nodo \(A\), calculado con los elementos de deformaciones mejoradas supuestas, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-21.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-11.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-2.7\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-35.6\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p32</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor del desplazamiento en direcci&oacute;n \(Y\) del nodo \(B\), calculado con los elementos de deformaciones mejoradas supuestas, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(21.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(33.4\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(13.4\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(7.6\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p4</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para evaluar la posible rotura del perfil, se visualizan los contornos de la tensi&oacute;n de Von Mises ({\tt pstr,6}). Para los elementos isoparam&eacute;tricos, el valor m&aacute;ximo es aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(27\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(12\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(53\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(6\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p5</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para evaluar la posible rotura del perfil, se visualizan los contornos de la tensi&oacute;n de Von Mises ({\tt pstr,6}). Para los elementos mixtos, el valor m&aacute;ximo es aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(29\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(15\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(48\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(9\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p6</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para evaluar la posible rotura del perfil, se visualizan los contornos de la tensi&oacute;n de Von Mises ({\tt pstr,6}). Para los elementos de deformaciones mejoradas supuestas, el valor m&aacute;ximo es aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(32\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(17\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(49\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(3\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p7</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>De acuerdo con los valores de los contornos de la tensi&oacute;n de Von Mises, la posible zona de rotura del perfil es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Con los tres modelos, en los puntos en que se aplican las cargas</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Con el modelo de elementos con deformaciones mejoradas supuestas, en los puntos en que se aplican las cargas. Con los modelos de elementos mixtos e isoparam&eacute;tricos, en la zona central de la cara interna</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Con los modelos de elementos mixtos e isoparam&eacute;tricos, en los puntos en que se aplican las cargas. Con el modelo de elementos con deformaciones mejoradas supuestas, en la zona central de la cara interna</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>Con los tres modelos, en la zona central de la cara interna</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p81</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para los elementos isoparam&eacute;tricos, el valor m&aacute;ximo del desplazamiento seg&uacute;n \(Oz\) es aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0.9\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(1.8\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(8.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(17.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p82</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para los elementos mixtos, el valor m&aacute;ximo del desplazamiento seg&uacute;n \(Oz\) es aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0.9\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(2.6\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(9.4\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(14.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p83</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para los elementos de deformaciones mejoradas supuestas, el valor m&aacute;ximo del desplazamiento seg&uacute;n \(Oz\) es aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(1.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(0.3\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(7.8\) mm</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(13.2\) mm</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p91</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de \(\sigma _{xx}\) en el nodo \(A\), calculado con los elementos isoparam&eacute;tricos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-20\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-7.1\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-45.8\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-101.3\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p92</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de \(\sigma _{xx}\) en el nodo \(A\), calculado con los elementos mixtos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-18.6\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-4.6\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-43.2\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-98.3\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p93</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de \(\sigma _{xx}\) en el nodo \(A\), calculado con los elementos de deformaciones mejoradas supuestas, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-25.3\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-3.2\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-52.3\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(-88.4\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p101</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de \(\sigma _{yy}\) en el nodo \(B\), calculado con los elementos isoparam&eacute;tricos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(20\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(11\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(6\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(43\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p102</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de \(\sigma _{yy}\) en el nodo \(B\), calculado con los elementos mixtos, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(18.6\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(12\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(9\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(41\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name>
+    <text>p103</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de \(\sigma _{yy}\) en el nodo \(B\), calculado con los elementos de deformaciones mejoradas supuestas, vale aproximadamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.1000000</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(25.3\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(16\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(8\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="-33.333" format="html">
+    <text><![CDATA[<p>\(47\) MPa</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Respuesta en blanco</p>]]></text>
+  </answer>
+</question>
+ 
+</quiz>

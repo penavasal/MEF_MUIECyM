@@ -1,0 +1,37 @@
+feap
+,,,3,6,2
+
+para
+n=10
+a=0.12
+Ix=1.5e-4
+Iy=1.0
+P=0.0
+J=1.0
+
+coor
+  1,1,0.0,0.0,0.0
+n+1, ,6.0,0.0,0.0
+
+elem
+1,1,1,1,2
+n, ,1,n,n+1
+
+boundary
+1,0,1,1,1,1,1,1
+
+forc
+n+1,,0.0,0.0,0.0,1.0e7,0.0,0.0
+
+mate,1
+frame
+shea,off
+refe,vect,0,0,-1
+elas,,3.5e10,0.2
+cros,,a,Ix,Iy,P,J
+
+end
+
+inte
+
+stop

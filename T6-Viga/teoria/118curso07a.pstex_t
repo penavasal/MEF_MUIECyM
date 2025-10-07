@@ -1,0 +1,19 @@
+\begin{picture}(0,0)%
+\includegraphics{118curso07a.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2654,2479)(294,-1933)
+\put(2386,-106){\makebox(0,0)[lb]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$M$}%
+}}}
+\put(2656,-916){\makebox(0,0)[b]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$N$}%
+}}}
+\put(1306,-1816){\makebox(0,0)[b]{\smash{\SetFigFont{25}{30.0}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$\sigma_{xx}$}%
+}}}
+\end{picture}

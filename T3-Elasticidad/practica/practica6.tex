@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumerate}
+%\documentstyle[12pt,bezier]{articulo}
+\setlength{\textheight}{235mm}
+\setlength{\textwidth}{168mm}
+\setlength{\oddsidemargin}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+\mbox{}\vspace*{-45mm}
+
+{\centering
+{\small\sc Escuela Técnica Superior de Ingenieros de Caminos, Canales y
+Puertos (Madrid)}\\*[4mm]
+{\Large\bf Método de los Elementos Finitos}\\*[4mm]
+PRÁCTICA 6: Elasticidad lineal (modelos axisimétricos)\\*[4mm]
+}
+%%%%%
+\noindent
+Obtener mediante un modelo de elementos finitos axisimétrico
+el campo de desplazamientos y la distribución de tensiones radiales y
+circunferenciales en la pared de un cilindro sometido a presión interna $p$.
+El radio
+interior del cilindro es $a=0.5$ m., el radio exterior $b=1.0$ m. y
+la presión $p=3 \cdot 10^8$ Pa. Considerar un material elástico lineal con
+módulo de elasticidad $E=2.1\cdot 10^{11}$ y coeficiente de Poisson $\nu=0.3$.
+Comparar los resultados obtenidos con la solución analítica:
+\begin{align}
+\sigma_{rr}&=-p \frac{{( b/r) }^2 -1}
+{{( b/a)}^2 -1} \\
+\sigma_{\theta \theta}&=
+p \frac{{( b/r) }^2 +1}
+{{( b/a)}^2 -1} \\
+\sigma_{zz}&=\nu(\sigma_{rr}+\sigma_{\theta \theta})
+=\nu p \frac{2}
+{{( b/a)}^2 -1} \\
+u_r&=\frac{(1+\nu)p}{E [{(b/a)}^2-1 ]} \left [ 
+(1-2 \nu) r +\frac{b^2}{r} \right ]
+\end{align}
+\end{document}

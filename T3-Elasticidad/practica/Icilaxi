@@ -1,0 +1,42 @@
+feap * * Practica #3 Cilindro con presion interna. Mod. axisim
+,,,2,2,4
+
+!a = radio interno 
+!b = radio externo
+!p = presion interior 
+!c = numero de elementos circunferenciales
+!r = numero de capas radiales 
+
+para
+a=0.5
+b=1.0
+p=3.0d8
+h=0.1
+c=1
+r=10
+
+block
+cart,r,c,,,,,,
+1,  a,0.0
+2,  b,0.0
+3,  b,(b-a)/r
+4,  a,(b-a)/r
+
+ebou
+2,0.0,0,1
+2,(b-a)/r,0,1
+
+efor
+1,a,p*a*(b-a)/r/2,0.0
+
+mate,1
+solid
+small deformation
+axis
+elastic,isotropic,2.1e11,0.3
+
+end
+
+interactive
+
+stop
