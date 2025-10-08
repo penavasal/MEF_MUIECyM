@@ -1,0 +1,27 @@
+\begin{picture}(0,0)%
+\includegraphics{118curso00a.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2210,2482)(28,-1693)
+\put(1856,214){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$y$}%
+}}}
+\put(2061,624){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$z$}%
+}}}
+\put(2126,444){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$x$}%
+}}}
+\put(1441,-961){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$y$}%
+}}}
+\put(1036,-556){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$z$}%
+}}}
+\put(946,-1411){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$b(z)$}%
+}}}
+\put(811,-1051){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color{ctexto}$x$}%
+}}}
+\end{picture}

@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+% Use preview.sty to crop the page
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+%\usepackage{xifthen}
+%\usetikzlibrary{arrows,shapes}
+\setlength\PreviewBorder{2pt}%
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw[rounded corners, very thick] (0,0) rectangle ++ (24,1.0);
+% Apoyo extremo izquierdo
+\draw[rounded corners, very thick] (0,-1) -- (1,-1) -- (0.5,0) -- cycle;
+\draw[cap=round, very thick] (-0.25,-1) --++ (1.5,0);
+\draw[cap=round, very thick] (-0.25,-1.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (0.,-1.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (0.25,-1.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (0.5,-1.25) --+ (0.25,0.25);
+\draw[cap=round, very thick] (0.75,-1.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (1.0,-1.25) --++ (0.25,0.25);
+
+% Apoyo extremo derecho
+\draw[rounded corners, very thick] (23,-1) -- (24,-1) -- (23.5,0) -- cycle;
+\draw[cap=round, very thick] (22.75,-1.25) --++ (1.5,0);
+\draw[cap=round, very thick] (22.75,-1.5) --++ (0.25,0.25);
+\draw[cap=round, very thick] (23.,-1.5) --++ (0.25,0.25);
+\draw[cap=round, very thick] (23.25,-1.5) --++ (0.25,0.25);
+\draw[cap=round, very thick] (23.5,-1.5) --+ (0.25,0.25);
+\draw[cap=round, very thick] (23.75,-1.5) --++ (0.25,0.25);
+\draw[cap=round, very thick] (24.0,-1.5) --++ (0.25,0.25);
+\draw[very thick] (23.25,-1.125) circle (0.125);
+\draw[very thick] (23.75,-1.125) circle (0.125);
+% Apoyo de pilares
+\draw[very thick] (12,-.5) circle (0.5);
+\draw[cap=round, very thick] (11.25,-1.) --++ (1.5,0);
+\draw[rounded corners, very thick] (11.75,-1) rectangle  ++ (0.5,-8.0);
+\draw[cap=round, very thick] (11.25,-9.0) --++ (1.5,0.);
+\draw[cap=round, very thick] (11.25,-9.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (11.50,-9.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (11.75,-9.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (12.0,-9.25) --+ (0.25,0.25);
+\draw[cap=round, very thick] (12.25,-9.25) --++ (0.25,0.25);
+\draw[cap=round, very thick] (12.50,-9.25) --++ (0.25,0.25);
+%
+\draw[->, color=red, very thick] (0.5,0.5) --++ (2,0) node[right,color=black,font=\huge] {$x$};
+\draw[->, color=red, very thick] (0.5,0.5) --++ (0,2.0) node[above,color=black,font=\huge] {$y$};
+\draw (6.0,-0.5) node[below,color=black,font=\huge] {$L_1$};
+\draw (18.0,-0.5) node[below,color=black,font=\huge] {$L_2$};
+\draw (12.0,-4.5) node[right,color=black,font=\huge] {$H_1$};
+%
+\draw[<-, color=blue, very thick] (5.6,1.0) --++ (0.0,2.0) node[above, color=blue,font=\huge] {$P$};
+\draw[<-, color=blue, very thick] (4.8,1.0) --++ (0.0,2.0) node[above, color=blue,font=\huge] {$P$};
+\draw[<-, color=blue, very thick] (6.4,1.0) --++ (0.0,2.0) node[above, color=blue,font=\huge] {$P$};
+\draw[<-, color=blue, very thick] (7.2,1.0) --++ (0.0,2.0) node[above, color=blue,font=\huge] {$P$};
+\draw[thick, color=blue] (6.0,0.5) circle (0.25) node[color=blue] {+} node[right, color=blue, font=\huge] {Q};
+\draw[thick, color=blue] (18.0,0.5) circle (0.25) node[color=blue] {+} node[right, color=blue, font=\huge] {Q};
+\draw[<-, color=blue, very thick] (7.6,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (8.693,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (9.786,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (10.879,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (11.972,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (13.065,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (14.158,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (15.251,1.0) --++(0.0,0.75) node [above, color=blue, font=\huge] {$q$};
+\draw[<-, color=blue, very thick] (16.344,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (17.437,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (18.530,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (19.623,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (20.716,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (21.809,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (22.902,1.0) --++(0.0,0.75);
+\draw[<-, color=blue, very thick] (24.0,1.0) --++(0.0,0.75);
+\draw[color=blue, very thick] (7.6,1.75) --++ (16.4,0.0);
+
+\draw[<-, color=blue, very thick] (0.0,1.0) --++ (0.0,0.75);
+\draw[<-, color=blue, very thick] (1.1,1.0) --++ (0.0,0.75);
+\draw[<-, color=blue, very thick] (2.2,1.0) --++ (0.0,0.75) node[above, color=blue, font=\huge] {$q$};
+\draw[<-, color=blue, very thick] (3.3,1.0) --++ (0.0,0.75);
+\draw[<-, color=blue, very thick] (4.4,1.0) --++ (0.0,0.75);
+\draw[color=blue, very thick] (0.0,1.75) --++ (4.4,0.0);
+
+%\node[draw,circle,font=\footnotesize] at (25.0,0.5) {+};
+\end{tikzpicture}
+
+
+
+
+\end{document}

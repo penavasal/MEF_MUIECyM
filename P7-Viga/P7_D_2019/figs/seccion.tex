@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+% Use preview.sty to crop the page
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+%\usepackage{xifthen}
+%\usetikzlibrary{arrows,shapes}
+\setlength\PreviewBorder{2pt}%
+\begin{document}
+
+\begin{tikzpicture}
+	\draw[color=black, thick, fill=brown!30] (-4.0,2.0) -- (4.0,2.0) -- (4.0,1.7) -- (2.5,1.6) -- (2.0,0.0) -- (-2.0,0.0) -- (-2.5,1.6) -- (-4.0,1.7) -- cycle;
+	\draw[color=black, thick,fill=white] (-1.95,1.65) -- (-1.8,1.75) -- (1.8,1.75) -- (1.95,1.65) -- (1.6,0.4) -- (-1.6,0.4) -- cycle;
+	\draw[->, color=red, very thick] (0.0,1.0) --++ (1.5,0) node[below,color=black] {1};
+	\draw[->, color=red, very thick] (0.0,1.0) --++ (0,1.5) node[above,color=black] {2};
+	\draw (0,-0.5) node[below, color=black, font=\huge] {$A,I_1,I_2,J,E,G,\rho$};
+\end{tikzpicture}
+
+
+
+
+\end{document}

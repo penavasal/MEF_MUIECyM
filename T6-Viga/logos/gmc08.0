@@ -1,0 +1,86 @@
+%!PS
+%%BoundingBox: 152 600 348 767 
+%%Creator: MetaPost
+%%CreationDate: 2001.03.27:1122
+%%Pages: 1
+%*Font: cmr10 32.86171 9.96265 43:882
+%%EndProlog
+%%Page: 1 1
+ 0.6 0 0 setrgbcolor 0 0.5 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 187.04251 683.34018 moveto
+267.19798 763.49571 lineto
+347.35344 683.34018 lineto
+267.19798 603.18471 lineto
+ closepath
+gsave fill grestore stroke
+newpath 187.04251 683.34018 moveto
+267.19798 763.49571 lineto
+347.35344 683.34018 lineto
+267.19798 603.18471 lineto
+ closepath stroke
+ 0.58824 setgray 0 1.12 dtransform truncate idtransform setlinewidth pop
+newpath 154.91849 683.684 moveto
+235.07394 763.83948 lineto
+315.22939 683.684 lineto
+235.07394 603.52853 lineto
+ closepath stroke
+ 1 setlinecap
+newpath 251.10504 747.80835 moveto
+170.94957 667.6529 lineto stroke
+newpath 267.13612 731.77725 moveto
+186.98067 651.62183 lineto stroke
+newpath 283.16722 715.74619 moveto
+203.01176 635.59073 lineto stroke
+newpath 299.1983 699.71512 moveto
+219.04285 619.55966 lineto stroke
+newpath 170.94957 699.71512 moveto
+251.10504 619.55966 lineto stroke
+newpath 186.98067 715.74619 moveto
+267.13612 635.59073 lineto stroke
+newpath 203.01176 731.77725 moveto
+283.16722 651.62183 lineto stroke
+newpath 219.04285 747.80835 moveto
+299.1983 667.6529 lineto stroke
+ 0 5.67 dtransform truncate idtransform setlinewidth pop
+newpath 154.91849 683.684 moveto 0 0 rlineto stroke
+newpath 170.94957 667.6529 moveto 0 0 rlineto stroke
+newpath 186.98067 651.62184 moveto 0 0 rlineto stroke
+newpath 203.01176 635.59073 moveto 0 0 rlineto stroke
+newpath 219.04285 619.55966 moveto 0 0 rlineto stroke
+newpath 235.07394 603.52853 moveto 0 0 rlineto stroke
+newpath 170.94957 699.71512 moveto 0 0 rlineto stroke
+newpath 186.98067 683.684 moveto 0 0 rlineto stroke
+newpath 203.01176 667.6529 moveto 0 0 rlineto stroke
+newpath 219.04285 651.62184 moveto 0 0 rlineto stroke
+newpath 235.07394 635.59073 moveto 0 0 rlineto stroke
+newpath 251.10504 619.55966 moveto 0 0 rlineto stroke
+newpath 186.98067 715.74617 moveto 0 0 rlineto stroke
+newpath 203.01176 699.71512 moveto 0 0 rlineto stroke
+newpath 219.04285 683.684 moveto 0 0 rlineto stroke
+newpath 235.07394 667.6529 moveto 0 0 rlineto stroke
+newpath 251.10504 651.62184 moveto 0 0 rlineto stroke
+newpath 267.13612 635.59073 moveto 0 0 rlineto stroke
+newpath 203.01176 731.77725 moveto 0 0 rlineto stroke
+newpath 219.04285 715.74617 moveto 0 0 rlineto stroke
+newpath 235.07394 699.71512 moveto 0 0 rlineto stroke
+newpath 251.10504 683.684 moveto 0 0 rlineto stroke
+newpath 267.13612 667.6529 moveto 0 0 rlineto stroke
+newpath 283.16722 651.62184 moveto 0 0 rlineto stroke
+newpath 219.04285 747.80832 moveto 0 0 rlineto stroke
+newpath 235.07394 731.77725 moveto 0 0 rlineto stroke
+newpath 251.10504 715.74617 moveto 0 0 rlineto stroke
+newpath 267.13612 699.71512 moveto 0 0 rlineto stroke
+newpath 283.16722 683.684 moveto 0 0 rlineto stroke
+newpath 299.1983 667.6529 moveto 0 0 rlineto stroke
+newpath 235.07394 763.83948 moveto 0 0 rlineto stroke
+newpath 251.10504 747.80832 moveto 0 0 rlineto stroke
+newpath 267.13612 731.77725 moveto 0 0 rlineto stroke
+newpath 283.16722 715.74617 moveto 0 0 rlineto stroke
+newpath 299.1983 699.71512 moveto 0 0 rlineto stroke
+newpath 315.22939 683.684 moveto 0 0 rlineto stroke
+ 0.97647 setgray
+gsave [0.5145 0.5145 -0.8575 0.8575 302.99652 642.9409 ] concat 0 0 moveto
+(GMC) cmr10 32.86171 fshow grestore
+showpage
+%%EOF

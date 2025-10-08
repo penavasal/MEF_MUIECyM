@@ -1,0 +1,44 @@
+feap
+,,,3,6,2
+
+para
+n=10
+a=0.12
+Ix=1.5e-4
+Iy=1.0
+P=0.0
+J=1.0
+l=6.0
+pi=3.1415926535897
+lx=l*cos(pi/4.0d0)
+lz=l*sin(pi/4.0d0)
+f=-1.0e3
+fx= f*cos(pi/4.0d0)
+fz=-f*sin(pi/4.0d0)
+
+coor
+  1,1,0.0,0.0,0.0
+n+1, , lx,0.0, lz
+
+elem
+1,1,1,1,2
+n, ,1,n,n+1
+
+boundary
+1,0,1,1,1,1,1,1
+
+forc
+n+1,,fx,0.0,fz,0.0,0.0
+
+mate,1
+frame
+shea,off
+refe,vect,1,0,-1
+elas,,3.5e10,0.2
+cros,,a,Ix,Iy,P,J
+
+end
+
+inte
+
+stop

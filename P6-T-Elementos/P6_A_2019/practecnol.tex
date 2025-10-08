@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{bm}
+\setlength{\textheight}{235mm}
+\setlength{\textwidth}{168mm}
+\setlength{\oddsidemargin}{0pt}
+\pagestyle{empty}
+
+\begin{document}
+\mbox{}\vspace*{-45mm}
+
+{\centering
+{\small\sc Escuela Técnica Superior de Ingenieros de Caminos, Canales y
+Puertos (Madrid)}\\*[4mm]
+{\Large\bf Método de los Elementos Finitos}\\*[4mm]
+PRÁCTICA 6. Tecnología de elementos. \\*[4mm]
+}
+\vspace{3mm}
+Se considera una cubierta en forma de bóveda cilíndrica que tiende un arco de
+$80^{\circ}$ (ver figura). Las dimensiones son $R=25$ m, $L=50$ m, y espesor
+$t=0.25$ m. El material es elástico con módulo de Young $E=4.32\cdot
+10^8\,\text{N/m$^2$}$ y coeficiente de Poisson $\nu=0$.
+
+\centerline{\includegraphics{scordelis}}
+
+Los dos extremos curvos están apoyados sobre diafragmas rígidos que impiden
+únicamente los desplazamientos en dirección vertical y permiten los
+desplazamientos en horizontal, mientras que
+los bordes laterales rectos están libres. El conjunto está sometido a una carga
+gravitatoria vertical uniforme, siendo el peso específico del material igual
+a $360\,\text{N/m$^3$}$.
+
+Se desea conocer el desplazamiento vertical en el punto medio del borde
+libre\footnote{El valor que está reportado por diversos autores empleando
+elementos lámina es $0.3024$ m. (Bóveda de Scordelis-Lo)} y la distribución de
+esfuerzos en la cubierta
+a lo largo de las lineas de puntos de la figura. Para ello se realizarán los
+siguientes modelos de elementos finitos:
+\begin{enumerate}
+\item Modelo de elementos sólidos isoparamétricos.
+\item Modelo de elementos sólidos de ocho nodos con formulación mixta.
+\item Modelo de elementos sólidos de ocho nodos con formulación de 
+deformaciones mejoradas supuestas.
+\end{enumerate}
+\end{document}

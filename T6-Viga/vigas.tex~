@@ -1,0 +1,1195 @@
+% Modificado: 2005 ene 31 - 15:38
+\documentclass[landscape]{slides}
+% --------------------------------------------------------------------------
+\newcommand{\acolor}{0}% proyección: 1, impresión: 0
+% --------------------------------------------------------------------------
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{texpause}
+\usepackage{ifthen}
+\usepackage{enumitem}
+% --------------------------------------------------------------------------
+\newif \ifpdf
+    \ifx \pdfoutput \undefined
+        \pdffalse
+    \else
+        \pdftrue
+\fi
+\makeatother
+\ifpdf
+  \usepackage[pdftex]{graphicx}
+  \usepackage{eps2pdf}
+  \usepackage[pdftex]{hyperref}
+  \hypersetup{%
+      pdftitle={Curso postgrado MEF 2004 - Vigas},
+      pdfkeywords = {Elementos Finitos, Mecánica Computacional},
+      pdfauthor = {Jose M.ª Goicolea},
+      %pdfpagemode = {FullScreen}
+      pdfpagemode = None,
+      baseurl = {file:/home/goico/demos/}
+      %menucolor=cyan
+  }%
+\else
+  \usepackage[dvipdfm]{graphicx}
+  \usepackage[dvipdfm]{hyperref}
+  \hypersetup{%
+      pdftitle={Curso postgrado MEF 2004 - Vigas},
+      pdfkeywords = {Elementos Finitos, Mecánica Computacional},
+      pdfauthor = {Jose M.ª Goicolea},
+      %pdfpagemode = {FullScreen}
+      pdfpagemode = None,
+      baseurl = {file:/home/goico/demos/}
+      %menucolor=cyan
+  }%
+\fi
+% --------------------------------------------------------------------------
+\ifthenelse{\equal{\acolor}{1}}%
+  {
+   \definecolor{cfondo}{rgb}{0.3,0.3,0.6}
+   %\definecolor{cfondo}{rgb}{0,0,0.3}
+   \definecolor{ctitulo}{rgb}{1,0.6,0.6} 
+   \definecolor{cemph}{rgb}{0.6,1,0.6}
+   \definecolor{citem}{rgb}{0.5,0.5,0.5}
+   \definecolor{ctexto}{rgb}{1,1,1}
+   \definecolor{bgblue}{rgb}{0.03,0.26,0.36}
+   \hypersetup{menucolor=cyan,colorlinks=true}
+  }
+  {
+   \definecolor{cfondo}{rgb}{1,1,1}
+   \definecolor{ctitulo}{rgb}{0,0,1}
+   \definecolor{cemph}{rgb}{0,0,1}
+   \definecolor{citem}{rgb}{0.5,0.5,0.5}
+   \definecolor{ctexto}{rgb}{0,0,0}
+   \renewcommand{\pause}{}
+   \hypersetup{menucolor=white,colorlinks=false}
+  }
+\pagecolor{cfondo}
+\color{ctexto}
+%..............................................................................
+\newcommand{\cemph}[1]{\textcolor{cemph}{#1}}
+\newcommand{\cuadrado}{\tiny\textcolor{citem}{$\blacksquare$}}
+\newcommand{\puntogordo}{\textcolor{citem}{$\bullet$}}
+\newcommand{\dr}{\rm d}
+\newcommand{\eqdef}{\stackrel{\rm def}{=}}
+%------------------------------------------------------------------------------
+\setlength{\topmargin}{-25mm}
+\setlength{\textheight}{185mm}
+\textwidth 235mm \hoffset -5mm
+%------------------------------------------------------------------------------
+\def\lista{\list
+        {$\bullet$}{\topsep=0pt \itemsep=0pt}
+}
+\let\endlista=\endlist
+\DeclareMathOperator{\diverg}{div}
+\newcommand{\trebol}{\textcolor{SpringGreen}{$\clubsuit$}\ }
+\newcommand{\pica}{\textcolor{blue}{$\spadesuit$}\ }
+\newcommand{\carreau}{\textcolor{magenta}{$\diamondsuit$}\ }
+\newcommand{\corazon}{\textcolor{red}{$\heartsuit$}\ }
+\newcommand{\bul}{$\bullet$\ }
+\let\club=\trebol
+\let\diamante=\carreau
+\let\heart=\corazon
+\let\spade=\pica
+%------------------------------------------------------------------------------
+\newcommand{\marcas}{
+ \setlength{\unitlength}{1mm}
+ \begin{picture}(0,0)
+  \put(0,11){\parbox{\linewidth}{%
+   \centerline{
+   \tiny
+   \textbf{\seccion} \hfill \rightheader
+   }
+  \vspace{2mm}\hrule}}
+  \put(0,-180){\parbox{\linewidth}{%
+  \hrule\vspace{4mm}
+  \centerline{ 
+   {\tiny\Acrobatmenu{FirstPage}{$\blacktriangleleft$}
+   \Acrobatmenu{PrevPage}{$\triangleleft$}\hspace{5mm}
+   \footer
+   \hspace{5mm}\Acrobatmenu{NextPage}{$\triangleright$}
+   \Acrobatmenu{LastPage}{$\blacktriangleright$}}
+  }
+ }}
+ \end{picture}
+}
+%..............................................................................
+\newcommand{\titulo}[1]{%
+ \centerline{\Large\bf\textcolor{ctitulo}{#1}}\par
+}
+%..............................................................................
+\selectspanish
+%------------------------------------------------------------------------------
+\newcommand{\seccion}{}
+\newcommand{\rightheader}{
+  J.M. Goicolea / F.Gabaldón, 3 de febrero de 2005
+}
+\newcommand{\footer}{%
+  Modelos Estructurales: Vigas
+}
+%------------------------------------------------------------------------------
+\title{
+\textcolor{ctitulo}{
+ \bf Modelos Estructurales: Vigas}
+ }
+\author{
+{\sl José M.ª Goicolea / Felipe Gabaldón}\\[5ex]
+{\small 
+Grupo de Mecánica Computacional\\
+Depto. Mecánica Medios Continuos y Teoría Estructuras\\
+E.T.S. Ingenieros de Caminos, UPM\\}
+\url{http://w3.mecanica.upm.es}}
+\date{Madrid, 3/02/2005}
+
+\begin{document}
+
+{\pagestyle{empty}
+\begin{slide}
+{\setlength{\unitlength}{1mm}
+\begin{picture}(0,0)
+  \put(0,11){\parbox{\linewidth}{%
+  \parbox{0.18\textwidth}{%
+   \includegraphics[width=0.8\linewidth]{logos/upm}
+  }
+  \hfill
+  \parbox{0.25\textwidth}{%
+   \includegraphics[width=\linewidth]{logos/gmc08.0}
+  }
+  \hfill
+  \parbox{0.18\textwidth}{%
+   \includegraphics[width=0.7\linewidth]{logos/caminos}
+  } } }
+  \put(0,-160){\parbox{\linewidth}{%
+  \centerline{\tiny 
+   \Acrobatmenu{FullScreen}{$\diamondsuit$}\hspace{5mm}
+   \Acrobatmenu{NextPage}{$\triangleright$}
+   \Acrobatmenu{LastPage}{$\blacktriangleright$}\hspace{5mm}
+   \Acrobatmenu{Quit}{$\otimes$}}
+  }}
+\end{picture}
+}
+
+\maketitle
+\end{slide}
+}
+
+\setcounter{slide}{0}
+
+\begin{slide}
+\marcas
+\titulo{Bibliografía}
+\begin{itemize}[label=\pica]
+  \item N. Ottosen y H. Petersson,\\
+  \emph{Introduction to the Finite Element Method}, Prentice Hall Europe,
+  1992.
+  \item Thomas J.R. Hughes,\\
+  \emph{The Finite Element Method}, Prentice Hall, 1987. 
+  \item Eugenio Oñate,\\
+  \emph{Cálculo de Estructuras por el Método de Elementos Finitos},
+  Centro Internacional de Métodos Numéricos en Ingeniería, 1995.
+  \item Michel Géradin y Alberto Cardona,\\
+  \emph{Flexible Multibody Dynamics, A Finite Element Approach},
+  Wiley, 2001
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{VIGAS 2D: Definición de Resultantes}
+\noindent\parbox{0.48\textwidth}{
+\begin{align}
+  N&\eqdef\int_{-t/2}^{t/2} \sigma_{xx}b(z)\,\dr z;\\
+  V&\eqdef\int_{-t/2}^{t/2} \sigma_{xz}b(z)\,\dr z;\\
+  M&\eqdef-\int_{-t/2}^{t/2} z\sigma_{xx}b(z)\,\dr z.
+\end{align}
+}
+\parbox{0.50\textwidth}{
+  \hfill\input 118curso00b.pstex_t
+}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{VIGAS: Condiciones de Equilibrio}
+\noindent\parbox{0.40\textwidth}{
+\begin{align}
+  \frac{\dr N}{\dr x}+q_x&=0; \label{eq:Nq}\\
+  \frac{\dr V}{\dr x}+q_z&=0; \label{eq:Vq}\\
+  \frac{\dr M}{\dr x}+V&=0 \label{eq:MV}
+\end{align}
+}
+\parbox{0.58\textwidth}{
+  \hfill\input 118curso00c.pstex_t
+  \hspace{1ex}
+}
+\club Leyes válidas en cualquier instancia (incluso no lineal).
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Hipótesis de Bernouilli-Euler}
+\begin{enumerate}
+  \item Pieza prismática, directriz
+  \input 118curso05a.pstex_t
+  \item Secciones planas normales a directriz permanecen planas y 
+  \textcolor{red}{normales a la directriz}
+  \item Desplazamientos normales a la viga son uniformes sobre la sección, e
+  iguales a los de la directriz:
+  \begin{equation}
+    \boxed{w(x,z)=w(x).} \label{eq:wx}
+  \end{equation}
+  \item Tensión plana: 
+  \begin{equation}
+  \boxed{\sigma_{zz}=0.}
+  \end{equation}
+\end{enumerate}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Desplazamientos}
+\parbox{0.48\textwidth}{\input 118curso06a.pstex_t}\hfill%
+\parbox{0.48\textwidth}{
+\carreau Giro de sección: $\theta$ \\
+\carreau Giro de directriz: $\dfrac{\dr w}{\dr x}=w'$\\[1ex]
+\carreau Sección normal a directriz:
+\begin{gather}
+  \theta=\frac{\dr w}{\dr x};\label{eq:twx}
+\end{gather}
+\carreau Desplazamiento longitudinal:
+\begin{gather}
+\begin{split}
+  u(x,z)&=u_0(x)-z\theta\\
+  &=u_0(x)-z\frac{\dr w}{\dr x}
+\end{split}
+\label{eq:uxz}
+\end{gather}
+}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Deformaciones}
+\begin{align}
+  \text{de (\ref{eq:twx}): } &&
+  \quad\varepsilon_{xx} &=\frac{\partial u}{\partial x}
+  =\frac{d u_0}{dx}-z\frac{d^2w}{dx^2}; \label{eq:exx}
+  \\
+  \text{de (\ref{eq:wx}): } &&
+  \quad \varepsilon_{zz} &=\frac{\partial w}{\partial z}=0;
+  \\
+  \text{de (\ref{eq:uxz}): } &&
+  \quad \gamma_{xz} &\eqdef 2\varepsilon_{xz}=\frac{\partial u}{\partial z}
+  +\frac{\partial w}{\partial x}
+  =-\frac{dw}{dx}+\frac{dw}{dx}=0
+  \label{eq:gxz}
+  \\
+  && \gamma_{yz}&=\gamma_{xy}=0
+\end{align}
+\begin{itemize}[label=\heart]
+  \item No hay deformación por cortante
+  \item Hipótesis válida para vigas esbeltas: $\lambda=\dfrac{l}{t} > 20$.
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Relaciones Constitutivas: Momento}
+\parbox{0.60\textwidth}{
+\begin{gather}
+  M=-\int_{-t/2}^{t/2} z\sigma_{xx} b(z)\,dz
+\end{gather}
+de (\ref{eq:exx}):
+%  \\
+%  \text{de (\ref{eq:exx}): }\nonumber \\
+\begin{gather}
+  \sigma_{xx}=E\varepsilon_{xx}=E\left(\frac{du_0}{dx}-z\frac{d^2w}{dx}\right)
+\end{gather}}
+\hfill\parbox{0.30\textwidth}{\input 118curso07a.pstex_t}
+\begin{equation}
+  M=-E\int_{-t/2}^{t/2} z\frac{du_0}{dx} b(z)\,dz
+  +E\int_{-t/2}^{t/2} z^2\frac{d^2w}{dx^2}b(z)\,dz
+  =EI\frac{d^2w}{dx^2}
+\end{equation}
+\spade Curvatura ($w$ pequeña):
+\begin{equation}
+  \kappa=\frac{d^2w/dx^2}{\left[1+(dw/dx)^2\right]^{3/2}}
+  \approx\frac{d^2w}{dx^2}
+  \quad\Rightarrow\quad
+  \boxed{M=EI\mathcal{\kappa}}
+\end{equation}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Relaciones Constitutivas: Axil, Cortante}
+\begin{itemize}[label=\spade]
+\item Por integración de las tensiones:
+\begin{equation}
+  N=\int_{-t/2}^{t/2} \sigma_{xx} b(z)\,dz
+  =EA\frac{du_0}{dx}
+\end{equation}
+\begin{equation}
+  V=\int_{-t/2}^{t/2} \sigma_{xz} b(z)\,dz;
+\end{equation}
+\item Contradicción: de (\ref{eq:gxz}),
+\begin{equation}
+  \gamma_{xz}=0
+  \quad\Rightarrow\quad
+  \sigma_{xz}=G\gamma_{xz}=0
+  \quad\Rightarrow\quad
+  \boxed{V=0\ \text{!}}
+\end{equation}
+\item En la práctica, el cortante $V$ se calcula a partir de ecuaciones de
+equilibrio (\ref{eq:MV})
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Formulación fuerte}
+\begin{itemize}[label=\club]
+\item De (\ref{eq:MV}):
+\begin{equation*}
+  \left.
+  \begin{array}{lr}
+  (\ref{eq:MV}): & \dfrac{dM}{dx}+V=0
+  \\[1ex]
+  (\ref{eq:Vq}): & \dfrac{dV}{dx}+q=0
+  \end{array}
+  \right\}
+  \quad\Rightarrow\quad
+  \frac{d^2M}{dx^2}=q
+\end{equation*}
+\begin{equation}
+  M=EI\frac{d^2w}{dx^2}
+  \quad\Rightarrow\quad
+  \boxed{EI\frac{d^4w}{dx^4}=q}
+  \label{eq:FFb}
+\end{equation}
+(suponiendo $EI$ constante)
+\item Ecuación diferencial (4"o orden) de la \emph{elástica},
+para obtener $w(x)$
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Formulación matricial}
+\club Solución general en tramo 1--2 sin cargas intermedias $(q=0)$:
+
+\parbox{0.3\textwidth}{$\dfrac{d^4w}{dx^4}=0$}
+\hfill
+\parbox{0.6\textwidth}{\input 118curso08a.pstex_t}
+
+\club Condiciones de contorno: 
+$w_1, \left.\dfrac{dw}{dx}\right|_1,
+w_2, \left.\dfrac{dw}{dx}\right|_2$
+\begin{equation}
+  w(x)=\alpha_0+\alpha_1 x+\alpha_2 x^2+\alpha_3 x^3
+\end{equation}
+4 condiciones $\quad\Rightarrow\quad 
+\text{4 parámetros}\quad (\alpha_0, \alpha_1, \alpha_2, \alpha_3)$
+
+\club \emph{Planteamiento directo} de ecuaciones matriciales: programas de
+<<barras>>\\
+\diamante Ojo: cargas repartidas $(q\ne 0)$ precisa corrección (m. emp.)
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Formulación débil}
+\begin{itemize}[label=\club]
+\item Funciones de peso (desplazamientos virtuales) $\bar w$,
+en principio arbitrarias. De (\ref{eq:FFb}):
+\begin{equation}
+  \frac{d^2M}{dx^2}=q
+  \quad\Rightarrow\quad
+  \int_{a}^{b} \bar w\frac{d^2M}{dx^2}\,dx
+  =\int_{a}^{b} \bar w q\,dx
+  \quad\forall{\bar w}
+\end{equation}
+\item
+Integrando por partes, dos veces:
+\begin{gather}
+  -\int_a^b \frac{d\bar w}{dx}\frac{dM}{dx}\,dx
+  +\left[\bar w\frac{dM}{dx}\right]_a^b
+  =\int_a^b \bar w q\,dx
+  \nonumber
+\\  
+  \boxed{\int_a^b\frac{d^2\bar w}{dx^2}EI\frac{d^2 w}{dx^2} \,dx
+  =\int_a^b \bar w q\,dx
+  + \left[\frac{d\bar w}{dx}M\right]_a^b -\left[\bar w V\right]_a^b }
+\end{gather}
+\item $M_a, V_a, M_b, V_b$: condiciones de contorno <<naturales>>.
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Aproximación elementos finitos}
+\club Funciones de interpolación de desplazamientos, $N_i(x)$
+\begin{equation*}
+\begin{split}
+  w(x)&\approx\{\mathbf{N}\}^{\rm T}\{\mathbf{a}\}\\
+  &=\begin{bmatrix}N_1(x) & N_2(x)& \ldots & N_n(x)\end{bmatrix}
+  \begin{Bmatrix}a_1 \\ a_2 \\ \vdots \\ a_n\end{Bmatrix}
+\end{split}
+\end{equation*}
+\club Interpolación de <<deformaciones>>: $[\mathbf{B}]$
+\begin{gather}
+  \frac{d^2w}{dx^2}\approx[\mathbf{B}]\{\mathbf{a}\};
+  \\ [\mathbf{B}]=\frac{d^2}{dx^2}\{\mathbf{N}\}^{\rm T}
+  =\begin{bmatrix}\frac{d^2N_1}{dx^2}&\frac{d^2N_2}{dx^2}&\dots
+  \frac{d^2N_n}{dx^2}\end{bmatrix}
+\end{gather}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Método de Galerkin}
+\club Misma interpolación para $\bar w$ que para $w$
+\begin{equation}
+  \frac{d^2\bar w}{dx^2}\approx[\mathbf{B}]\{\mathbf{\bar a}\}
+  =\{\mathbf{\bar a}\}^{\rm T}[\mathbf{B}]^{\rm T}
+\end{equation}
+\begin{gather}
+  \int_a^b \frac{d^2 w}{dx^2} EI \frac{d^2\bar w}{dx^2}\,dx
+  \approx
+  \int_a^b \{\mathbf{\bar a}\}^{\rm T}
+  \left([\mathbf{B}]^{\rm T} EI [\mathbf{B}]\right) \{\mathbf{a}\}\,dx
+  \\
+  \int_a^b \bar w q\,dx\approx\int_a^b \{\mathbf{\bar a}\}^{\rm T}
+  \{\mathbf{N}\} q\,dx
+  =\{\mathbf{\bar a}\}^{\rm T}\{\mathbf{\mathbf{f}_{\rm int}}\}
+  \\
+  \{\mathbf{\bar a}\}^{\rm T}\Biggl[
+  \underbrace{\Biggl(\int_a^b \underbrace{[\mathbf{B}]^{\rm T}}_{(n\times 1)} EI
+  \underbrace{[\mathbf{B}]}_{(1\times
+  n)}\,dx\Biggr)}_{\displaystyle[\mathbf{K}]\ (n\times n)}
+  \{\mathbf{a}\}
+  \Biggr]
+  =
+  \{\mathbf{\bar a}\}^{\rm T}\Biggl[
+  \{\mathbf{f}_{\rm int}\}+\{\mathbf{f}_{\rm ext}\}
+  \Biggr]
+  \label{eq:FMb}
+\end{gather}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Formulación Matricial}
+\begin{itemize}[label=\club]
+\item $\{\mathbf{a}\}^{\rm T}$ arbitrarios;
+  $\{\mathbf{f}\}=\{\mathbf{f}_{\rm int}\}+\{\mathbf{f}_{\rm ext}\}$:
+\begin{gather*}
+  \boxed{[\mathbf{K}]\{\mathbf{a}\}=\{\mathbf{f}\}}
+\end{gather*}
+\begin{itemize}
+  \item $w,\frac{dw}{dx}$: cond. contorno cinemáticas o esenciales\\
+  \item $M,V$: cond. contorno estáticas o naturales
+  $(\rightarrow\{\mathbf{f}\})$
+\end{itemize}
+\item A nivel elemental, integrales en subdominio $\Omega^e$:
+\begin{gather}
+  [\mathbf{K}^e]\{\mathbf{a}^e\}=\{\mathbf{f}^e\};
+  \\
+  [\mathbf{K}]=\stackrel{numel}%
+  {\displaystyle\text{\huge\sf{A}}}
+  [\mathbf{K}^e];\quad
+  \{\mathbf{f}\}=\stackrel{numel}%
+  {\displaystyle\text{\huge\sf{A}}}
+  \{\mathbf{f}^e\}.
+\end{gather}
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Requisitos de complitud y compatibilidad}
+\begin{itemize}[label=\spade]
+\item $w(x)$ debe poder representar un movimiento rígido arbitrario
+$\left(w^0,\theta^0=\left(\frac{dw}{dx}\right)^0\right)$
+\item $w(x)$ debe poder representar deformaciones con curvatura constante
+arbitraria, $\left(\frac{d^2w}{dx^2}\right)^0=\kappa^0$.
+\\
+$\rightarrow\quad w(x)=\alpha_0+\alpha_1 x+\alpha_2 x^2+\ldots$
+\item Debe tener continuidad al menos un orden menor que las derivadas que
+aparecen en la formulación débil $(\frac{dw}{dx})$,
+\\
+$\rightarrow\quad w(x)\in C^1$
+$\quad\rightarrow\quad$ 4 condiciones: $w_a, (\frac{dw}{dx})_a,w_b, (\frac{dw}{dx})_b$. 
+\begin{equation}
+  \boxed{w(x)=\alpha_0+\alpha_1 x+\alpha_2 x^2+\alpha_3 x^3}
+\end{equation}
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Elemento con interpolación cúbica (hermítico)}
+%Grados de libertad: 
+%$ a_1=w_1,\ a_2=\left.\frac{dw}{dx}\right|_1,\ 
+%  a_3=w_2,\ a_4=\left.\frac{dw}{dx}\right|_2 $
+
+\parbox{0.48\textwidth}{\[N_1(x)=1-3\frac{x^2}{l^2}+2\frac{x^3}{l^3}\]}
+\parbox{0.35\textwidth}{\includegraphics[width=\linewidth]{118curso01.eps}}
+\parbox{0.15\textwidth}{$a_1=w_1$}
+\\
+\parbox{0.48\textwidth}{\[N_2(x)=x\left(1-2\frac{x}{l}+\frac{x^2}{l^2}\right)\]}
+\parbox{0.35\textwidth}{\includegraphics[width=\linewidth]{118curso02.eps}}
+\parbox{0.15\textwidth}{$a_2=\left.\frac{dw}{dx}\right|_1$}
+\\
+\parbox{0.48\textwidth}{\[N_3(x)=\frac{x^2}{l^2}\left(3-2\frac{x}{l}\right)\]}
+\parbox{0.35\textwidth}{\includegraphics[width=\linewidth]{118curso03.eps}}
+\parbox{0.15\textwidth}{$a_3=w_2$}
+\\
+\parbox{0.48\textwidth}{\[N_4(x)=\frac{x^2}{l}\left(\frac{x}{l}-1\right)\]}
+\parbox{0.35\textwidth}{\includegraphics[width=\linewidth]{118curso04.eps}}
+\parbox{0.15\textwidth}{$a_4=\left.\frac{dw}{dx}\right|_2$}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Matriz de rigidez}
+Integrando términos de (\ref{eq:FMb}):
+\begin{gather}
+  K_{11}^e=EI\int_0^l B_1^2\,dx;
+  \quad B_1=\frac{d^2}{dx^2}N_1(x)=-\frac{6}{l^2}+\frac{12x}{l^3};
+  \\
+  K_{11}^e=\frac{12EI}{l^3};
+  \\
+  K_{12}^e=\frac{6EI}{l^2};
+  \quad
+  K_{13}^e=-\frac{12EI}{l^3}; \ldots
+\end{gather}
+\begin{equation}
+  [\mathbf{K}^e]=\frac{12EI}{l^3}
+  \begin{pmatrix}
+  1 & l/2 & -1 & l/2 \\
+  l/2 & l^2/3 & -l/2 & l^2/6 \\
+  -1 & -l/2 & 1 & -l/2 \\
+  l/2 & l^2/6 & -l/2 & l^2/3
+  \end{pmatrix}
+\end{equation}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Matrices de cargas}
+Integrando términos de (\ref{eq:FMb}):
+\begin{equation}
+  \{\mathbf{f}^e\}
+  =
+  \underbrace{
+  \begin{Bmatrix}
+  ql/2 \\ ql^2/12 \\ ql/2 \\ -ql^2/12
+  \end{Bmatrix}
+  }_{\displaystyle \{\mathbf{f}_{\rm int}\}}
+  +
+  \underbrace{
+  \begin{Bmatrix}
+  -V_1 \\ -M_1 \\ V_2 \\ M_2
+  \end{Bmatrix}
+  }_{\displaystyle \{\mathbf{f}_{\rm ext}\}}
+\end{equation}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Hipótesis de vigas de Timoshenko}
+\begin{enumerate}
+  \item Pieza prismática, directriz
+  \input 118curso05a.pstex_t
+  \item Secciones planas normales a directriz permanecen planas, pero
+  \textcolor{red}{\emph{no necesariamente normales a la directriz.}}
+  \item Desplazamientos normales a la viga son uniformes sobre la sección, e
+  iguales a los de la directriz:
+  \begin{equation}
+    \boxed{w(x,z)=w(x).}
+    \label{eq:wxzt}
+  \end{equation}
+  \item Tensión plana: 
+  \begin{equation}
+  \boxed{\sigma_{zz}=0.}
+  \end{equation}
+\end{enumerate}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Hipótesis de vigas de Timoshenko}
+\cemph{Desplazamientos}
+\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item $\theta$: giro sección;
+  \item $\dr w/\dr x$: giro directriz (1\sptext{er} orden)
+\end{itemize}
+\parbox{0.48\textwidth}{\input 118curso09a.pstex_t}
+\parbox{0.48\textwidth}{
+\begin{equation}
+  v(x,y,z)=0
+\end{equation}
+\begin{equation}
+  u(x,z)=u_0(x)-z\theta(x)
+  \label{eq:uxzt}
+\end{equation}
+}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Deformaciones}
+\begin{align}
+  \text{de (\ref{eq:uxzt}): } &&\quad
+  \varepsilon_{xx}&=\frac{\partial u}{\partial x}
+  =\frac{d u_0}{dx}-z\frac{d\theta}{dx}
+  \\
+  \text{de (\ref{eq:wxzt}): } &&\quad
+  \varepsilon_{zz}&=\frac{\partial w}{\partial z}=0;
+  \\
+  \text{de (\ref{eq:uxzt}): } &&\quad
+  \gamma_{xz}&=2\varepsilon_{xz}=\frac{\partial u}{\partial z}+
+  \frac{\partial w}{\partial x}=-\theta+\frac{dw}{dx} \ne 0
+  \label{eq:gamma}
+  \\
+  && \gamma_{yz}&=\gamma_{xy}=0
+\end{align}
+\begin{itemize}[parsep=0pt]
+\item \emph{Sí existe} deformación por cortante $\gamma_{xz}$
+\item Deformación cortante es constante en sección (hip. Navier)
+\item Hipótesis válida para vigas moderadamente gruesas: $\lambda=\dfrac{l}{t}>8$.
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Relaciones Constitutivas}
+\spade Tensiones
+\begin{gather}
+  \sigma_{xx}=E\varepsilon_{xx}=E\frac{d u_0}{dx}-Ez\frac{d\theta}{dx}
+  \\
+  \sigma_{xz}=\tau=G\gamma_{xz}=G\left(\frac{dw}{dx}-\theta\right)
+\end{gather}
+\spade Resultantes
+\begin{gather}
+  M=\int_{-t/2}^{+t/2} -Ez^2\frac{d\theta}{dx} b(z)\,dz
+  =EI\frac{d\theta}{dx}=EI\kappa
+  \\
+  V=\int_{-t/2}^{+t/2}G\left(\frac{dw}{dx}-\theta\right) b(z) \,dz
+  =GA\left(\frac{dw}{dx}-\theta\right)
+  =GA\gamma_{xz}
+  \\
+  N=\int_{-t/2}^{+t/2} E\left(\frac{d u_0}{dx}-z\frac{d\theta}{dx}\right) b(z)\,dz
+  =EA\frac{d u_0}{dx}
+\end{gather}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Área Reducida}
+\begin{itemize}[itemsep=0pt,parsep=0pt]
+\item Según (\ref{eq:gamma}), $\gamma_{xz}=\gamma_0\ \text{(cte.)}$ en sección
+\item Exacto: distribución parabólica, sección alabeada. Igualando cortante
+($V=\int_{-t/2}^{+t/2} b(z)\gamma(z)\,dz$):
+
+\centerline{\input 118curso12a.pstex_t}
+\item Igualando energía de deformación entre ambos,
+\begin{equation*}
+  \frac{1}{2}GA^* (\gamma_0)^2 = \int_{-t/2}^{+t/2} \frac{1}{2}G b(z)
+  \gamma(z)^2\,dz
+  \quad\Rightarrow\quad A^*=\alpha A.
+\end{equation*}
+
+\item Sección rectangular:
+$ \alpha=\frac{5}{6} \quad\Rightarrow\quad A^*=\frac{5}{6} A $
+\end{itemize}
+\vfill
+\end{slide}
+
+
+\begin{slide}
+\marcas
+\titulo{Formulación Fuerte}
+\club A partir de ecuaciones de equilibrio.
+\begin{alignat}{3}
+  &\text{de (\ref{eq:MV}): }\quad
+  \frac{dM}{dx}+V&=0
+  &\quad\Rightarrow\quad&
+  EI\frac{d^2\theta}{dx^2}+V&=0
+  \label{eq:FFtM}
+  \\
+  &\text{de (\ref{eq:Vq}): }\quad
+  \frac{dV}{dx}+q&=0
+  &\quad\Rightarrow\quad&
+  GA^*\left(\frac{d^2w}{dx^2}-\frac{d\theta}{dx}\right)+q&=0
+  \label{eq:FFtV}
+\end{alignat}
+\club Intervienen derivadas segundas de $w, \theta$.
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Formulación débil (momentos)}
+Tomando en primer lugar la ecuación del momento (\ref{eq:FFtM}):
+\begin{equation}
+  \int_{1}^{2} \bar\theta\,\left(EI\frac{d^2\theta}{dx^2}\right)\,dx
+  + \int_{1}^{2} \bar\theta\,\overbrace{V}^{GA^* \gamma_{xz}}\,dx
+  =0 \quad\forall{\bar\theta}
+\end{equation}
+integrando por partes,
+\begin{multline}
+  -\int_1^2 \frac{d\bar\theta}{dx} EI \frac{d\theta}{dx}\,dx
+  +\Bigl[\bar\theta\,EI\frac{d\theta}{dx} \Bigr]_1^2
+  \\
+  +\int_1^2 \bar\theta GA^*\left(\frac{dw}{dx}-\theta\right)\,dx
+  =0 \quad\forall{\bar\theta}
+  \label{eq:FDMt}
+\end{multline}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Formulación débil (cortantes)}
+Haciendo ahora lo mismo con la del cortante (\ref{eq:FFtV}):
+\begin{equation}
+  \int_{1}^{2}\bar w\,GA^*\left(\frac{d^2w}{dx^2}
+  -\frac{d\theta}{dx}\right)\,dx
+  +\int_{1}^{2} q \bar w\,dx
+  =0 \quad\forall \bar w
+\end{equation}
+Integrando por partes:
+\begin{multline}
+  -\int_{1}^{2} \frac{d\bar w}{dx} GA^* \left(\frac{d w}{dx}-\theta\right)\,dx+
+  \Bigl[\bar w\,GA^*\left(\frac{d w}{dx}-\theta\right) \Bigr]_1^2
+  \\
+  +\int_1^2 \bar w q\,dx
+  =0 \quad\forall \bar w
+  \label{eq:FDVt}
+\end{multline}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Formulación débil (conjunta)}
+Sumando (\ref{eq:FDMt}) y (\ref{eq:FDVt}):
+\begin{multline}
+  \int_{1}^{2} 
+  \underbrace{\left(\frac{d\bar w}{dx}-\bar\theta\right)}_{\bar\gamma} GA^* 
+  \underbrace{\left(\frac{d w}{dx}-\theta\right)}_{\gamma}\,dx
+  +\int_1^2 \underbrace{\frac{d\bar\theta}{dx}}_{\displaystyle \bar\kappa} 
+  EI \underbrace{\frac{d\theta}{dx}}_{\displaystyle \kappa}\,dx
+  \\
+  =\Biggl[\bar w\, \underbrace{GA^*\left(\frac{d w}{dx}-\theta\right)}%
+  _{\displaystyle V_i}\Biggr]_1^2
+  +\Biggl[\bar\theta\,\underbrace{EI\frac{d\theta}{dx}}_{\displaystyle M_i}\Biggr]_1^2
+  + \int_1^2 \bar w q\,dx
+  \quad\forall (\bar w,\bar\theta)
+  \label{eq:FDt}
+\end{multline}
+\club Intervienen derivadas primeras de $w,\bar w,\theta,\bar\theta$
+$\Rightarrow$ requiere tan solo aproximación $C^0$
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Aproximación Elementos Finitos (Galerkin)}
+\club La formulación débil (\ref{eq:FDt}) puede escribirse:
+\begin{multline*}
+  \delta W = 
+  \int_1^2 \bar\gamma\, GA^* \,\gamma \,dx
+  +\int_1^2 \bar\kappa\, EI\, \kappa\,dx
+  -\int_1^2 \bar w\, q\,dx
+  -\left[\bar w\, V\right]_1^2
+  -\left[\bar\theta\, M\right]_1^2
+  \\
+  =0 \quad\forall(\bar\gamma,\bar\kappa)
+\end{multline*}
+\club Funciones de interpolación lineales (continuidad $C^0$):
+\begin{align*}
+  w^h(x)=w_1 N_1(x)+w_2 N_2(x);\\
+  \theta^h(x)=\theta_1 N_1(x)+\theta_2 N_2(x);
+\end{align*}
+\parbox{0.49\textwidth}{\input 118curso10a.pstex_t}
+\parbox{0.49\textwidth}{\input 118curso11a.pstex_t}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Interpolación de Deformaciones}
+\begin{gather*}
+  \kappa^h=\theta_1\frac{d N_1}{dx}+\theta_2\frac{d N_2}{dx}
+  =\underbrace{\begin{bmatrix} 0 & -1/l & 0 & 1/l \end{bmatrix}%
+  }_{\displaystyle[\mathbf{B}_f^e]}
+  \begin{Bmatrix} w_1 \\ \theta_1 \\ w_2 \\ \theta_2 \end{Bmatrix}
+  \ \text{(cte.)}
+  \\
+  \begin{split}
+  \gamma^h&=\left(\frac{dw^h}{dx}-\theta^h\right)
+  =w_1\frac{d N_1}{dx}-\theta_1 N_1+w_2\frac{d N_2}{dx}-\theta_2 N_2
+  \\
+  &=\underbrace{\begin{bmatrix} -1/l & -1+x/l & 1/l & -x/l \end{bmatrix}%
+  }_{\displaystyle[\mathbf{B}_c^e]}
+  \begin{Bmatrix} w_1 \\ \theta_1 \\ w_2 \\ \theta_2 \end{Bmatrix}
+  \ \text{(lineal)}
+  \end{split}
+\end{gather*}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Matrices elementales (1)}
+\begin{equation*}
+  \delta W^{h,e} = \{\bar{\mathbf{a}}^e\}^{\rm T} \Biggl[ 
+  \Bigl([\mathbf{K}_f^e] + [\mathbf{K}_c^e] \Bigr) \{\mathbf{a}^e\}
+  - \{\mathbf{f}_{\rm int}^e\} - \{\mathbf{f}_{\rm ext}^e\} \Biggr] 
+\end{equation*}
+\begin{gather*}
+  [\mathbf{K}_f^e]=\int_1^2 [\mathbf{B}_f^e]^{\rm T} EI [\mathbf{B}_f^e]\,dx
+  ;\qquad
+  [\mathbf{K}_c^e]=\int_1^2 [\mathbf{B}_c^e]^{\rm T} GA^* [\mathbf{B}_c^e]\,dx
+  \\
+  \{\mathbf{f}_{\rm int}^e\} = \int_1^2 \{\mathbf{N}^e\} q(x)\,dx
+  ;\qquad
+  \{\mathbf{f}_{\rm ext}^e\} = \begin{Bmatrix} -V_1 \\ -M_1 \\ V_2 \\ M_2 \end{Bmatrix}
+\end{gather*}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Matrices elementales (2)}
+
+Integrando analíticamente:
+
+\begin{align*}
+  [\mathbf{K}_f^e] &= \left(\frac{EI}{l}\right)^e
+  \begin{pmatrix}
+  0 & 0 & 0 & 0 \\
+  0 & 1 & 0 & -1 \\
+  0 & 0 & 0 & 0 \\
+  0 & -1 & 0 & 1
+  \end{pmatrix}
+  \quad&&\text{\parbox{22ex}{(constante: 1 pto. Gauss)}}
+  \\
+  [\mathbf{K}_c^e] &= \left(\frac{GA^*}{l}\right)^e
+  \begin{pmatrix}
+  1 & l/2 & -1 & l/2 \\
+  l/2 & l^2/3 & -l/2 & l^2/6 \\
+  -1 & -l/2 & 1 & -l/2 \\
+  l/2 & l^2/6 & -l/2 & l^2/3
+  \end{pmatrix}
+  \quad&&\text{\parbox{22ex}{(cuadrático: 2 ptos. Gauss)}}
+\end{align*}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Deformación de ménsula}
+\club Viga Bernouilli $(EI)$: $w_f=P\dfrac{l^3}{3EI}$
+\hfill\parbox{0.42\textwidth}{\input 118curso13a.pstex_t\hfill}
+
+\club Viga Cortante $(GA^*)$: $w_c=P\dfrac{l}{GA^*}$
+\hfill\parbox{0.42\textwidth}{\input 118curso14a.pstex_t\hfill}
+
+\club Viga Timoshenko $(EI, GA^*)$:\\
+$w_t=P\left(\dfrac{l^3}{3EI}+\dfrac{l}{GA^*} \right)$
+\hfill\parbox{0.42\textwidth}{\input 118curso15a.pstex_t\hfill}
+
+(Más flexible que viga Bernouilli)
+
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Bloqueo de viga (Timoshenko) esbelta}
+\club Sección rectangular $b\times t$: 
+$I=\frac{1}{12}bt^3;\ GA^*=\frac{5}{6} bt$
+\begin{gather*}
+  K_f=\frac{3EI}{l^3};\quad
+  K_c=\frac{GA^*}{l}
+  \\
+  \frac{K_f}{K_c}=\frac{3}{5}(1+\nu)\frac{1}{\lambda^2}
+  \qquad \left(\lambda=\frac{l}{t}\right)
+  \\
+  \text{en el límite}\ \lambda\rightarrow\infty
+  \quad\Rightarrow\quad
+  \frac{K_f}{K_c}\rightarrow 0,
+  \ \theta=\frac{dw}{dx}
+\end{gather*}
+\centerline{\input 118curso16a.pstex_t}
+$\theta_0=0 \ \Rightarrow\ \left.\dfrac{dw}{dx}\right|_0=0
+\ \Rightarrow\ \text{($w$ lineal en elto.)}\ w_1=0,\ \theta_1=0\ \Rightarrow\ \left.\dfrac{dw}{dx}\right|_1=0,
+\ldots$ \quad\fbox{\color{red}¡Bloqueo!}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Ejemplo: ménsula con 1 elemento (1)}
+\parbox{0.35\textwidth}{1 elemento viga de Timoshenko}
+\hfill
+\parbox{0.60\textwidth}{\hfill\input 118curso17a.pstex_t}
+\begin{equation*}
+  \begin{pmatrix}
+  \frac{GA^*}{l} & \frac{GA^*}{2} & -\frac{GA^*}{l} & \frac{GA^*}{2} \\
+                 & \frac{GA^*}{3}l+\frac{EI}{l} & -\frac{GA^*}{2} & 
+		 \frac{GA^*}{6}l-\frac{EI}{l} \\
+                 & & \frac{GA^*}{l} & -\frac{GA^*}{2} \\
+		 & & & \frac{GA^*}{3}l+\frac{EI}{l}
+  \end{pmatrix}
+  \begin{Bmatrix} 0 \\ 0 \\ w_2 \\ \theta_2 \end{Bmatrix}
+  =
+  \begin{Bmatrix} V_1 \\ M_1 \\ P \\ 0 \end{Bmatrix}
+\end{equation*}
+Eliminando las ecuaciones de $(V_1, M_1)$:
+\begin{equation*}
+  \begin{pmatrix}
+  \frac{GA^*}{l} & -\frac{GA^*}{2} \\
+  -\frac{GA^*}{2} & \frac{GA^*}{3}l+\frac{EI}{l}
+  \end{pmatrix}
+  \begin{Bmatrix} w_2 \\ \theta_2 \end{Bmatrix}
+  =
+  \begin{Bmatrix} P \\ 0 \end{Bmatrix}
+\end{equation*}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Ejemplo: ménsula con 1 elemento (2)}
+Invirtiendo:
+\begin{gather*}
+  \begin{Bmatrix} w_2 \\ \theta_2 \end{Bmatrix}
+  =
+  \text{\color{blue}$\dfrac{\mu}{1+\mu}$}
+  \begin{pmatrix}
+  \frac{l}{GA^*}+\frac{l^3}{3EI} & \frac{l^2}{2EI} \\
+  \frac{l^2}{2EI} & \frac{l}{2EI}
+  \end{pmatrix}
+  \begin{Bmatrix} P \\ 0 \end{Bmatrix}
+  \quad
+  \left(\mu=\frac{12EI}{GA^* l^2}\right)
+  \\
+  w_2 = \dfrac{\mu}{1+\mu} P \left(\frac{l}{GA^*}+\frac{l^3}{3EI}\right)
+\end{gather*}
+\club Idéntica a solución exacta (con flexión y cortante), salvo el factor
+\fbox{$\frac{\mu}{1+\mu}$}. 
+
+\club Valor para sección rectangular $(b\times t)$ y $\nu=1/4$:
+\begin{equation*}
+  \frac{\mu}{1+\mu}=\frac{3}{3+\lambda^2};
+  \quad
+  \lim_{\lambda\rightarrow\infty}\frac{\mu}{1+\mu}=0
+\end{equation*}
+\centerline{\fbox{\color{red} ¡Bloqueo!}}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Integración reducida (del cortante)}
+\bul Particularizando $[\mathbf{K}_c]$ en el centro del elemento, e integrando
+con este único punto de integración: 
+\begin{equation*}
+\begin{split}
+  [\mathbf{K}_c^e]
+  &=\int_1^2 \Bigl[\mathbf{B}_c^e\Bigr]_{x=l/2}^{\rm T} 
+  GA^* \Bigl[\mathbf{B}_c^e\Bigr]_{x=l/2}\,dx
+  \\
+  &= \left(\frac{GA^*}{l}\right)^e
+  \begin{pmatrix}
+  1 & l/2 & -1 & l/2 \\
+  l/2 & l^2/4 & -l/2 & l^2/4 \\
+  -1 & -l/2 & 1 & -l/2 \\
+  l/2 & l^2/4 & -l/2 & l^2/4
+  \end{pmatrix}
+\end{split}
+\end{equation*}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Ménsula, 1 elto. de integración reducida}
+\begin{itemize}[itemsep=0pt,parsep=0pt]
+\item[\club] Ecuación matricial:
+\begin{equation*}
+  \begin{Bmatrix} w_2 \\ \theta_2 \end{Bmatrix}
+  =
+  \begin{pmatrix}
+  \frac{l}{GA^*}+\frac{l^3}{\text{\textcolor{blue}{$4$}}%
+  EI} & \frac{l^2}{2EI} \\
+  \frac{l^2}{2EI} & \frac{l}{2EI}
+  \end{pmatrix}
+  \begin{Bmatrix} P \\ 0 \end{Bmatrix}
+\end{equation*}
+\item[\club] Para $\lambda\rightarrow\infty$:
+\begin{equation*}
+  \frac{w^{\rm EF}}{w^{\rm exacto}}
+  \to
+  \frac{l^3/(4EI)}{l^3/(3EI)}=\frac{3}{4} 
+\end{equation*}
+¡Solución sin bloqueo!  (algo más rígido que solución exacta)
+\item[\club] El error desaparece para una malla suficientemente fina:
+con tan sólo 2 elementos, $w^{\rm EF}/w^{\rm exacto}=0.938$ (para
+$\lambda\rightarrow\infty$).
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Deformaciones impuestas (1)}
+\bul Campo de deformaciones (Timoshenko, interpolación lineal):
+\begin{equation*}
+  \gamma=\frac{1}{l}(w_2-w_1)+\theta_1\left(1-\frac{x}{l}\right)
+  +\theta_2\left(-\frac{x}{l}\right)
+\end{equation*}
+\bul En coordenadas isoparamétricas:
+\parbox{40mm}{\small \input 118curso18a.pstex_t }
+\begin{equation*}
+  \gamma=\underbrace{\frac{1}{l}(w_2-w_1)-\frac{1}{2}(\theta_1+\theta_2)}%
+  _{\displaystyle\alpha_1}+
+  \underbrace{\frac{1}{2}(\theta_1-\theta_2)}_{\displaystyle\alpha_2}\xi
+  =\alpha_1+\alpha_2\xi
+\end{equation*}
+\bul Vigas muy esbeltas: $\alpha_1\rightarrow 0\ \Rightarrow\
+\alpha_2\rightarrow 0\ \Rightarrow\ \theta_1=\theta_2$
+
+\club Solución: campo independiente (\textcolor{red}{<<impuesto>>}),
+$\gamma(x)=[\mathbf{N}_{\gamma}]\{\bm{\gamma}\}$
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Deformaciones impuestas (2)}
+\bul \textcolor{red}{Método \emph{mixto}}: interpolación independiente de
+flechas $(w)$, giros $(\theta)$, y deformaciones a cortante $(\gamma)$
+
+\bul Caso más simple: imponer $\gamma=\text{cte.}$:
+\begin{equation*}
+\begin{split}
+  \gamma(\xi)&=[\widehat{\mathbf{B}}_c]\{\mathbf{a}\}
+  =\alpha_1=\frac{1}{l}(w_2-w_1)-\frac{1}{2}(\theta_1+\theta_2)
+  \\
+  &=\begin{bmatrix} -\frac{1}{l} & -\frac{1}{2} & \frac{1}{l} & -\frac{1}{2}
+  \end{bmatrix} 
+  \begin{Bmatrix} w_1 \\ \theta_1 \\ w_2 \\ \theta_2 \end{Bmatrix} 
+\end{split}
+\end{equation*}
+\club En este caso, igual resultado que integración reducida.
+\vfill
+\end{slide}
+
+\end{document}
+
+\begin{slide}
+\marcas
+\titulo{Objetivos}
+\begin{itemize}[label=\trebol,parsep=0.5ex,topsep=0pt]
+  \item Estado actual Métodos de Elementos Finitos
+  \item Aspectos clave de la formulación
+  \begin{itemize}
+    \item Cinemática de medios continuos
+    \item Ecuaciones (estática y dinámica)
+    \item Comportamiento no lineal (geométrico, material, \ldots)
+    \item Métodos y algoritmos de resolución
+  \end{itemize}
+  \item Algunos ejemplos
+  \item Perspectivas de desarrollo
+  \item Conclusiones:
+  \begin{itemize}[label=\corazon]
+    \item Comprensión y planteamiento de problemas complejos
+    \item Menor dificultad del cálculo propiamente dicho
+  \end{itemize}
+\end{itemize}
+\vfill
+\end{slide}
+
+\renewcommand{\seccion}{1. Estado de la Técnica}
+\begin{slide}
+\marcas
+\titulo{Motivación}
+\begin{itemize}[label=\carreau,parsep=0.5ex,topsep=0pt]
+  \item Acortamiento ciclos de desarrollo productos
+  \pause
+  \item Mayores requisitos calidad, seguridad, prestaciones
+  \pause
+  \item[\carreau] Aplicaciones: Ing. civil, mecánica, aeronáutica, naval, etc.
+  \pause
+  \item[\carreau] Potencia de cálculo:
+  \begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
+    \item Ordenadores y HW
+    \item Programas de cálculo y SW
+  \end{itemize}
+  \pause
+  \item[\carreau] Adaptación del conocimiento del ingeniero (superior):
+  \begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
+    \item Menor énfasis en procedimientos manuales de cálculo;
+    \item Mayor énfasis en modelos complejos, no lineales;
+    \item Conceptos y métodos orientados a resolución por ordenador,
+    numérica o simbólica.
+  \end{itemize}
+\end{itemize}
+\vfill
+\end{slide}
+
+\begin{slide}
+\marcas
+\titulo{Elementos Finitos en Internet}
+\cemph{Algunas páginas web útiles:}
+\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
+  \item \url{http://www.engr.usask.ca/~macphed/finite/fe_resources/fe_resources.html}
+  \item \url{http://www.swan.ac.uk/civeng/Research/Software/flagshyp/}
+  \item \url{http://www.calculix.de/}
+  \item \url{http://www.abaqus.com/}
+  \item \url{http://www.adina.com/}
+  \item \url{http://www.ansys.com/}
+  \item \url{http://www.tnodiana.com/}
+  \item \url{http://www.ls-dyna.com/}
+  \item \url{http://www.ce.berkeley.edu/~rlt/feap}
+  \item \url{http://www.ce.berkeley.edu/~sanjay/FEAP/feap.html}
+  \item \url{http://mse2.ugr.es/indexfem.html}
+  \item \url{http://titan.Colorado.EDU/Felippa.d/FelippaHome.d/}
+  \item \url{http://filemon.mecanica.upm.es/~goico/docmefnl/}
+  \item \url{http://www.mapleapps.com/powertools/fem/fem.shtml}
+\end{itemize}
+\vfill
+\end{slide}
+
+\end{document}
