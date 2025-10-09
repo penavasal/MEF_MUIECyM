@@ -1,8 +1,8 @@
 \documentclass[landscape]{slides}
 % --------------------------------------------------------------------------
-\newcommand{\acolor}{0}% proyecci√≥n: 1, impresi√≥n: 0
+\newcommand{\acolor}{0}% proyecciÛn: 1, impresiÛn: 0
 % --------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{bm}
@@ -67,7 +67,7 @@
 %------------------------------------------------------------------------------
 \newcommand{\seccion}{}
 \newcommand{\rightheader}{
- F.Gabald√≥n
+ F.GabaldÛn
 }
 \newcommand{\footer}{%
   Modelos Estructurales: Vigas
@@ -78,10 +78,10 @@
  \bf Modelos Estructurales: Vigas}
  }
 \author{
-{\sl Jos√© M.¬™ Goicolea / Felipe Gabald√≥n}\\[5ex]
+{\sl JosÈ M.™ Goicolea / Felipe GabaldÛn}\\[5ex]
 {\small 
-Grupo de Mec√°nica Computacional\\
-Depto. Mec√°nica Medios Continuos y Teor√≠a Estructuras\\
+Grupo de Mec·nica Computacional\\
+Depto. Mec·nica Medios Continuos y TeorÌa Estructuras\\
 E.T.S. Ingenieros de Caminos, UPM\\}
 }
 \date{Madrid, 2/02/2006}
@@ -122,17 +122,17 @@ E.T.S. Ingenieros de Caminos, UPM\\}
 
 \begin{slide}
 \marcas
-\titulo{Bibliograf√≠a}
+\titulo{BibliografÌa}
 \begin{itemize}[label=\pica]
   \item N. Ottosen y H. Petersson,\\
   \emph{Introduction to the Finite Element Method}, Prentice Hall Europe,
   1992.
   \item Thomas J.R. Hughes,\\
   \emph{The Finite Element Method}, Prentice Hall, 1987. 
-  \item Eugenio O√±ate,\\
-  \emph{C√°lculo de Estructuras por el M√©todo de Elementos Finitos},
-  Centro Internacional de M√©todos Num√©ricos en Ingenier√≠a, 1995.
-  \item Michel G√©radin y Alberto Cardona,\\
+  \item Eugenio OÒate,\\
+  \emph{C·lculo de Estructuras por el MÈtodo de Elementos Finitos},
+  Centro Internacional de MÈtodos NumÈricos en IngenierÌa, 1995.
+  \item Michel GÈradin y Alberto Cardona,\\
   \emph{Flexible Multibody Dynamics, A Finite Element Approach},
   Wiley, 2001
 \end{itemize}
@@ -141,7 +141,7 @@ E.T.S. Ingenieros de Caminos, UPM\\}
 
 \begin{slide}
 \marcas
-\titulo{VIGAS 2D: Definici√≥n de Resultantes}
+\titulo{VIGAS 2D: DefiniciÛn de Resultantes}
 \noindent\parbox{0.48\textwidth}{
 \begin{align}
   N&\eqdef\int_{-t/2}^{t/2} \sigma_{xx}b(z)\,\dr z;\\
@@ -169,24 +169,24 @@ E.T.S. Ingenieros de Caminos, UPM\\}
   \hfill\input 118curso00c.pstex_t
   \hspace{1ex}
 }
-\club Leyes v√°lidas en cualquier instancia (incluso no lineal).
+\club Leyes v·lidas en cualquier instancia (incluso no lineal).
 \vfill
 \end{slide}
 
 \begin{slide}
 \marcas
-\titulo{Hip√≥tesis de Bernouilli-Euler}
+\titulo{HipÛtesis de Bernouilli-Euler}
 \begin{enumerate}
-  \item Pieza prism√°tica, directriz
+  \item Pieza prism·tica, directriz
   \input 118curso05a.pstex_t
   \item Secciones planas normales a directriz permanecen planas y 
   \textcolor{red}{normales a la directriz}
-  \item Desplazamientos normales a la viga son uniformes sobre la secci√≥n, e
+  \item Desplazamientos normales a la viga son uniformes sobre la secciÛn, e
   iguales a los de la directriz:
   \begin{equation}
     \boxed{w(x,z)=w(x).} \label{eq:wx}
   \end{equation}
-  \item Tensi√≥n plana: 
+  \item TensiÛn plana: 
   \begin{equation}
   \boxed{\sigma_{zz}=0.}
   \end{equation}
@@ -199,9 +199,9 @@ E.T.S. Ingenieros de Caminos, UPM\\}
 \titulo{Desplazamientos}
 \parbox{0.48\textwidth}{\input 118curso06a.pstex_t}\hfill%
 \parbox{0.48\textwidth}{
-\carreau Giro de secci√≥n: $\theta$ \\
+\carreau Giro de secciÛn: $\theta$ \\
 \carreau Giro de directriz: $\dfrac{\dr w}{\dr x}=w'$\\[1ex]
-\carreau Secci√≥n normal a directriz:
+\carreau SecciÛn normal a directriz:
 \begin{gather}
   \theta=\frac{\dr w}{\dr x};\label{eq:twx}
 \end{gather}
@@ -237,8 +237,8 @@ E.T.S. Ingenieros de Caminos, UPM\\}
   && \gamma_{yz}&=\gamma_{xy}=0
 \end{align}
 \begin{itemize}[label=\heart]
-  \item No hay deformaci√≥n por cortante
-  \item Hip√≥tesis v√°lida para vigas esbeltas: $\lambda=\dfrac{l}{t} > 20$.
+  \item No hay deformaciÛn por cortante
+  \item HipÛtesis v·lida para vigas esbeltas: $\lambda=\dfrac{l}{t} > 20$.
 \end{itemize}
 \vfill
 \end{slide}
@@ -262,7 +262,7 @@ de (\ref{eq:exx}):
   +E\int_{-t/2}^{t/2} z^2\frac{d^2w}{dx^2}b(z)\,dz
   =EI\frac{d^2w}{dx^2}
 \end{equation}
-\spade Curvatura ($w$ peque√±a):
+\spade Curvatura ($w$ pequeÒa):
 \begin{equation}
   \kappa=\frac{d^2w/dx^2}{\left[1+(dw/dx)^2\right]^{3/2}}
   \approx\frac{d^2w}{dx^2}
@@ -276,7 +276,7 @@ de (\ref{eq:exx}):
 \marcas
 \titulo{Relaciones Constitutivas: Axil, Cortante}
 \begin{itemize}[label=\spade]
-\item Por integraci√≥n de las tensiones:
+\item Por integraciÛn de las tensiones:
 \begin{equation}
   N=\int_{-t/2}^{t/2} \sigma_{xx} b(z)\,dz
   =EA\frac{du_0}{dx}
@@ -284,7 +284,7 @@ de (\ref{eq:exx}):
 \begin{equation}
   V=\int_{-t/2}^{t/2} \sigma_{xz} b(z)\,dz;
 \end{equation}
-\item Contradicci√≥n: de (\ref{eq:gxz}),
+\item ContradicciÛn: de (\ref{eq:gxz}),
 \begin{equation}
   \gamma_{xz}=0
   \quad\Rightarrow\quad
@@ -292,7 +292,7 @@ de (\ref{eq:exx}):
   \quad\Rightarrow\quad
   \boxed{V=0\ \text{!}}
 \end{equation}
-\item En la pr√°ctica, el cortante $V$ se calcula a partir de ecuaciones de
+\item En la pr·ctica, el cortante $V$ se calcula a partir de ecuaciones de
 equilibrio (\ref{eq:MV})
 \end{itemize}
 \vfill
@@ -300,7 +300,7 @@ equilibrio (\ref{eq:MV})
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n fuerte}
+\titulo{FormulaciÛn fuerte}
 \begin{itemize}[label=\club]
 \item De (\ref{eq:MV}):
 \begin{equation*}
@@ -321,7 +321,7 @@ equilibrio (\ref{eq:MV})
   \label{eq:FFb}
 \end{equation}
 (suponiendo $EI$ constante)
-\item Ecuaci√≥n diferencial (4"o orden) de la \emph{el√°stica},
+\item EcuaciÛn diferencial (4"o orden) de la \emph{el·stica},
 para obtener $w(x)$
 \end{itemize}
 \vfill
@@ -329,8 +329,8 @@ para obtener $w(x)$
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n matricial}
-\club Soluci√≥n general en tramo 1--2 sin cargas intermedias $(q=0)$:
+\titulo{FormulaciÛn matricial}
+\club SoluciÛn general en tramo 1--2 sin cargas intermedias $(q=0)$:
 
 \parbox{0.3\textwidth}{$\dfrac{d^4w}{dx^4}=0$}
 \hfill
@@ -343,17 +343,17 @@ w_2, \left.\dfrac{dw}{dx}\right|_2$
   w(x)=\alpha_0+\alpha_1 x+\alpha_2 x^2+\alpha_3 x^3
 \end{equation}
 4 condiciones $\quad\Rightarrow\quad 
-\text{4 par√°metros}\quad (\alpha_0, \alpha_1, \alpha_2, \alpha_3)$
+\text{4 par·metros}\quad (\alpha_0, \alpha_1, \alpha_2, \alpha_3)$
 
 \club \emph{Planteamiento directo} de ecuaciones matriciales: programas de
 <<barras>>\\
-\diamante Ojo: cargas repartidas $(q\ne 0)$ precisa correcci√≥n (m. emp.)
+\diamante Ojo: cargas repartidas $(q\ne 0)$ precisa correcciÛn (m. emp.)
 \vfill
 \end{slide}
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n d√©bil}
+\titulo{FormulaciÛn dÈbil}
 \begin{itemize}[label=\club]
 \item Funciones de peso (desplazamientos virtuales) $\bar w$,
 en principio arbitrarias. De (\ref{eq:FFb}):
@@ -383,8 +383,8 @@ Integrando por partes, dos veces:
 
 \begin{slide}
 \marcas
-\titulo{Aproximaci√≥n elementos finitos}
-\club Funciones de interpolaci√≥n de desplazamientos, $N_i(x)$
+\titulo{AproximaciÛn elementos finitos}
+\club Funciones de interpolaciÛn de desplazamientos, $N_i(x)$
 \begin{equation*}
 \begin{split}
   w(x)&\approx\{\mathbf{N}\}^{\rm T}\{\mathbf{a}\}\\
@@ -392,7 +392,7 @@ Integrando por partes, dos veces:
   \begin{Bmatrix}a_1 \\ a_2 \\ \vdots \\ a_n\end{Bmatrix}
 \end{split}
 \end{equation*}
-\club Interpolaci√≥n de <<deformaciones>>: $[\mathbf{B}]$
+\club InterpolaciÛn de <<deformaciones>>: $[\mathbf{B}]$
 \begin{gather}
   \frac{d^2w}{dx^2}\approx[\mathbf{B}]\{\mathbf{a}\};
   \\ [\mathbf{B}]=\frac{d^2}{dx^2}\{\mathbf{N}\}^{\rm T}
@@ -404,8 +404,8 @@ Integrando por partes, dos veces:
 
 \begin{slide}
 \marcas
-\titulo{M√©todo de Galerkin}
-\club Misma interpolaci√≥n para $\bar w$ que para $w$
+\titulo{MÈtodo de Galerkin}
+\club Misma interpolaciÛn para $\bar w$ que para $w$
 \begin{equation}
   \frac{d^2\bar w}{dx^2}\approx[\mathbf{B}]\{\mathbf{\bar a}\}
   =\{\mathbf{\bar a}\}^{\rm T}[\mathbf{B}]^{\rm T}
@@ -437,7 +437,7 @@ Integrando por partes, dos veces:
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n Matricial}
+\titulo{FormulaciÛn Matricial}
 \begin{itemize}[label=\club]
 \item $\{\mathbf{a}\}^{\rm T}$ arbitrarios;
   $\{\mathbf{f}\}=\{\mathbf{f}_{\rm int}\}+\{\mathbf{f}_{\rm ext}\}$:
@@ -445,8 +445,8 @@ Integrando por partes, dos veces:
   \boxed{[\mathbf{K}]\{\mathbf{a}\}=\{\mathbf{f}\}}
 \end{gather*}
 \begin{itemize}
-  \item $w,\frac{dw}{dx}$: cond. contorno cinem√°ticas o esenciales\\
-  \item $M,V$: cond. contorno est√°ticas o naturales
+  \item $w,\frac{dw}{dx}$: cond. contorno cinem·ticas o esenciales\\
+  \item $M,V$: cond. contorno est·ticas o naturales
   $(\rightarrow\{\mathbf{f}\})$
 \end{itemize}
 \item A nivel elemental, integrales en subdominio $\Omega^e$:
@@ -468,14 +468,14 @@ Integrando por partes, dos veces:
 \marcas
 \titulo{Requisitos de complitud y compatibilidad}
 \begin{itemize}[label=\spade]
-\item $w(x)$ debe poder representar un movimiento r√≠gido arbitrario
+\item $w(x)$ debe poder representar un movimiento rÌgido arbitrario
 $\left(w^0,\theta^0=\left(\frac{dw}{dx}\right)^0\right)$
 \item $w(x)$ debe poder representar deformaciones con curvatura constante
 arbitraria, $\left(\frac{d^2w}{dx^2}\right)^0=\kappa^0$.
 \\
 $\rightarrow\quad w(x)=\alpha_0+\alpha_1 x+\alpha_2 x^2+\ldots$
 \item Debe tener continuidad al menos un orden menor que las derivadas que
-aparecen en la formulaci√≥n d√©bil $(\frac{dw}{dx})$,
+aparecen en la formulaciÛn dÈbil $(\frac{dw}{dx})$,
 \\
 $\rightarrow\quad w(x)\in C^1$
 $\quad\rightarrow\quad$ 4 condiciones: $w_a, (\frac{dw}{dx})_a,w_b, (\frac{dw}{dx})_b$. 
@@ -488,7 +488,7 @@ $\quad\rightarrow\quad$ 4 condiciones: $w_a, (\frac{dw}{dx})_a,w_b, (\frac{dw}{d
 
 \begin{slide}
 \marcas
-\titulo{Elemento con interpolaci√≥n c√∫bica (herm√≠tico)}
+\titulo{Elemento con interpolaciÛn c˙bica (hermÌtico)}
 %Grados de libertad: 
 %$ a_1=w_1,\ a_2=\left.\frac{dw}{dx}\right|_1,\ 
 %  a_3=w_2,\ a_4=\left.\frac{dw}{dx}\right|_2 $
@@ -514,7 +514,7 @@ $\quad\rightarrow\quad$ 4 condiciones: $w_a, (\frac{dw}{dx})_a,w_b, (\frac{dw}{d
 \begin{slide}
 \marcas
 \titulo{Matriz de rigidez}
-Integrando t√©rminos de (\ref{eq:FMb}):
+Integrando tÈrminos de (\ref{eq:FMb}):
 \begin{gather}
   K_{11}^e=EI\int_0^l B_1^2\,dx;
   \quad B_1=\frac{d^2}{dx^2}N_1(x)=-\frac{6}{l^2}+\frac{12x}{l^3};
@@ -540,7 +540,7 @@ Integrando t√©rminos de (\ref{eq:FMb}):
 \begin{slide}
 \marcas
 \titulo{Matrices de cargas}
-Integrando t√©rminos de (\ref{eq:FMb}):
+Integrando tÈrminos de (\ref{eq:FMb}):
 \begin{equation}
   \{\mathbf{f}^e\}
   =
@@ -561,19 +561,19 @@ Integrando t√©rminos de (\ref{eq:FMb}):
 
 \begin{slide}
 \marcas
-\titulo{Hip√≥tesis de vigas de Timoshenko}
+\titulo{HipÛtesis de vigas de Timoshenko}
 \begin{enumerate}
-  \item Pieza prism√°tica, directriz
+  \item Pieza prism·tica, directriz
   \input 118curso05a.pstex_t
   \item Secciones planas normales a directriz permanecen planas, pero
   \textcolor{red}{\emph{no necesariamente normales a la directriz.}}
-  \item Desplazamientos normales a la viga son uniformes sobre la secci√≥n, e
+  \item Desplazamientos normales a la viga son uniformes sobre la secciÛn, e
   iguales a los de la directriz:
   \begin{equation}
     \boxed{w(x,z)=w(x).}
     \label{eq:wxzt}
   \end{equation}
-  \item Tensi√≥n plana: 
+  \item TensiÛn plana: 
   \begin{equation}
   \boxed{\sigma_{zz}=0.}
   \end{equation}
@@ -583,10 +583,10 @@ Integrando t√©rminos de (\ref{eq:FMb}):
 
 \begin{slide}
 \marcas
-\titulo{Hip√≥tesis de vigas de Timoshenko}
+\titulo{HipÛtesis de vigas de Timoshenko}
 \cemph{Desplazamientos}
 \begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
-  \item $\theta$: giro secci√≥n;
+  \item $\theta$: giro secciÛn;
   \item $\dr w/\dr x$: giro directriz (1\sptext{er} orden)
 \end{itemize}
 \parbox{0.48\textwidth}{\input 118curso09a.pstex_t}
@@ -621,9 +621,9 @@ Integrando t√©rminos de (\ref{eq:FMb}):
   && \gamma_{yz}&=\gamma_{xy}=0
 \end{align}
 \begin{itemize}[parsep=0pt]
-\item \emph{S√≠ existe} deformaci√≥n por cortante $\gamma_{xz}$
-\item Deformaci√≥n cortante es constante en secci√≥n (hip. Navier)
-\item Hip√≥tesis v√°lida para vigas moderadamente gruesas: $\lambda=\dfrac{l}{t}>8$.
+\item \emph{SÌ existe} deformaciÛn por cortante $\gamma_{xz}$
+\item DeformaciÛn cortante es constante en secciÛn (hip. Navier)
+\item HipÛtesis v·lida para vigas moderadamente gruesas: $\lambda=\dfrac{l}{t}>8$.
 \end{itemize}
 \vfill
 \end{slide}
@@ -654,21 +654,21 @@ Integrando t√©rminos de (\ref{eq:FMb}):
 
 \begin{slide}
 \marcas
-\titulo{√Årea Reducida}
+\titulo{¡rea Reducida}
 \begin{itemize}[itemsep=0pt,parsep=0pt]
-\item Seg√∫n (\ref{eq:gamma}), $\gamma_{xz}=\gamma_0\ \text{(cte.)}$ en secci√≥n
-\item Exacto: distribuci√≥n parab√≥lica, secci√≥n alabeada. Igualando cortante
+\item Seg˙n (\ref{eq:gamma}), $\gamma_{xz}=\gamma_0\ \text{(cte.)}$ en secciÛn
+\item Exacto: distribuciÛn parabÛlica, secciÛn alabeada. Igualando cortante
 ($V=\int_{-t/2}^{+t/2} b(z)\gamma(z)\,dz$):
 
 \centerline{\input 118curso12a.pstex_t}
-\item Igualando energ√≠a de deformaci√≥n entre ambos,
+\item Igualando energÌa de deformaciÛn entre ambos,
 \begin{equation*}
   \frac{1}{2}GA^* (\gamma_0)^2 = \int_{-t/2}^{+t/2} \frac{1}{2}G b(z)
   \gamma(z)^2\,dz
   \quad\Rightarrow\quad A^*=\alpha A.
 \end{equation*}
 
-\item Secci√≥n rectangular:
+\item SecciÛn rectangular:
 $ \alpha=\frac{5}{6} \quad\Rightarrow\quad A^*=\frac{5}{6} A $
 \end{itemize}
 \vfill
@@ -677,7 +677,7 @@ $ \alpha=\frac{5}{6} \quad\Rightarrow\quad A^*=\frac{5}{6} A $
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n Fuerte}
+\titulo{FormulaciÛn Fuerte}
 \club A partir de ecuaciones de equilibrio.
 \begin{alignat}{3}
   &\text{de (\ref{eq:MV}): }\quad
@@ -698,8 +698,8 @@ $ \alpha=\frac{5}{6} \quad\Rightarrow\quad A^*=\frac{5}{6} A $
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n d√©bil (momentos)}
-Tomando en primer lugar la ecuaci√≥n del momento (\ref{eq:FFtM}):
+\titulo{FormulaciÛn dÈbil (momentos)}
+Tomando en primer lugar la ecuaciÛn del momento (\ref{eq:FFtM}):
 \begin{equation}
   \int_{1}^{2} \bar\theta\,\left(EI\frac{d^2\theta}{dx^2}\right)\,dx
   + \int_{1}^{2} \bar\theta\,\overbrace{V}^{GA^* \gamma_{xz}}\,dx
@@ -719,7 +719,7 @@ integrando por partes,
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n d√©bil (cortantes)}
+\titulo{FormulaciÛn dÈbil (cortantes)}
 Haciendo ahora lo mismo con la del cortante (\ref{eq:FFtV}):
 \begin{equation}
   \int_{1}^{2}\bar w\,GA^*\left(\frac{d^2w}{dx^2}
@@ -741,7 +741,7 @@ Integrando por partes:
 
 \begin{slide}
 \marcas
-\titulo{Formulaci√≥n d√©bil (conjunta)}
+\titulo{FormulaciÛn dÈbil (conjunta)}
 Sumando (\ref{eq:FDMt}) y (\ref{eq:FDVt}):
 \begin{multline}
   \int_{1}^{2} 
@@ -758,14 +758,14 @@ Sumando (\ref{eq:FDMt}) y (\ref{eq:FDVt}):
   \label{eq:FDt}
 \end{multline}
 \club Intervienen derivadas primeras de $w,\bar w,\theta,\bar\theta$
-$\Rightarrow$ requiere tan solo aproximaci√≥n $C^0$
+$\Rightarrow$ requiere tan solo aproximaciÛn $C^0$
 \vfill
 \end{slide}
 
 \begin{slide}
 \marcas
-\titulo{Aproximaci√≥n Elementos Finitos (Galerkin)}
-\club La formulaci√≥n d√©bil (\ref{eq:FDt}) puede escribirse:
+\titulo{AproximaciÛn Elementos Finitos (Galerkin)}
+\club La formulaciÛn dÈbil (\ref{eq:FDt}) puede escribirse:
 \begin{multline*}
   \delta W = 
   \int_1^2 \bar\gamma\, GA^* \,\gamma \,dx
@@ -776,7 +776,7 @@ $\Rightarrow$ requiere tan solo aproximaci√≥n $C^0$
   \\
   =0 \quad\forall(\bar\gamma,\bar\kappa)
 \end{multline*}
-\club Funciones de interpolaci√≥n lineales (continuidad $C^0$):
+\club Funciones de interpolaciÛn lineales (continuidad $C^0$):
 \begin{align*}
   w^h(x)=w_1 N_1(x)+w_2 N_2(x);\\
   \theta^h(x)=\theta_1 N_1(x)+\theta_2 N_2(x);
@@ -788,7 +788,7 @@ $\Rightarrow$ requiere tan solo aproximaci√≥n $C^0$
 
 \begin{slide}
 \marcas
-\titulo{Interpolaci√≥n de Deformaciones}
+\titulo{InterpolaciÛn de Deformaciones}
 \begin{gather*}
   \kappa^h=\theta_1\frac{d N_1}{dx}+\theta_2\frac{d N_2}{dx}
   =\underbrace{\begin{bmatrix} 0 & -1/l & 0 & 1/l \end{bmatrix}%
@@ -833,7 +833,7 @@ $\Rightarrow$ requiere tan solo aproximaci√≥n $C^0$
 \marcas
 \titulo{Matrices elementales (2)}
 
-Integrando anal√≠ticamente:
+Integrando analÌticamente:
 
 \begin{align*}
   [\mathbf{K}_f^e] &= \left(\frac{EI}{l}\right)^e
@@ -852,14 +852,14 @@ Integrando anal√≠ticamente:
   -1 & -l/2 & 1 & -l/2 \\
   l/2 & l^2/6 & -l/2 & l^2/3
   \end{pmatrix}
-  \quad&&\text{\parbox{22ex}{(cuadr√°tico: 2 ptos. Gauss)}}
+  \quad&&\text{\parbox{22ex}{(cuadr·tico: 2 ptos. Gauss)}}
 \end{align*}
 \vfill
 \end{slide}
 
 \begin{slide}
 \marcas
-\titulo{Deformaci√≥n de m√©nsula}
+\titulo{DeformaciÛn de mÈnsula}
 \club Viga Bernouilli $(EI)$: $w_f=P\dfrac{l^3}{3EI}$
 \hfill\parbox{0.42\textwidth}{\input 118curso13a.pstex_t\hfill}
 
@@ -870,7 +870,7 @@ Integrando anal√≠ticamente:
 $w_t=P\left(\dfrac{l^3}{3EI}+\dfrac{l}{GA^*} \right)$
 \hfill\parbox{0.42\textwidth}{\input 118curso15a.pstex_t\hfill}
 
-(M√°s flexible que viga Bernouilli)
+(M·s flexible que viga Bernouilli)
 
 \vfill
 \end{slide}
@@ -878,7 +878,7 @@ $w_t=P\left(\dfrac{l^3}{3EI}+\dfrac{l}{GA^*} \right)$
 \begin{slide}
 \marcas
 \titulo{Bloqueo de viga (Timoshenko) esbelta}
-\club Secci√≥n rectangular $b\times t$: 
+\club SecciÛn rectangular $b\times t$: 
 $I=\frac{1}{12}bt^3;\ GA^*=\frac{5}{6} bt$
 \begin{gather*}
   K_f=\frac{3EI}{l^3};\quad
@@ -887,7 +887,7 @@ $I=\frac{1}{12}bt^3;\ GA^*=\frac{5}{6} bt$
   \frac{K_f}{K_c}=\frac{3}{5}(1+\nu)\frac{1}{\lambda^2}
   \qquad \left(\lambda=\frac{l}{t}\right)
   \\
-  \text{en el l√≠mite}\ \lambda\rightarrow\infty
+  \text{en el lÌmite}\ \lambda\rightarrow\infty
   \quad\Rightarrow\quad
   \frac{K_f}{K_c}\rightarrow 0,
   \ \theta=\frac{dw}{dx}
@@ -895,13 +895,13 @@ $I=\frac{1}{12}bt^3;\ GA^*=\frac{5}{6} bt$
 \centerline{\input 118curso16a.pstex_t}
 $\theta_0=0 \ \Rightarrow\ \left.\dfrac{dw}{dx}\right|_0=0
 \ \Rightarrow\ \text{($w$ lineal en elto.)}\ w_1=0,\ \theta_1=0\ \Rightarrow\ \left.\dfrac{dw}{dx}\right|_1=0,
-\ldots$ \quad\fbox{\color{red}¬°Bloqueo!}
+\ldots$ \quad\fbox{\color{red}°Bloqueo!}
 \vfill
 \end{slide}
 
 \begin{slide}
 \marcas
-\titulo{Ejemplo: m√©nsula con 1 elemento (1)}
+\titulo{Ejemplo: mÈnsula con 1 elemento (1)}
 \parbox{0.35\textwidth}{1 elemento viga de Timoshenko}
 \hfill
 \parbox{0.60\textwidth}{\hfill\input 118curso17a.pstex_t}
@@ -932,7 +932,7 @@ Eliminando las ecuaciones de $(V_1, M_1)$:
 
 \begin{slide}
 \marcas
-\titulo{Ejemplo: m√©nsula con 1 elemento (2)}
+\titulo{Ejemplo: mÈnsula con 1 elemento (2)}
 Invirtiendo:
 \begin{gather*}
   \begin{Bmatrix} w_2 \\ \theta_2 \end{Bmatrix}
@@ -948,24 +948,24 @@ Invirtiendo:
   \\
   w_2 = \dfrac{\mu}{1+\mu} P \left(\frac{l}{GA^*}+\frac{l^3}{3EI}\right)
 \end{gather*}
-\club Id√©ntica a soluci√≥n exacta (con flexi√≥n y cortante), salvo el factor
+\club IdÈntica a soluciÛn exacta (con flexiÛn y cortante), salvo el factor
 \fbox{$\frac{\mu}{1+\mu}$}. 
 
-\club Valor para secci√≥n rectangular $(b\times t)$ y $\nu=1/4$:
+\club Valor para secciÛn rectangular $(b\times t)$ y $\nu=1/4$:
 \begin{equation*}
   \frac{\mu}{1+\mu}=\frac{3}{3+\lambda^2};
   \quad
   \lim_{\lambda\rightarrow\infty}\frac{\mu}{1+\mu}=0
 \end{equation*}
-\centerline{\fbox{\color{red} ¬°Bloqueo!}}
+\centerline{\fbox{\color{red} °Bloqueo!}}
 \vfill
 \end{slide}
 
 \begin{slide}
 \marcas
-\titulo{Integraci√≥n reducida (del cortante)}
+\titulo{IntegraciÛn reducida (del cortante)}
 \bul Particularizando $[\mathbf{K}_c]$ en el centro del elemento, e integrando
-con este √∫nico punto de integraci√≥n: 
+con este ˙nico punto de integraciÛn: 
 \begin{equation*}
 \begin{split}
   [\mathbf{K}_c^e]
@@ -986,9 +986,9 @@ con este √∫nico punto de integraci√≥n:
 
 \begin{slide}
 \marcas
-\titulo{M√©nsula, 1 elto. de integraci√≥n reducida}
+\titulo{MÈnsula, 1 elto. de integraciÛn reducida}
 \begin{itemize}[itemsep=0pt,parsep=0pt]
-\item[\club] Ecuaci√≥n matricial:
+\item[\club] EcuaciÛn matricial:
 \begin{equation*}
   \begin{Bmatrix} w_2 \\ \theta_2 \end{Bmatrix}
   =
@@ -1005,9 +1005,9 @@ con este √∫nico punto de integraci√≥n:
   \to
   \frac{l^3/(4EI)}{l^3/(3EI)}=\frac{3}{4} 
 \end{equation*}
-¬°Soluci√≥n sin bloqueo!  (algo m√°s r√≠gido que soluci√≥n exacta)
+°SoluciÛn sin bloqueo!  (algo m·s rÌgido que soluciÛn exacta)
 \item[\club] El error desaparece para una malla suficientemente fina:
-con tan s√≥lo 2 elementos, $w^{\rm EF}/w^{\rm exacto}=0.938$ (para
+con tan sÛlo 2 elementos, $w^{\rm EF}/w^{\rm exacto}=0.938$ (para
 $\lambda\rightarrow\infty$).
 \end{itemize}
 \vfill
@@ -1016,12 +1016,12 @@ $\lambda\rightarrow\infty$).
 \begin{slide}
 \marcas
 \titulo{Deformaciones impuestas (1)}
-\bul Campo de deformaciones (Timoshenko, interpolaci√≥n lineal):
+\bul Campo de deformaciones (Timoshenko, interpolaciÛn lineal):
 \begin{equation*}
   \gamma=\frac{1}{l}(w_2-w_1)+\theta_1\left(1-\frac{x}{l}\right)
   +\theta_2\left(-\frac{x}{l}\right)
 \end{equation*}
-\bul En coordenadas isoparam√©tricas:
+\bul En coordenadas isoparamÈtricas:
 \parbox{40mm}{\small \input 118curso18a.pstex_t }
 \begin{equation*}
   \gamma=\underbrace{\frac{1}{l}(w_2-w_1)-\frac{1}{2}(\theta_1+\theta_2)}%
@@ -1032,7 +1032,7 @@ $\lambda\rightarrow\infty$).
 \bul Vigas muy esbeltas: $\alpha_1\rightarrow 0\ \Rightarrow\
 \alpha_2\rightarrow 0\ \Rightarrow\ \theta_1=\theta_2$
 
-\club Soluci√≥n: campo independiente (\textcolor{red}{<<impuesto>>}),
+\club SoluciÛn: campo independiente (\textcolor{red}{<<impuesto>>}),
 $\gamma(x)=[\mathbf{N}_{\gamma}]\{\bm{\gamma}\}$
 \vfill
 \end{slide}
@@ -1040,10 +1040,10 @@ $\gamma(x)=[\mathbf{N}_{\gamma}]\{\bm{\gamma}\}$
 \begin{slide}
 \marcas
 \titulo{Deformaciones impuestas (2)}
-\bul \textcolor{red}{M√©todo \emph{mixto}}: interpolaci√≥n independiente de
+\bul \textcolor{red}{MÈtodo \emph{mixto}}: interpolaciÛn independiente de
 flechas $(w)$, giros $(\theta)$, y deformaciones a cortante $(\gamma)$
 
-\bul Caso m√°s simple: imponer $\gamma=\text{cte.}$:
+\bul Caso m·s simple: imponer $\gamma=\text{cte.}$:
 \begin{equation*}
 \begin{split}
   \gamma(\xi)&=[\widehat{\mathbf{B}}_c]\{\mathbf{a}\}
@@ -1054,7 +1054,7 @@ flechas $(w)$, giros $(\theta)$, y deformaciones a cortante $(\gamma)$
   \begin{Bmatrix} w_1 \\ \theta_1 \\ w_2 \\ \theta_2 \end{Bmatrix} 
 \end{split}
 \end{equation*}
-\club En este caso, igual resultado que integraci√≥n reducida.
+\club En este caso, igual resultado que integraciÛn reducida.
 \vfill
 \end{slide}
 
@@ -1064,48 +1064,48 @@ flechas $(w)$, giros $(\theta)$, y deformaciones a cortante $(\gamma)$
 \marcas
 \titulo{Objetivos}
 \begin{itemize}[label=\trebol,parsep=0.5ex,topsep=0pt]
-  \item Estado actual M√©todos de Elementos Finitos
-  \item Aspectos clave de la formulaci√≥n
+  \item Estado actual MÈtodos de Elementos Finitos
+  \item Aspectos clave de la formulaciÛn
   \begin{itemize}
-    \item Cinem√°tica de medios continuos
-    \item Ecuaciones (est√°tica y din√°mica)
-    \item Comportamiento no lineal (geom√©trico, material, \ldots)
-    \item M√©todos y algoritmos de resoluci√≥n
+    \item Cinem·tica de medios continuos
+    \item Ecuaciones (est·tica y din·mica)
+    \item Comportamiento no lineal (geomÈtrico, material, \ldots)
+    \item MÈtodos y algoritmos de resoluciÛn
   \end{itemize}
   \item Algunos ejemplos
   \item Perspectivas de desarrollo
   \item Conclusiones:
   \begin{itemize}[label=\corazon]
-    \item Comprensi√≥n y planteamiento de problemas complejos
-    \item Menor dificultad del c√°lculo propiamente dicho
+    \item ComprensiÛn y planteamiento de problemas complejos
+    \item Menor dificultad del c·lculo propiamente dicho
   \end{itemize}
 \end{itemize}
 \vfill
 \end{slide}
 
-\renewcommand{\seccion}{1. Estado de la T√©cnica}
+\renewcommand{\seccion}{1. Estado de la TÈcnica}
 \begin{slide}
 \marcas
-\titulo{Motivaci√≥n}
+\titulo{MotivaciÛn}
 \begin{itemize}[label=\carreau,parsep=0.5ex,topsep=0pt]
   \item Acortamiento ciclos de desarrollo productos
   \pause
   \item Mayores requisitos calidad, seguridad, prestaciones
   \pause
-  \item[\carreau] Aplicaciones: Ing. civil, mec√°nica, aeron√°utica, naval, etc.
+  \item[\carreau] Aplicaciones: Ing. civil, mec·nica, aeron·utica, naval, etc.
   \pause
-  \item[\carreau] Potencia de c√°lculo:
+  \item[\carreau] Potencia de c·lculo:
   \begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
     \item Ordenadores y HW
-    \item Programas de c√°lculo y SW
+    \item Programas de c·lculo y SW
   \end{itemize}
   \pause
-  \item[\carreau] Adaptaci√≥n del conocimiento del ingeniero (superior):
+  \item[\carreau] AdaptaciÛn del conocimiento del ingeniero (superior):
   \begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
-    \item Menor √©nfasis en procedimientos manuales de c√°lculo;
-    \item Mayor √©nfasis en modelos complejos, no lineales;
-    \item Conceptos y m√©todos orientados a resoluci√≥n por ordenador,
-    num√©rica o simb√≥lica.
+    \item Menor Ènfasis en procedimientos manuales de c·lculo;
+    \item Mayor Ènfasis en modelos complejos, no lineales;
+    \item Conceptos y mÈtodos orientados a resoluciÛn por ordenador,
+    numÈrica o simbÛlica.
   \end{itemize}
 \end{itemize}
 \vfill
@@ -1114,7 +1114,7 @@ flechas $(w)$, giros $(\theta)$, y deformaciones a cortante $(\gamma)$
 \begin{slide}
 \marcas
 \titulo{Elementos Finitos en Internet}
-\cemph{Algunas p√°ginas web √∫tiles:}
+\cemph{Algunas p·ginas web ˙tiles:}
 \begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt]
   \item \url{http://www.engr.usask.ca/~macphed/finite/fe_resources/fe_resources.html}
   \item \url{http://www.swan.ac.uk/civeng/Research/Software/flagshyp/}

@@ -1,33 +1,36 @@
-\documentclass{beamer}
+% A partir del fichero.pdf se genera el fichero a imprimir:
+%
+% pdfnup --nup 1x2 --paper a4paper --no-landscape filename.pdf
+%
+\documentclass[handout]{beamer}
 \usepackage{ae}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[american]{babel}
 \usepackage{amsmath,amsfonts}
 \usepackage{bm}
 \mode<presentation>
 {
-  \usetheme{PaloAlto}
-  % or ...
-
-%  \setbeamercovered{transparent}
-  % or whatever (possibly just delete it)
-  \usecolortheme{default}
+	\usetheme{PaloAlto}
+	% or ...
+	
+	%  \setbeamercovered{transparent}
+	% or whatever (possibly just delete it)
+	\usecolortheme{dove}
 }
-
-\title[Modelos de difusi√≥n]{
-M√âTODO DE LOS ELEMENTOS FINITOS. \\
-Modelos de difusi√≥n}
-\author[Felipe Gabald√≥n]{Felipe Gabald√≥n Castillo}
+\title[Modelos de difusiÛn]{
+	M…TODO DE LOS ELEMENTOS FINITOS. \\
+	Modelos de DifusiÛn}
+\author[Felipe GabaldÛn]{Felipe GabaldÛn Castillo}
 \date{Madrid, 28 de septiembre de 2017}
 \pgfdeclareimage[height=0.5cm]{logo-upm}{upm}
 \logo{\pgfuseimage{logo-upm}}
 
 \AtBeginSection[]
 {
-  \begin{frame}<beamer>
-    \frametitle{√çndice}
-    \tableofcontents[currentsection]
-  \end{frame}
+	\begin{frame}<beamer>
+		\frametitle{Õndice}
+		\tableofcontents[currentsection]
+	\end{frame}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\norm}[1]{\lVert #1 \rVert}
@@ -38,14 +41,14 @@ Modelos de difusi√≥n}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{√çndice}
+\frametitle{Õndice}
 \tableofcontents[pausesections]
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introducci√≥n}
+\section{IntroducciÛn}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{La ecuaci√≥n de Poisson}
+\frametitle{La ecuaciÛn de Poisson}
 \parbox{40mm}{
 \begin{align*}
 \operatorname{div} \bm{q}&=f \textrm{ en }\Omega \\
@@ -56,27 +59,27 @@ u&=\overline{u}\textrm{ en } \partial_{u} \Omega \\
 }
 \parbox{50mm}{
 \begin{align*}
-\mbox{}& \textrm{ (ecuaci√≥n de balance)} \\
-\mbox{}& \textrm{ (condici√≥n esencial de contorno)}\\
-\mbox{}& \textrm{ (condici√≥n natural de contorno)}\\
-\mbox{}& \textrm{ (ecuaci√≥n constitutiva)}
+\mbox{}& \textrm{ (ecuaciÛn de balance)} \\
+\mbox{}& \textrm{ (condiciÛn esencial de contorno)}\\
+\mbox{}& \textrm{ (condiciÛn natural de contorno)}\\
+\mbox{}& \textrm{ (ecuaciÛn constitutiva)}
 \end{align*}
 }
 siendo:
 \vspace{-5mm}
 \begin{align*}
-u  &:\textrm{ funci√≥n potencial (variable b√°sica)} \\
+u  &:\textrm{ funciÛn potencial (variable b·sica)} \\
 \bm{q}&:\textrm{ vector flujo} \\
 f&:\textrm{ fuente} \\
 \bm{k}&:\textrm{ tensor constitutivo} \\
 \end{align*}
-El inter√©s que tiene estudiar aqu√≠ la ecuaci√≥n de Poisson es el
-amplio n√∫mero de modelos f√≠sicos que se rigen por esta ecuaci√≥n, y que
-la variable b√°sica es un escalar
+El interÈs que tiene estudiar aquÌ la ecuaciÛn de Poisson es el
+amplio n˙mero de modelos fÌsicos que se rigen por esta ecuaciÛn, y que
+la variable b·sica es un escalar
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Conducci√≥n de calor}
+\frametitle{ConducciÛn de calor}
 \begin{align*}
 \operatorname{div} \bm{q}&=f  \\
 \bm{q}&=-\bm{k} \bm{\nabla}_{x} u
@@ -90,7 +93,7 @@ f&:\textrm{\color{red}{Calor generado por unidad de volumen}} \\
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Conducci√≥n de calor}
+\frametitle{ConducciÛn de calor}
 \begin{center}
 \includegraphics[width=0.65\textwidth]{building_envelope_ir.jpg}
 \end{center}
@@ -103,7 +106,7 @@ f&:\textrm{\color{red}{Calor generado por unidad de volumen}} \\
 \bm{q}&=-\bm{k} \bm{\nabla}_{x} u
 \end{align*}
 \begin{align*}
-u  &:\textrm{\color{blue}{Altura piezom√©trica }} (u=\frac{p}{\gamma}+z) \\
+u  &:\textrm{\color{blue}{Altura piezomÈtrica }} (u=\frac{p}{\gamma}+z) \\
 \bm{q}&:\textrm{\color{blue}{Velocidad}}\\
 f&:\textrm{\color{blue}{Caudal suministrado por unidad de volumen}}\\
 \bm{k}&:\textrm{\color{blue}{Matriz de permeabilidades (Ley de Darcy)}}
@@ -118,21 +121,21 @@ f&:\textrm{\color{blue}{Caudal suministrado por unidad de volumen}}\\
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Electrost√°tica}
+\frametitle{Electrost·tica}
 \begin{align*}
 \operatorname{div} \bm{q}&=f  \\
 \bm{q}&=-\bm{k} \bm{\nabla}_{x} u
 \end{align*}
 \begin{align*}
-u  &:\textrm{\color{green}{Potencial el√©ctrico}} \\
-\bm{q}&:\textrm{\color{green}{Intensidad de campo el√©ctrico}} \\
-f&:\textrm{\color{green}{Carga el√©ctrica generada por unidad de volumen}} \\
+u  &:\textrm{\color{green}{Potencial elÈctrico}} \\
+\bm{q}&:\textrm{\color{green}{Intensidad de campo elÈctrico}} \\
+f&:\textrm{\color{green}{Carga elÈctrica generada por unidad de volumen}} \\
 \bm{k}&:\textrm{\color{green}{Matriz de permitividades (Ley de Gauss)}}
 \end{align*}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Electrost√°tica}
+\frametitle{Electrost·tica}
 \begin{center}
 \includegraphics[width=0.4\textwidth]{Model_Geometry_600_514.jpg}
 \includegraphics[width=0.6\textwidth]{electric_fields_contour_600_480.jpg}
@@ -140,44 +143,44 @@ f&:\textrm{\color{green}{Carga el√©ctrica generada por unidad de volumen}} \\
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Torsi√≥n uniforme}
+\frametitle{TorsiÛn uniforme}
 \begin{align*}
 \operatorname{div} \bm{q}&=f  \\
 \bm{q}&=-\bm{k} \bm{\nabla}_{x} u
 \end{align*}
 \begin{align*}
-u  &:\textrm{\color{magenta}{ Funci√≥n de tensiones (constante en }} \partial \Omega) \\
+u  &:\textrm{\color{magenta}{ FunciÛn de tensiones (constante en }} \partial \Omega) \\
 \bm{q}&:\textrm{\color{magenta}{ Tensiones tangenciales}} \\
 f&: \textrm{ }2 G \theta, \textrm{\color{magenta}{ siendo }} 
 \theta \textrm{\color{magenta}{ el giro por unidad de longitud y}} \\
- &\mbox{ }G \textrm{\color{magenta}{ el m√≥dulo de cortante}} \\
+ &\mbox{ }G \textrm{\color{magenta}{ el mÛdulo de cortante}} \\
 \sigma_{i3}&= \frac{\partial u}{\partial x_i}, 
-\textrm{\color{magenta}{ ser√≠a la ecuaci√≥n constitutiva}}
+\textrm{\color{magenta}{ serÌa la ecuaciÛn constitutiva}}
 \end{align*}
 \begin{itemize}
-\item Otros modelos f√≠sicos: flujo irrotacional de fluidos ideales,
-lubricaci√≥n de cojinetes, magnetost√°tica, presiones hidrodin√°micas sobre
+\item Otros modelos fÌsicos: flujo irrotacional de fluidos ideales,
+lubricaciÛn de cojinetes, magnetost·tica, presiones hidrodin·micas sobre
 superficies en movimiento, etc.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Torsi√≥n uniforme}
+\frametitle{TorsiÛn uniforme}
 \begin{center}
 \includegraphics[height=0.95\textheight]{torsion_uni.pdf}
 \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Formulaci√≥n del problema de contorno}
+\section{FormulaciÛn del problema de contorno}
 \begin{frame}
-\frametitle{Formulaci√≥n fuerte}
+\frametitle{FormulaciÛn fuerte}
 
 Sea $\overline{\Omega}=\Omega \cup \partial \Omega$ el dominio ocupado
 por un medio conductivo ($\overline{\Omega} \subset \mathbb{R}^n$), cuyo
-contorno $\partial \Omega$ admite la descomposici√≥n
+contorno $\partial \Omega$ admite la descomposiciÛn
 $\partial \Omega=\partial_u \Omega \cup \partial_t \Omega$,
-$\partial_u \Omega \cap \partial_t \Omega= \emptyset$. La formulaci√≥n fuerte
-del problema se establece en los siguientes t√©rminos:
+$\partial_u \Omega \cap \partial_t \Omega= \emptyset$. La formulaciÛn fuerte
+del problema se establece en los siguientes tÈrminos:
 
 Dados $f:\Omega \rightarrow \mathbb{R},\quad
 \overline{u} :\partial_u \Omega \rightarrow \mathbb{R}, \quad
@@ -193,7 +196,7 @@ con $\bm{q}=-\bm{k} \bm{\nabla} u$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n d√©bil}
+\frametitle{FormulaciÛn dÈbil}
 
 Dados $f:\Omega \rightarrow \mathbb{R}$ y las funciones
 $\overline{u} :\partial_u \Omega \rightarrow \mathbb{R}, \quad
@@ -222,11 +225,11 @@ $$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Equivalencia de las formulaciones fuerte y d√©bil}
+\frametitle{Equivalencia de las formulaciones fuerte y dÈbil}
 \begin{itemize}
-\item[1.] $u$ es soluci√≥n de (S) $\Rightarrow u$ es soluci√≥n de (W)
+\item[1.] $u$ es soluciÛn de (S) $\Rightarrow u$ es soluciÛn de (W)
 
-Si $u \textrm{ es soluci√≥n de (S)} \Rightarrow u=\overline{u} \textrm{ en }
+Si $u \textrm{ es soluciÛn de (S)} \Rightarrow u=\overline{u} \textrm{ en }
 \partial_u \Omega \Rightarrow u \in \delta$
 
 Por otra parte:
@@ -244,11 +247,11 @@ d \Omega+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Equivalencia de las formulaciones fuerte y d√©bil}
+\frametitle{Equivalencia de las formulaciones fuerte y dÈbil}
 \begin{itemize}
-\item[2.] $u$ es soluci√≥n de (W) $\Rightarrow u$ es soluci√≥n de (S)
+\item[2.] $u$ es soluciÛn de (W) $\Rightarrow u$ es soluciÛn de (S)
 
-Si $u \textrm{ es soluci√≥n de (W), } u \in \delta \Rightarrow u=g \textrm{ en }
+Si $u \textrm{ es soluciÛn de (W), } u \in \delta \Rightarrow u=g \textrm{ en }
 \partial_u \Omega$
 
 Por otra parte, $\forall \delta u \in \nu$ se verifica:
@@ -270,12 +273,12 @@ con lo que debe demostrarse:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Equivalencia de las formulaciones fuerte y d√©bil}
+\frametitle{Equivalencia de las formulaciones fuerte y dÈbil}
 \begin{itemize}
 \item[a)] $-\operatorname{div} \bm{q} +f=0 \textrm{ en } \Omega$
 \end{itemize}
 Sea $\delta u=(-\operatorname{div} \bm{q} +f) \phi$,
-donde $\phi$ es una funci√≥n que verifica:
+donde $\phi$ es una funciÛn que verifica:
 \begin{align*}
 1&) \phi>0 \textrm{ en } \Omega \\
 2&) \phi=0 \textrm{ en } \partial \Omega \\
@@ -292,7 +295,7 @@ Sustituyendo en (\ref{auxequi}):
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Equivalencia de las formulaciones fuerte y d√©bil}
+\frametitle{Equivalencia de las formulaciones fuerte y dÈbil}
 \begin{itemize}
 \item[b)] $\bm{q}\cdot \bm{n} - \overline{q}=0 \textrm{ en } \partial_t \Omega$
 \end{itemize}
@@ -315,18 +318,18 @@ para lo que debe de verificarse:
 \end{equation*}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Formulaci√≥n de Galerkin}
+\section{FormulaciÛn de Galerkin}
 \begin{frame}
-\frametitle{Formulaci√≥n de Galerkin}
+\frametitle{FormulaciÛn de Galerkin}
 Sean los conjuntos $\nu^h$ y $\delta^h$ aproximaciones de
-dimensi√≥n finita de $\nu$ y $\delta$ respectivamente. Partiendo de
-la descomposici√≥n (m√©todo de Bubnov-Galerkin):
+dimensiÛn finita de $\nu$ y $\delta$ respectivamente. Partiendo de
+la descomposiciÛn (mÈtodo de Bubnov-Galerkin):
 \begin{equation}
 u^h=v^h+\overline{u}^h
 \end{equation}
 donde $v^h \in \nu^h$ y $\overline{u}^h=\overline{u}$ en $\partial_u \Omega$
-(``aproximadamente''), la formulaci√≥n de Galerkin se expresa en los
-siguientes t√©rminos:
+(``aproximadamente''), la formulaciÛn de Galerkin se expresa en los
+siguientes tÈrminos:
 
 Dados $f:\Omega \rightarrow \mathbb{R}$ y las funciones
 $\overline{u} :\partial_u \Omega \rightarrow \mathbb{R}, \quad
@@ -346,7 +349,7 @@ f \delta u^h \, d \Omega -
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n matricial}
+\frametitle{FormulaciÛn matricial}
 
 Sean $\eta=\{ 1,2,\ldots,n_{\textrm{nod}} \}$,
 $\eta_u \subset \eta$ el conjunto de nodos con temperaturas prescritas
@@ -366,7 +369,7 @@ y por otra parte:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n matricial}
+\frametitle{FormulaciÛn matricial}
 
 Sustituyendo (\ref{termnuh}, \ref{termuh}) en (\ref{calorgal}), y teniendo
 en cuenta que los coeficientes $c_A$ son arbitrarios, resulta el 
@@ -379,7 +382,7 @@ sistema de ecuaciones:
 \quad (A \in \eta-\eta_u) \label{siseqcal}
 \end{multline}
 Para expresar en forma matricial este sistema
-es necesario establecer la numeraci√≥n global de las $\eta-\eta_u$ ecuaciones
+es necesario establecer la numeraciÛn global de las $\eta-\eta_u$ ecuaciones
 que lo constituyen:
 \begin{equation}
 id(A)=\left\{
@@ -389,13 +392,13 @@ P & \textrm{ si } A \in \eta-\eta_u \\
 \end{array}
 \right. \label{idmcalor}
 \end{equation}
-siendo $P$ el n√∫mero de la ecuaci√≥n global correspondiente al nodo $A$, y tal
-que $1 \leq P \leq n_{\rm eq}$. La dimensi√≥n de la matriz $\bm{id}$ es $n_{\rm nod}$.
+siendo $P$ el n˙mero de la ecuaciÛn global correspondiente al nodo $A$, y tal
+que $1 \leq P \leq n_{\rm eq}$. La dimensiÛn de la matriz $\bm{id}$ es $n_{\rm nod}$.
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n matricial}
-La expresi√≥n matricial del sistema de ecuaciones (\ref{siseqcal}) es:
+\frametitle{FormulaciÛn matricial}
+La expresiÛn matricial del sistema de ecuaciones (\ref{siseqcal}) es:
 \begin{equation}
 \mathbf{K} \bm{d}=\bm{F}
 \end{equation}
@@ -422,14 +425,14 @@ F_P&= \int_{\Omega} N_A f \, d\Omega+
       \frac{\partial N_B}{\partial x_j} d \Omega
                           \right) \overline{u}_B
 \end{align}
-{\em La matriz de rigidez es sim√©trica.}
+{\em La matriz de rigidez es simÈtrica.}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Formulaci√≥n de elementos finitos}
+\section{FormulaciÛn de elementos finitos}
 \begin{frame}
-\frametitle{Formulaci√≥n de elementos finitos}
+\frametitle{FormulaciÛn de elementos finitos}
 
-Considerando un elemento gen√©rico $e$ de $n_{\textrm{nen}}$ nodos, las
+Considerando un elemento genÈrico $e$ de $n_{\textrm{nen}}$ nodos, las
 expresiones de la matriz de rigidez elemental y del vector de fuerzas, son
 respectivamente:
 \begin{align*}
@@ -470,7 +473,7 @@ denomina {\em ensamble} o {\em ensamblaje}.
 \begin{align*}
 IEN(\underbrace{a}_{\textrm{nodo local}},\underbrace{e}_{\textrm{elemento}})&=
 \underbrace{A}_{\textrm{nodo global}} \\
-ID(A)&=\underbrace{N}_{\textrm{ecuaci√≥n}} \\
+ID(A)&=\underbrace{N}_{\textrm{ecuaciÛn}} \\
 LM(a,e)&=ID(IEN(a,e))
 \end{align*}
 Las matrices $IEN$ e $ID$ se construyen a partir de los datos de
@@ -537,29 +540,29 @@ $$
 \begin{frame}
 \frametitle{Concepto de convergencia}
 \begin{itemize}
-\item Al refinar (disminuir el tama√±o de los elementos), la soluci√≥n num√©rica 
-debe aproximarse tanto como se desee a la soluci√≥n exacta. \pause
+\item Al refinar (disminuir el tamaÒo de los elementos), la soluciÛn numÈrica 
+debe aproximarse tanto como se desee a la soluciÛn exacta. \pause
 \item Consistencia $=$ Complitud $+$ Compatibilidad
 \begin{itemize}
 \item Complitud: los elementos deben tener la suficiente {\em capacidad
-de aproximaci√≥n} para capturar la soluci√≥n exacta en l√≠mite del proceso
+de aproximaciÛn} para capturar la soluciÛn exacta en lÌmite del proceso
 de refinamiento.
 \item Compatibilidad: Las funciones de forma deben de ser continuas entre
 los elementos \pause
 \end{itemize}
 \item Estabilidad: se puede interpretar como el requisito que garantiza que la
-soluci√≥n de elementos finitos tiene las mismas propiedades de unicidad que la
-soluci√≥n del modelo matem√°tico que se desea resolver. \pause
-\item La complitud es una condici√≥n necesaria para la convergencia,
-mientras que la relajaci√≥n de los otros requisitos no excluye la convergencia.
+soluciÛn de elementos finitos tiene las mismas propiedades de unicidad que la
+soluciÛn del modelo matem·tico que se desea resolver. \pause
+\item La complitud es una condiciÛn necesaria para la convergencia,
+mientras que la relajaciÛn de los otros requisitos no excluye la convergencia.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{√çndice Variacional}
+\frametitle{Õndice Variacional}
 \begin{itemize}
-\item El √≠ndice variacional $m$ es el orden de la derivada espacial m√°s alta de
-$u$ en el funcional de energ√≠a $\Pi(u)$.
+\item El Ìndice variacional $m$ es el orden de la derivada espacial m·s alta de
+$u$ en el funcional de energÌa $\Pi(u)$.
 \item Ejemplo: elasticidad 1D
 $$
 \Pi(u)=\int_{0}^L \left(\frac{1}{2} u'EAu'-qu \right ) \, dx
@@ -585,7 +588,7 @@ de funciones de forma del elemento.
 u=\alpha_0 + \alpha_1 x + \alpha_2 y \qquad \qquad
 v=\alpha_3 + \alpha_4 x + \alpha_5 \label{ejcomp1}
 \end{equation}
-Se representan de manera exacta para valores cualesquiera de $\alpha_i$ (movimientos de s√≥lido r√≠gido y campos de deformaci√≥n constante). La condici√≥n de complitud equivale a:
+Se representan de manera exacta para valores cualesquiera de $\alpha_i$ (movimientos de sÛlido rÌgido y campos de deformaciÛn constante). La condiciÛn de complitud equivale a:
 $$
 \sum_{a=1}^{n_{en}} N_a = 1
 $$
@@ -631,11 +634,11 @@ interior de cada elemento.
 \item El requisito de continuidad ${\cal C}^{m-1}$ caracteriza a los
 {\em elementos conformes}
 \item El requisito de continuidad ${\cal C}^{m}$ caracteriza a las
-funciones de {\em energ√≠a finita}. Las funciones de forma que lo
-satisfacen son funciones cuya derivada $m$-√©sima es de cuadrado
+funciones de {\em energÌa finita}. Las funciones de forma que lo
+satisfacen son funciones cuya derivada $m$-Èsima es de cuadrado
 integrable: $N(\bm{x}) \in H^m$
-\item El requisito de conformidad puede relajarse al l√≠mite
-asint√≥tico (para $h \rightarrow 0$). La comprobaci√≥n se realiza mediante
+\item El requisito de conformidad puede relajarse al lÌmite
+asintÛtico (para $h \rightarrow 0$). La comprobaciÛn se realiza mediante
 la prueba de la parcela.
 \end{itemize}
 \begin{center}

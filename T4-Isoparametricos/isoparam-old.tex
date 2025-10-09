@@ -1,5 +1,5 @@
 \documentclass{beamer}
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath,amsfonts}
 \usepackage{bm}
@@ -14,10 +14,10 @@
   \usecolortheme{default}
 }
 
-\title[Elementos isoparam√©tricos]{
-M√âTODO DE LOS ELEMENTOS FINITOS \\
-Elementos isoparam√©tricos}
-\author[F. Gabald√≥n]{Felipe Gabald√≥n Castillo}
+\title[Elementos isoparamÈtricos]{
+M…TODO DE LOS ELEMENTOS FINITOS \\
+Elementos isoparamÈtricos}
+\author[F. GabaldÛn]{Felipe GabaldÛn Castillo}
 \date{}
 \pgfdeclareimage[height=0.5cm]{logo-gmc}{gmc}
 \logo{\pgfuseimage{logo-gmc}}
@@ -25,7 +25,7 @@ Elementos isoparam√©tricos}
 \AtBeginSection[]
 {
   \begin{frame}<beamer>
-    \frametitle{√çndice}
+    \frametitle{Õndice}
     \tableofcontents[currentsection]
   \end{frame}
 }
@@ -38,28 +38,28 @@ Elementos isoparam√©tricos}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{√çndice}
+\frametitle{Õndice}
 \tableofcontents
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ejemplo: el elemento CST}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Ejemplo: CST para problemas de tensi√≥n plana}
-A continuaci√≥n se desarrollar√°n las ecuaciones a nivel elemental del
-tri√°ngulo de deformaci√≥n constante (CST) para el problema de tensi√≥n plana.
-Este elemento presenta las siguientes caracter√≠sticas:
+\frametitle{Ejemplo: CST para problemas de tensiÛn plana}
+A continuaciÛn se desarrollar·n las ecuaciones a nivel elemental del
+tri·ngulo de deformaciÛn constante (CST) para el problema de tensiÛn plana.
+Este elemento presenta las siguientes caracterÌsticas:
 \begin{itemize}
-\item Es un elemento isoparam√©trico
-\item No es necesario emplear cuadraturas para la integraci√≥n num√©rica, ya que
+\item Es un elemento isoparamÈtrico
+\item No es necesario emplear cuadraturas para la integraciÛn numÈrica, ya que
 las integrales se pueden resolver de forma exacta.
 \item Se utiliza en aplicaciones no estructurales por la facilidad para generar
-mallas, ya que en an√°lisis estructural sus prestaciones son bastante pobres.
+mallas, ya que en an·lisis estructural sus prestaciones son bastante pobres.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Geometr√≠a y sistema de coordenadas}
+\frametitle{GeometrÌa y sistema de coordenadas}
 \parbox{0.25\textwidth}{
 \includegraphics{cst1}
 }\hfill \parbox{0.70\textwidth}{
@@ -85,17 +85,17 @@ y_1 & y_2 & y_3
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Interpolaci√≥n lineal}
-Una funci√≥n lineal $f$ definida en el tri√°ngulo se expresa en coordenadas
+\frametitle{InterpolaciÛn lineal}
+Una funciÛn lineal $f$ definida en el tri·ngulo se expresa en coordenadas
 cartesianas:
 \begin{equation}
 f(x,y)=a_0+a_1 x + a_2 y
 \end{equation}
-determin√°ndose los coeficientes $a_i$ a partir de tres condiciones que
+determin·ndose los coeficientes $a_i$ a partir de tres condiciones que
 proporciones los valores $f_1$, $f_2$ y $f_3$ (que en el contexto del MEF se 
 denominan "valores nodales").
 
-La expresi√≥n de $f$ en coordenadas triangulares hace uso directamente de los
+La expresiÛn de $f$ en coordenadas triangulares hace uso directamente de los
 valores nodales:
 \begin{equation}
 f(\xi_1,\xi_2,\xi_3)=f_1 \xi_1+f_2 \xi_2+f_3 \xi_3=
@@ -113,7 +113,7 @@ f(\xi_1,\xi_2,\xi_3)=f_1 \xi_1+f_2 \xi_2+f_3 \xi_3=
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Transformaci√≥n de coordenadas}
+\frametitle{TransformaciÛn de coordenadas}
 \begin{align}
 \left\{
 \begin{array}{c}
@@ -161,14 +161,14 @@ y
 \right\} \label{cstxix}
 \end{align}
 siendo $x_{jk}=x_j-x_k$, $y_{jk}=y_j-y_k$ y $A_{jk}=0.5(x_jy_k-x_ky_j)$ es el 
-√°rea encerrada por los nodos $j$, $k$ y el origen de coordenadas.
+·rea encerrada por los nodos $j$, $k$ y el origen de coordenadas.
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n del elemento CST}
+\frametitle{FormulaciÛn del elemento CST}
 \begin{itemize}
 \item Funciones de forma: $N_j=\xi_j,\quad j=1 \ldots 3$
-\item Interpolaci√≥n del campo de desplazamientos:
+\item InterpolaciÛn del campo de desplazamientos:
 \begin{footnotesize}
 \begin{align}
 u_x &= u_{x1} \xi_1 + u_{x2} \xi_2 + u_{x3} \xi_3 \\
@@ -204,13 +204,13 @@ u_{y3}
 \label{indcst}
 \end{equation}
 \end{footnotesize}
-que es la particularizaci√≥n de $\bm{u}^h=\sum_{A=1}^{n^e_{\textrm{nod}}}
-\bm{d}_{A} N_{A}(\bm{\xi}) = \mathbf{N}^{T} \bm{d}^e$  para el tri√°ngulo CST
+que es la particularizaciÛn de $\bm{u}^h=\sum_{A=1}^{n^e_{\textrm{nod}}}
+\bm{d}_{A} N_{A}(\bm{\xi}) = \mathbf{N}^{T} \bm{d}^e$  para el tri·ngulo CST
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\frametitle{Formulaci√≥n del elemento CST: Derivadas parciales}
+	\frametitle{FormulaciÛn del elemento CST: Derivadas parciales}
 	\begin{itemize}
 		\item A partir de las relaciones (\ref{cstxxi}) y (\ref{cstxix}) es inmediato 
 		obtener las relaciones:
@@ -224,7 +224,7 @@ que es la particularizaci√≥n de $\bm{u}^h=\sum_{A=1}^{n^e_{\textrm{nod}}}
 		%2A \frac{\partial \xi_i}{\partial x}&=y_{jk}, \qquad &
 		%2A \frac{\partial \xi_i}{\partial y}&=x_{kj}
 		%\end{alignat}
-		siendo $j$ y $k$ las permutaciones c√≠clicas de $i$.
+		siendo $j$ y $k$ las permutaciones cÌclicas de $i$.
 		\item Las derivadas de $f(\xi_1,\xi_2,\xi_3)$ respecto de las coordenadas
 		cartesianas se obtienen mediante la regla de la cadena:
 		\begin{align}
@@ -243,9 +243,9 @@ que es la particularizaci√≥n de $\bm{u}^h=\sum_{A=1}^{n^e_{\textrm{nod}}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n del elemento CST}
+\frametitle{FormulaciÛn del elemento CST}
 \begin{itemize}
-\item Relaciones deformaci√≥n--desplazamiento
+\item Relaciones deformaciÛn--desplazamiento
 \begin{footnotesize}
 \begin{equation}
 \bm{\varepsilon}=\mathbf{B} \bm{d}^e=\frac{1}{2A}
@@ -286,13 +286,13 @@ y} & \frac{\partial N_3}{\partial x}
 \end{equation}
 \end{footnotesize}
 \end{itemize}
-Obs√©rvese que las deformaciones son constantes en el elemento
+ObsÈrvese que las deformaciones son constantes en el elemento
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n del elemento CST}
+\frametitle{FormulaciÛn del elemento CST}
 \begin{itemize}
-\item Relaci√≥n tensi√≥n-deformaci√≥n
+\item RelaciÛn tensiÛn-deformaciÛn
 \begin{equation}
 \bm{\sigma}=
 \left\{
@@ -317,25 +317,25 @@ Obs√©rvese que las deformaciones son constantes en el elemento
 \end{array}
 \right\}=\mathbf{C}\bm{\varepsilon}
 \end{equation}
-\item La matriz constitutiva $\mathbf{C}$ se supondr√° constante en el
+\item La matriz constitutiva $\mathbf{C}$ se supondr· constante en el
 elemento. Por tanto, dado que las deformaciones son constantes en el elemento
-las tensiones tambi√©n los son.
+las tensiones tambiÈn los son.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n del elemento CST}
+\frametitle{FormulaciÛn del elemento CST}
 \begin{itemize}
 \item Matriz de rigidez elemental
 
-La expresi√≥n $\mathbf{K}^{e}=
+La expresiÛn $\mathbf{K}^{e}=
 \int_{\Omega^{e}} \mathbf{B}^{\rm T}  \mathbf{C} \mathbf{B} \, d \Omega$ de la
 matriz de rigidez elemental en este caso se puede escribir:
 \begin{equation}
 \mathbf{K}^{e}=\mathbf{B}^{\rm T}  \mathbf{C} \mathbf{B} 
 \int_{\Omega^{e}} h d \Omega \label{cstarrc}
 \end{equation}
-siendo $h$ el espesor y $\Omega^e$ el dominio del tri√°ngulo. Si el espesor es
+siendo $h$ el espesor y $\Omega^e$ el dominio del tri·ngulo. Si el espesor es
 constante la matriz de rigidez se expresa en forma cerrada:
 \begin{footnotesize}
 \begin{equation}
@@ -364,9 +364,9 @@ x_{32} & y_{23} & x_{13} & y_{31} & x_{21} & y_{12}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulaci√≥n del elemento CST}
+\frametitle{FormulaciÛn del elemento CST}
 \begin{itemize}
-\item Vector de fuerzas nodales (volum√©tricas)
+\item Vector de fuerzas nodales (volumÈtricas)
 \begin{footnotesize}
 \begin{equation}
 \bm{f}^e=\int_{\Omega^e} h \mathbf{N} \bm{b} d \Omega=
@@ -383,7 +383,7 @@ x_{32} & y_{23} & x_{13} & y_{31} & x_{21} & y_{12}
 \right) \bm{b} d \Omega
 \end{equation}
 \end{footnotesize}
-En el caso m√°s sencillo en que $h$ y $\bm{b}$ sean constantes en el elemento,
+En el caso m·s sencillo en que $h$ y $\bm{b}$ sean constantes en el elemento,
 y teniendo en cuenta:
 \begin{footnotesize}
 \begin{equation}
@@ -408,25 +408,25 @@ b_{x1} & b_{y1} & b_{x2} & b_{y2} & b_{x3} & b_{y3}
 \section{Cuadraturas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Integraci√≥n num√©rica}
+\frametitle{IntegraciÛn numÈrica}
 \begin{itemize}
-\item La integraci√≥n num√©rica es un ingrediente imprescindible en el
-c√°lculo de las integrales elementales
+\item La integraciÛn numÈrica es un ingrediente imprescindible en el
+c·lculo de las integrales elementales
 \item Existen diversas cuadraturas: Gauss, Simpson, Lobatto, etc.
 \item Las cuadraturas de Gauss proporcionan mayor exactitud que otras reglas
-para un determinado n√∫mero de puntos de integraci√≥n
-\item En cada punto de Gauss se realiza un n√∫mero importante de operaciones
+para un determinado n˙mero de puntos de integraciÛn
+\item En cada punto de Gauss se realiza un n˙mero importante de operaciones
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Integraci√≥n num√©rica}
+\frametitle{IntegraciÛn numÈrica}
 \begin{itemize}
-\item Cuadraturas de Gauss en una dimensi√≥n:
+\item Cuadraturas de Gauss en una dimensiÛn:
 \begin{equation}
 \int_{-1}^1 F(\xi) d \xi=\sum_{1}^p w_i F(\xi_i)
 \end{equation}
-siendo $p$ el n√∫mero de puntos de integraci√≥n, $\xi_i$ las coordenadas de
+siendo $p$ el n˙mero de puntos de integraciÛn, $\xi_i$ las coordenadas de
 cada punto $i$ y $w_i$ los pesos correspondientes.
 \item Algunas cuadraturas:
 \end{itemize}
@@ -444,7 +444,7 @@ w_2F(\xi_2)+w_3F(\xi_3)+w_4F(\xi_4)$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Integraci√≥n num√©rica}
+\frametitle{IntegraciÛn numÈrica}
 \begin{itemize}
 \item Para la regla de $4$ puntos:
 \begin{small}
@@ -463,7 +463,7 @@ exactamente polinomios de orden $2p-1$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Integraci√≥n num√©rica}
+\frametitle{IntegraciÛn numÈrica}
 \begin{itemize}
 \item Para calcular la integral de $F(x)$ en el intervalo $[a,b]$ se hace
 un cambio de variable definiendo $\xi$ en el intervalo biunitario:
@@ -475,34 +475,34 @@ siendo:
 \xi&=\frac{2}{b-a} \left( x-\frac{1}{2} (a+b) \right), \qquad &
 J&=\frac{dx}{d\xi}=\frac{b-a}{2}
 \end{alignat*}
-\item Las cuadraturas de Gauss de orden m√°s alto est√°n tabuladas en los
-libros de c√°lculo num√©rico (en {\sc Handbook of Mathematical Functions.
+\item Las cuadraturas de Gauss de orden m·s alto est·n tabuladas en los
+libros de c·lculo numÈrico (en {\sc Handbook of Mathematical Functions.
 Abramowitz \& Stegun} hasta 96 puntos). No obstante, las cuadraturas de 
 orden superior a $4$ no se pueden expresar de manera cerrada.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Integraci√≥n num√©rica}
+\frametitle{IntegraciÛn numÈrica}
 \begin{itemize}
 \item Cuadraturas de Gauss en dos dimensiones
 \begin{itemize}
-\item Las cuadraturas de Gauss m√°s simples se obtienen aplicando las
+\item Las cuadraturas de Gauss m·s simples se obtienen aplicando las
 cuadraturas 1D a cada variable. Para ello las integrales han de transformarse
-al cuadril√°tero biunitario.
+al cuadril·tero biunitario.
 \end{itemize}
 \begin{multline*}
 \int_{-1}^1 \int_{-1}^1 F(\xi,\eta) \, d \xi d\eta=
 \int_{-1}^1 d \eta \int_{-1}^1 F(\xi,\eta) \, d \xi \approx \\
 \sum_{i=1}^{p_1} \sum_{i=1}^{p_2} w_i w_j F(\xi_i,\eta_j)
 \end{multline*}
-siendo $p_1$ y $p_2$ el n√∫mero de puntos en cada direcci√≥n (que son
-iguales si las funciones de forma tambi√©n lo son).
+siendo $p_1$ y $p_2$ el n˙mero de puntos en cada direcciÛn (que son
+iguales si las funciones de forma tambiÈn lo son).
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Integraci√≥n num√©rica}
+\frametitle{IntegraciÛn numÈrica}
 \begin{itemize}
 \item Cuadraturas de Gauss en dos dimensiones
 
@@ -520,11 +520,11 @@ w_2&=w_4=w_6=w_8=\frac{40}{81} \\
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Elementos isoparam√©tricos}
+\section{Elementos isoparamÈtricos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elementos isoparam√©tricos}
-Las relaciones geom√©tricas y la interpolaci√≥n del campo de desplazamientos
+\frametitle{Elementos isoparamÈtricos}
+Las relaciones geomÈtricas y la interpolaciÛn del campo de desplazamientos
 verifican:
 \begin{equation}
 \left\{
@@ -554,23 +554,23 @@ N_{n^e_{\textrm{nod}}}
 \end{array}
 \right\} \label{intiso}
 \end{equation}
-El tri√°ngulo CST descrito anteriormente se expresa de acuerdo con (\ref{intiso})
+El tri·ngulo CST descrito anteriormente se expresa de acuerdo con (\ref{intiso})
 tomando $n^e_{\textrm{nod}}=3$, $N_1=\xi_1$, $N_2=\xi_2$ y $N_3=\xi_3$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elementos isoparam√©tricos}
+\frametitle{Elementos isoparamÈtricos}
 \begin{center}
 \includegraphics[width=0.8\textwidth]{lst1}
 
-Tri√°ngulo cuadr√°tico de seis nodos
+Tri·ngulo cuadr·tico de seis nodos
 \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elementos isoparam√©tricos}
+\frametitle{Elementos isoparamÈtricos}
 \begin{itemize}
-\item Tri√°ngulo cuadr√°tico
+\item Tri·ngulo cuadr·tico
 \end{itemize}
 \begin{equation}
 \left\{
@@ -610,21 +610,21 @@ N_4&=4\xi_1\xi_2     \quad& N_5&=4\xi_2\xi_3     \quad& N_6&=4\xi_3\xi_1
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elementos isoparam√©tricos}
+\frametitle{Elementos isoparamÈtricos}
 \begin{itemize}
-\item Elementos cuadril√°teros
+\item Elementos cuadril·teros
 \end{itemize}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{q4_4}
 
-Cuadril√°tero bilineal
+Cuadril·tero bilineal
 \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elementos isoparam√©tricos}
+\frametitle{Elementos isoparamÈtricos}
 \begin{itemize}
-\item Cuadril√°tero bilineal
+\item Cuadril·tero bilineal
 \end{itemize}
 \begin{equation}
 \left\{
@@ -662,18 +662,18 @@ N_3&=\frac{1}{4} (1+\xi) (1+\eta), \qquad& N_4&= \frac{1}{4} (1-\xi) (1+\eta)
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elementos isoparam√©tricos}
+\frametitle{Elementos isoparamÈtricos}
 \begin{center}
 \includegraphics[width=0.8\textwidth]{q4_5}
 
-Cuadril√°tero bicuadr√°tico
+Cuadril·tero bicuadr·tico
 \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elementos isoparam√©tricos}
+\frametitle{Elementos isoparamÈtricos}
 \begin{itemize}
-\item Cuadril√°tero bicuadr√°tico
+\item Cuadril·tero bicuadr·tico
 \end{itemize}
 \begin{footnotesize}
 \begin{equation*}
@@ -730,15 +730,15 @@ En este caso las funciones de forma son:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Dise√±o de las funciones de forma}
+\frametitle{DiseÒo de las funciones de forma}
 Requisitos:
 \begin{itemize}
-\item La funci√≥n de forma elemental $N_A$ debe tomar valor $1$ en el nodo $A$,
-y valor $0$ en los dem√°s nodos del elemento.
+\item La funciÛn de forma elemental $N_A$ debe tomar valor $1$ en el nodo $A$,
+y valor $0$ en los dem·s nodos del elemento.
 \item $N_A$ debe ser nula en los contornos de los elementos que no contengan al
 nodo $A$
 \end{itemize}
-y para problemas de √≠ndice variacional $m$:
+y para problemas de Ìndice variacional $m$:
 \begin{itemize}
 \item Las funciones de forma $N_A$ definidas en los elementos que comparten el
 nodo $A$ deben ser continuas de clase ${\cal C}^{m-1}$  entre los elementos
@@ -747,26 +747,26 @@ adyacentes.
 exacta cualquier polinomio de grado $m$  en las coordenadas del elemento.
 \end{itemize}
 Para garantizar la complitud, en los elementos
-isoparam√©tricos es suficiente con verificar la condici√≥n de partici√≥n de la
+isoparamÈtricos es suficiente con verificar la condiciÛn de particiÛn de la
 unidad.
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Dise√±o de las funciones de forma (elementos 2D)}
+\frametitle{DiseÒo de las funciones de forma (elementos 2D)}
 \begin{itemize}
 \item Las funciones de forma se expresan como el producto de $n$ factores
 $L_j(\xi_k)$:
 \begin{equation}
 N_A=c_A L_1 L_2 \ldots L_n \label{nfacconat}
 \end{equation}
-siendo las expresiones $L_j=0$ ecuaciones homog√©neas de l√≠neas
+siendo las expresiones $L_j=0$ ecuaciones homogÈneas de lÌneas
 (rectas o curvas) que son funciones lineales de las coordenadas naturales.
-\item Metodolog√≠a de dise√±o:
+\item MetodologÌa de diseÒo:
 \begin{itemize}
-\item Las $L_j$ son el m√≠nimo n√∫mero de
-l√≠neas isoparam√©tricas, con expresi√≥n lineal en las coordenadas naturales,
+\item Las $L_j$ son el mÌnimo n˙mero de
+lÌneas isoparamÈtricas, con expresiÛn lineal en las coordenadas naturales,
 que contengan a todos los nodos del elemento excepto el nodo $A$ (generalmente
-esta l√≠neas corresponden a los lados del elemento y a l√≠neas que unen los
+esta lÌneas corresponden a los lados del elemento y a lÌneas que unen los
 puntos medios de los lados).
 \item El coeficiente $c_A$ se calcula para que $N_A$ valga uno en el nodo $A$.
 \end{itemize}
@@ -774,28 +774,28 @@ puntos medios de los lados).
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Dise√±o de las funciones de forma (elementos 2D)}
+\frametitle{DiseÒo de las funciones de forma (elementos 2D)}
 \begin{itemize}
-\item Metodolog√≠a de dise√±o (continuaci√≥n):
+\item MetodologÌa de diseÒo (continuaciÛn):
 \begin{itemize}
 \item Comprobar que $N_A$ vale cero en todos los lados
 del elemento que no contienen al nodo $A$.
 \item Comprobar el grado del polinomio correspondiente a particularizar la
-funci√≥n de forma en los lados del elemento que contienen al nodo $A$. Si el
-n√∫mero de nodos en un lado del elemento es $p$, para que se verifique el
+funciÛn de forma en los lados del elemento que contienen al nodo $A$. Si el
+n˙mero de nodos en un lado del elemento es $p$, para que se verifique el
 requisito de compatibilidad el grado del polinomio en dicho lado debe ser
 $p-1$.
 \item Una vez verificados los requisitos anteriores, comprobar finalmente
 que las funciones de forma definidas en el elemento suman la unidad.
 \end{itemize}
-\item Ejemplo: obtenci√≥n de las funciones de forma del tri√°ngulo cuadr√°tico.
+\item Ejemplo: obtenciÛn de las funciones de forma del tri·ngulo cuadr·tico.
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Derivadas parciales}
 \begin{itemize}
-\item Jacobiano de la transformaci√≥n isoparam√©trica
+\item Jacobiano de la transformaciÛn isoparamÈtrica
 \end{itemize}
 \begin{align}
 \left\{
@@ -832,14 +832,14 @@ que las funciones de forma definidas en el elemento suman la unidad.
 \right)
 \label{jacob}
 \end{align}
-La matriz $\bm{J}$ se denomina {\em matriz Jacobiana} de la transformaci√≥n
-isoparam√©trica
+La matriz $\bm{J}$ se denomina {\em matriz Jacobiana} de la transformaciÛn
+isoparamÈtrica
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Derivadas parciales}
 \begin{itemize}
-\item C√°lculo de las derivadas parciales.
+\item C·lculo de las derivadas parciales.
 \end{itemize}
 \begin{alignat}{2}
 \frac{\partial x}{\partial \xi}&=\sum_{i=1}^{n^e_{\textrm nod}}
