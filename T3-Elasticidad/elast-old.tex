@@ -18,9 +18,9 @@
 MÉTODO DE LOS ELEMENTOS FINITOS. \\
 Elasticidad lineal}
 \author[F. Gabaldón]{Felipe Gabaldón Castillo}
-\date{Madrid, 5 de Noviembre de 2008}
-\pgfdeclareimage[height=0.5cm]{logo-gmc}{gmc}
-\logo{\pgfuseimage{logo-gmc}}
+\date{}
+\pgfdeclareimage[height=0.5cm]{logo-upm}{upm}
+\logo{\pgfuseimage{logo-upm}}
 
 \AtBeginSection[]
 {
@@ -189,8 +189,8 @@ s_{ij} t_{[ij]}&=-s_{ij} t_{[ji]} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Equivalencia de ambas formulaciones}
-Si $\bm{u}$ es solución del problema fuerte, entonces $\bm{u} \in \Omega$.
-Multiplicando (\ref{eula11}) por $\delta \bm{u} \in {\cal V}$ e integrando en
+Si $\bm{u}$ es solución del problema fuerte, 
+multiplicando (\ref{eula11}) por $\delta \bm{u} \in {\cal V}$ e integrando en
 $\Omega$:
 \begin{align}
 0&= \int_{\Omega} (\sigma_{ij,j}+b_i)\delta u_i d\Omega \nonumber \\
@@ -544,9 +544,9 @@ el sistema (\ref{linmef1}) se expresa:
 \\
 \varepsilon_z&=\frac{\sigma_z}{E}-\nu \frac{\sigma_x}{E}-\nu \frac{\sigma_y}{E}
 \\
-\varepsilon_{xy}&=\frac{\tau_{xy}}{2G} \\
-\varepsilon_{xz}&=\frac{\tau_{xz}}{2G} \\
 \varepsilon_{yz}&=\frac{\tau_{yz}}{2G} \\
+\varepsilon_{xz}&=\frac{\tau_{xz}}{2G} \\
+\varepsilon_{xy}&=\frac{\tau_{xy}}{2G} \\
 \end{align*}
 }\parbox{0.6\textwidth}{
 \begin{itemize}
@@ -738,9 +738,9 @@ N_{a,z} & N_{a,r} \\
 \sigma_{xx} \\
 \sigma_{yy} \\
 \sigma_{zz} \\
-\sigma_{xy} \\
+\sigma_{yz} \\
 \sigma_{xz} \\
-\sigma_{yz}
+\sigma_{xy}
 \end{array}
 \right\}=
 \left(
@@ -758,9 +758,9 @@ N_{a,z} & N_{a,r} \\
 \varepsilon{xx} \\
 \varepsilon{yy} \\
 \varepsilon{zz} \\
-\varepsilon{xy} \\
+\varepsilon{yz} \\
 \varepsilon{xz} \\
-\varepsilon{yz}
+\varepsilon{xy}
 \end{array}
 \right\}
 \end{equation}

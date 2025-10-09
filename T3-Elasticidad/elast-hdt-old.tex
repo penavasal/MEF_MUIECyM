@@ -1,4 +1,8 @@
-\documentclass{beamer}
+% A partir del fichero.pdf se genera el fichero a imprimir:
+%
+% pdfnup --nup 1x2 --paper a4paper --no-landscape filename.pdf
+%
+\documentclass[handout]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amsmath,amsfonts}
@@ -11,16 +15,16 @@
 
 %  \setbeamercovered{transparent}
   % or whatever (possibly just delete it)
-  \usecolortheme{default}
+  \usecolortheme{dove}
 }
 
 \title[Elasticidad lineal]{
 MÉTODO DE LOS ELEMENTOS FINITOS. \\
 Elasticidad lineal}
 \author[F. Gabaldón]{Felipe Gabaldón Castillo}
-\date{Madrid, 5 de Noviembre de 2009}
-\pgfdeclareimage[height=0.5cm]{logo-gmc}{gmc}
-\logo{\pgfuseimage{logo-gmc}}
+\date{}
+\pgfdeclareimage[height=0.5cm]{logo-upm}{upm}
+\logo{\pgfuseimage{logo-upm}}
 
 \AtBeginSection[]
 {
@@ -189,8 +193,8 @@ s_{ij} t_{[ij]}&=-s_{ij} t_{[ji]} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Equivalencia de ambas formulaciones}
-Si $\bm{u}$ es solución del problema fuerte, entonces $\bm{u} \in \Omega$.
-Multiplicando (\ref{eula11}) por $\delta \bm{u} \in {\cal V}$ e integrando en
+Si $\bm{u}$ es solución del problema fuerte,
+multiplicando (\ref{eula11}) por $\delta \bm{u} \in {\cal V}$ e integrando en
 $\Omega$:
 \begin{align}
 0&= \int_{\Omega} (\sigma_{ij,j}+b_i)\delta u_i d\Omega \nonumber \\

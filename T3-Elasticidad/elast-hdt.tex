@@ -19,9 +19,9 @@
 }
 
 \title[Elasticidad lineal]{
-MÉTODO DE LOS ELEMENTOS FINITOS. \\
+MÃ‰TODO DE LOS ELEMENTOS FINITOS. \\
 Elasticidad lineal}
-\author[F. Gabaldón]{Felipe Gabaldón Castillo}
+\author[F. GabaldÃ³n]{Felipe GabaldÃ³n Castillo}
 \date{}
 \pgfdeclareimage[height=0.5cm]{logo-upm}{upm}
 \logo{\pgfuseimage{logo-upm}}
@@ -29,7 +29,7 @@ Elasticidad lineal}
 \AtBeginSection[]
 {
   \begin{frame}<beamer>
-    \frametitle{Índice}
+    \frametitle{Ãndice}
     \tableofcontents[currentsection]
   \end{frame}
 }
@@ -42,20 +42,20 @@ Elasticidad lineal}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Índice}
+\frametitle{Ãndice}
 \tableofcontents
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introducción}
+\section{IntroducciÃ³n}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Introducción}
+\frametitle{IntroducciÃ³n}
 \begin{itemize}
 \item Sea $\bm{\sigma}$ el tensor de tensiones
 de Cauchy, $\bm{u}$ el vector desplazamiento y $\bm{b}$ el vector de
-fuerzas volumétricas.
+fuerzas volumÃ©tricas.
 \item Consideraremos el tensor de deformaciones infinitesimales, que se define
-como la parte simétrica del tensor gradiente de desplazamientos:
+como la parte simÃ©trica del tensor gradiente de desplazamientos:
 \begin{equation}
 \bm{\varepsilon}=\bm{\nabla}^s \bm{u}, \quad
 \varepsilon_{ij}=u_{(i,j)}=\frac{1}{2}\left(
@@ -64,11 +64,11 @@ como la parte simétrica del tensor gradiente de desplazamientos:
 \right)
 \end{equation}
 \item Las componentes del tensor de
-tensiones se expresan como combinación lineal de las componentes del tensor
+tensiones se expresan como combinaciÃ³n lineal de las componentes del tensor
 de deformaciones mediante un tensor de cuarto orden
 $\boldsymbol{\mathsf{C}}$ (Ley de Hooke generalizada), cuyas
 componentes $\mathsf{C}_{ijkl}$
-son constantes y se denominan ``coeficientes elásticos'':
+son constantes y se denominan ``coeficientes elÃ¡sticos'':
 \begin{equation}
 \bm{\sigma}= \boldsymbol{\mathsf{C}} \bm{\varepsilon} , \quad
 \sigma_{ij}=\mathsf{C}_{ijkl} \varepsilon_{kl} \label{hookegen}
@@ -77,14 +77,14 @@ son constantes y se denominan ``coeficientes elásticos'':
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Introducción}
-El tensor de módulos elásticos tiene las siguientes propiedades:
+\frametitle{IntroducciÃ³n}
+El tensor de mÃ³dulos elÃ¡sticos tiene las siguientes propiedades:
 \begin{enumerate}
-\item Simetría mayor:
+\item SimetrÃ­a mayor:
 \begin{equation}
 \mathsf{C}_{ijkl}=\mathsf{C}_{klij} \label{scmayor}
 \end{equation}
-\item Simetría menor:
+\item SimetrÃ­a menor:
 \begin{align}
 \mathsf{C}_{ijkl}&=\mathsf{C}_{jikl} &
 \mathsf{C}_{ijkl}&=\mathsf{C}_{ijlk}
@@ -92,12 +92,12 @@ El tensor de módulos elásticos tiene las siguientes propiedades:
 \item Es definido positivo:
 \begin{align}
 \mathsf{C}_{ijkl} \Phi_{ij} \Phi_{kl}& \geq 0 \quad \forall \Phi_{ij}
-\textrm{ simétrico} \label{sfcdpos1}\\
+\textrm{ simÃ©trico} \label{sfcdpos1}\\
 \mathsf{C}_{ijkl} \Phi_{ij} \Phi_{kl} &=0 \quad \Rightarrow \quad
 \Phi_{ij}=0 \label{sfcdpos2}
 \end{align}
 \end{enumerate}
-Consideraremos un sólido elástico definido por un conjunto abierto
+Consideraremos un sÃ³lido elÃ¡stico definido por un conjunto abierto
 $\Omega \subset \mathbb{R}^{n_{\rm dim}}$ con contorno
 $\partial \Omega$, tal que:
 \begin{align}
@@ -105,20 +105,20 @@ $\partial \Omega$, tal que:
 \emptyset       &=\partial_{u_i} \Omega \cap \partial_{t_i} \Omega
 \end{align}
 siendo $\partial_{u_i} \Omega$ la parte del contorno con desplazamientos
-impuestos en dirección $i$, y $\partial_{t_i} \Omega$ la parte con tensiones
-impuestas en dirección $i$
+impuestos en direcciÃ³n $i$, y $\partial_{t_i} \Omega$ la parte con tensiones
+impuestas en direcciÃ³n $i$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Formulación del problema de contorno}
+\section{FormulaciÃ³n del problema de contorno}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulación fuerte}
+\frametitle{FormulaciÃ³n fuerte}
 \parbox{70mm}{
 Sea $\overline{\Omega}=\Omega \cup \partial \Omega$ el dominio
-ocupado por un sólido, cuyo contorno es $\partial \Omega=
+ocupado por un sÃ³lido, cuyo contorno es $\partial \Omega=
 \partial_u \Omega \cup \partial_t \Omega$ con
 $\partial_u \Omega \cap \partial_t \Omega=\emptyset$. La
-formulación fuerte del problema se establece en los siguientes términos:
+formulaciÃ³n fuerte del problema se establece en los siguientes tÃ©rminos:
 }\parbox{60mm}{
 \includegraphics{elas1}
 }
@@ -136,7 +136,7 @@ $\bm{\varepsilon}=\bm{\nabla}^{S}\bm{u}$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulación débil}
+\frametitle{FormulaciÃ³n dÃ©bil}
 Dados $\bm{b}:\overline{\Omega}\rightarrow \mathbb{R}^n$ y las funciones
 $\overline{\bm{u}}:\partial_u \Omega \rightarrow \mathbb{R}^n$,
 $\overline{\bm{t}}:\partial_t \Omega \rightarrow \mathbb{R}^n$,
@@ -168,17 +168,17 @@ $$
 \begin{frame}
 \frametitle{Equivalencia de ambas formulaciones}
 \begin{itemize}
-\item Lema 1. Descomposición euclídea de un tensor de orden 2
+\item Lema 1. DescomposiciÃ³n euclÃ­dea de un tensor de orden 2
 \begin{equation*}
-s_{ij}=\underbrace{s_{(ij)}}_{\textrm{simétrico}}+
-       \underbrace{s_{[ij]}}_{\textrm{hemisimétrico}};
+s_{ij}=\underbrace{s_{(ij)}}_{\textrm{simÃ©trico}}+
+       \underbrace{s_{[ij]}}_{\textrm{hemisimÃ©trico}};
 \quad
 s_{(ij)}=\frac{s_{ij}+s_{ji}}{2},
 \;
 s_{[ij]}=\frac{s_{ij}-s_{ji}}{2}
 \end{equation*}
-\item Lema 2. Sea $s_{ij}$ un tensor simétrico y $t_{ij}$ un tensor no 
-simétrico. Entonces,
+\item Lema 2. Sea $s_{ij}$ un tensor simÃ©trico y $t_{ij}$ un tensor no 
+simÃ©trico. Entonces,
 $$
 s_{ij} t_{ij}=s_{ij} t_{(ij)}
 $$
@@ -193,7 +193,7 @@ s_{ij} t_{[ij]}&=-s_{ij} t_{[ji]} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Equivalencia de ambas formulaciones}
-Si $\bm{u}$ es solución del problema fuerte,
+Si $\bm{u}$ es soluciÃ³n del problema fuerte,
 multiplicando (\ref{eula11}) por $\delta \bm{u} \in {\cal V}$ e integrando en
 $\Omega$:
 \begin{align}
@@ -205,12 +205,12 @@ $\Omega$:
     \int_{\Omega}  b_i \delta u_i d\Omega + 
     \int_{\partial_{t_i}\Omega}  \overline{t}_i \delta u_i d \Gamma
 \end{align}
-y por tanto $u_i$ es solución del problema débil
+y por tanto $u_i$ es soluciÃ³n del problema dÃ©bil
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Equivalencia de ambas formulaciones}
-Sea $u_i$ solución del problema débil. Dado que $u_i \in \delta_i$, $u_i=
+Sea $u_i$ soluciÃ³n del problema dÃ©bil. Dado que $u_i \in \delta_i$, $u_i=
 \overline{u}_i$ en $\partial_{u_i} \Omega$. De (\ref{formdeb}):
 \begin{align}
 0&=-\int_{\Omega} \sigma_{ij}\delta u_{i,j} d \Omega +
@@ -232,7 +232,7 @@ Sean:
 \alpha_i&=\sigma_{ij,j}+b_i \\
 \beta_i&=\sigma_{ij}n_j-\overline{t}_i
 \end{align}
-La equivalencia entre ambas formulaciones estará demostrada si se verifica
+La equivalencia entre ambas formulaciones estarÃ¡ demostrada si se verifica
 que $\alpha_i=0$ en $\Omega$ y $\beta_i=0$ en $\partial_{t_i} \Omega$.
 Sea $\delta u_i=\alpha_i \phi$, donde:
 \begin{align*}
@@ -251,13 +251,13 @@ Sustituyendo este $\delta u_i$ en (\ref{demoeq}):
 \underbrace{ \phi}_{>0}) d\Omega 
 \Rightarrow \quad \alpha_i=0 \textrm{ en } \Omega
 \end{equation}
-Análogamente, tomemos ahora $\delta u_i=\delta_{i1} \beta_1 \psi$, donde:
+AnÃ¡logamente, tomemos ahora $\delta u_i=\delta_{i1} \beta_1 \psi$, donde:
 \begin{align*}
 \psi&>0 \textrm{ en } \partial_{t_1}\Omega \\
 \psi&=0 \textrm{ en } \partial_{u_1} \Omega \\
 \psi& \textrm{ suave}
 \end{align*}
-Sustituyendo esta nueva expresión de $\delta u_i \in {\cal V}$ en
+Sustituyendo esta nueva expresiÃ³n de $\delta u_i \in {\cal V}$ en
 (\ref{demoeq}):
 \begin{equation}
 0=\int_{\partial_{t_1} \Omega} \underbrace{\beta_1 \, (\beta_1}_{\geq 0}
@@ -269,21 +269,21 @@ Sustituyendo esta nueva expresión de $\delta u_i \in {\cal V}$ en
 \section{Formulaciones variacionales}
 \begin{frame}
 \frametitle{Formulaciones variacionales}
-Considerando el funcional de la energía potencial:
+Considerando el funcional de la energÃ­a potencial:
 \begin{equation}
 \Pi_p(\bm{u})=
 \int_{\Omega} \left(
 W(\bm{x},\bm{\varepsilon})-\bm{b} \cdot \bm{u}\right) \, d \Omega
 -\int_{\partial_t \Omega} \overline{\bm{t}}\cdot\bm{u} \, d \Gamma\label{potenc}
 \end{equation}
-la ecuación (\ref{formdeb}) equivale a establecer la condición de
+la ecuaciÃ³n (\ref{formdeb}) equivale a establecer la condiciÃ³n de
 estacionariedad del funcional (\ref{potenc}):
 \begin{equation}
 \delta \Pi_p(\bm{u})=0 \label{potest}
 \end{equation}
 \begin{itemize}
-\item Se dice que (\ref{formdeb}) es la ecuación variacional del problema
-(\ref{potest}), y que las ecuación (\ref{eula11}) es la ecuación de
+\item Se dice que (\ref{formdeb}) es la ecuaciÃ³n variacional del problema
+(\ref{potest}), y que las ecuaciÃ³n (\ref{eula11}) es la ecuaciÃ³n de
 Euler-Lagrange asociada al problema variacional (\ref{potest}).
 \item Para la ley de Hooke:
 \begin{equation}
@@ -297,9 +297,9 @@ W(\bm{x},\bm{\varepsilon})=\frac{1}{2} \bm{\varepsilon} \cdot
 \frametitle{Formulaciones variacionales}
 \begin{itemize}
 \item Existen otros principios variacionales diferentes al expresado en
-(\ref{potest}), asociado al funcional de la {\em energía potencial
+(\ref{potest}), asociado al funcional de la {\em energÃ­a potencial
 total} (\ref{potenc}).
-\item Dichos principios son la base de la formulación de
+\item Dichos principios son la base de la formulaciÃ³n de
 los denominados ``elementos mixtos''.
 \item En general se deducen a partir de ``funcionales multicampo'' como,
 por ejemplo, el de Hu-Washizu:
@@ -313,13 +313,13 @@ W(\bm{x},\bm{\varepsilon})-\bm{\sigma}\cdot\bm{\varepsilon}+
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Formulación de Galerkin}
+\section{FormulaciÃ³n de Galerkin}
 \begin{frame}
-\frametitle{Formulación de Galerkin}
+\frametitle{FormulaciÃ³n de Galerkin}
 \begin{itemize}
-\item Sean $\nu^h$ y $\delta^h$ aproximaciones de dimensión finita de los
+\item Sean $\nu^h$ y $\delta^h$ aproximaciones de dimensiÃ³n finita de los
 espacios funcionales $\nu$ y $\delta$, respectivamente
-\item Se adopta la descomposición: $\bm{u}^h=\bm{v}^h+\overline{\bm{u}}^h$
+\item Se adopta la descomposiciÃ³n: $\bm{u}^h=\bm{v}^h+\overline{\bm{u}}^h$
 con $\bm{v}^h \in \nu^h$ y 
 $\overline{\bm{u}}^h=\overline{\bm{u}}$ en $\partial_u \Omega$ (``aproximadamente'')
 \item Dados $\bm{b}:\overline{\Omega}\rightarrow \mathbb{R}^n$ y las funciones
@@ -345,9 +345,9 @@ $\forall \delta \bm{u}^h \in \nu^h$ se cumple:
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Formulación de Elementos Finitos}
+\section{FormulaciÃ³n de Elementos Finitos}
 \begin{frame}
-\frametitle{Formulación de elementos finitos}
+\frametitle{FormulaciÃ³n de elementos finitos}
 \begin{itemize}
 \item El dominio $\Omega$ se discretiza en $n_{\textrm{elm}}$ elementos
 $\Omega^e$:
@@ -358,7 +358,7 @@ $\Omega^e$:
 \item El elemento $\Omega^e$ se transforma
 en un ``cubo unitario''
 $$\Box=\underbrace{[-1,1]\times \cdots \times [-1,1]}_{n_{\rm dim}}$$
-definido en el espacio isoparamétrico de coordenadas $\{ \bm{\xi} \}$:
+definido en el espacio isoparamÃ©trico de coordenadas $\{ \bm{\xi} \}$:
 \begin{equation}
 \bm{\phi}:\bm{\xi}\in \Box \rightarrow \bm{x} \in \Omega^e; \qquad
 \bm{x}=\bm{\phi}(\bm{\xi})=\sum_{A=1}^{n^{e}_{\textrm{nod}}}
@@ -370,11 +370,11 @@ del elemento $e$
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Formulación de elementos finitos}
+\frametitle{FormulaciÃ³n de elementos finitos}
 \begin{itemize}
-\item Los subespacios de dimensión finita $\delta^h$ y ${\cal V}^h$
-se definen mediante unas funciones de interpolación $N_A, \;
-A=1 \ldots n_{\textrm{nod}}$ (polinómicas), que se denominan ``funciones de forma''
+\item Los subespacios de dimensiÃ³n finita $\delta^h$ y ${\cal V}^h$
+se definen mediante unas funciones de interpolaciÃ³n $N_A, \;
+A=1 \ldots n_{\textrm{nod}}$ (polinÃ³micas), que se denominan ``funciones de forma''
 \begin{small}
 \begin{align*}
 \delta^h&=\left\{
@@ -390,19 +390,19 @@ u_i^{h}=\sum_{A\in \eta - \eta_{u_i}} u_{iA}N_{A}(\bm{\xi})+
 \right\}
 \end{align*}
 \end{small}
-siendo $\eta=\{ 1,2,\ldots,n_{\textrm{numnp}} \}$ el conjunto de números de los
+siendo $\eta=\{ 1,2,\ldots,n_{\textrm{numnp}} \}$ el conjunto de nÃºmeros de los
 $n_{\textrm{numnp}}$ nodos de la malla, $\eta_{u_i} \subset \eta$ el conjunto
 de nodos en los que $u_i^h=\overline{u}_i$, y $\eta - \eta_{u_i}$ el conjunto
 complementario de $\eta_{u_i}$
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Formulación matricial}
+\section{FormulaciÃ³n matricial}
 \begin{frame}
-\frametitle{Interpolación del campo de desplazamientos}
+\frametitle{InterpolaciÃ³n del campo de desplazamientos}
 
-Si se emplea una formulación isoparamétrica que interpola los
-desplazamientos con la misma interpolación que las coordenadas
+Si se emplea una formulaciÃ³n isoparamÃ©trica que interpola los
+desplazamientos con la misma interpolaciÃ³n que las coordenadas
 (\ref{mapiso}):
 \begin{equation}
 \bm{u}^h=\sum_{A=1}^{n^e_{\textrm{nod}}}
@@ -431,12 +431,12 @@ N_1 &  0  & N_2 &  0  & \ldots & N_{\textrm n_{nod}} & 0                    \\
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Interpolación del campo de deformaciones}
+\frametitle{InterpolaciÃ³n del campo de deformaciones}
 
-Con la notación en que las tensiones y
+Con la notaciÃ³n en que las tensiones y
 deformaciones se expresan en forma de vector (por ejemplo en 2D:
 $\bm{\varepsilon}=(\varepsilon_{xx},\varepsilon_{yy},2
-\varepsilon_{xy})^T$) y derivando (\ref{disiso}), la interpolación del campo
+\varepsilon_{xy})^T$) y derivando (\ref{disiso}), la interpolaciÃ³n del campo
 de deformaciones se expresa:
 \begin{small}
 \begin{equation}
@@ -470,7 +470,7 @@ N_{\textrm n_{nod}}}{\partial x_1}
 \frametitle{Ecuaciones de elementos finitos}
 Sustituyendo (\ref{disiso}) y (\ref{intdefcomp}) en (\ref{ecvapr1})
 e imponiendo que los desplazamientos virtuales $\delta \bm{u}$ son arbitrarios,
-después de operar se obtiene:
+despuÃ©s de operar se obtiene:
 \begin{equation}
 \bm{R}\stackrel{\textrm{def}}{=}\stackrel{n_{\textrm{elm}}}{
 \underset{e=1}{\mbox{\LARGE{\bf {\sf A}}}}} \left[
@@ -481,7 +481,7 @@ después de operar se obtiene:
 donde ${\Large \bf{\sf A}[\cdot]}$ es el operador de ensamblaje y
 $\bm{f}^{e,{\rm ext}}$
 es el vector de fuerzas externas convencional que se obtiene a partir de la
-expresión (\ref{ecvapr1}):
+expresiÃ³n (\ref{ecvapr1}):
 \begin{equation}
 \bm{f}^{e,{\rm ext}}=\int_{\Omega^e} \mathbf{N}^{T} \bm{b} d\Omega+
 \int_{\partial_t \Omega^e} \mathbf{N}^{T} \overline{\bm{t}} d \Gamma
@@ -492,17 +492,17 @@ expresión (\ref{ecvapr1}):
 \begin{frame}
 \frametitle{Observaciones:}
 \begin{itemize}
-\item La ecuación (\ref{resmef1}) está planteada en forma
+\item La ecuaciÃ³n (\ref{resmef1}) estÃ¡ planteada en forma
 residual (anulando la diferencia entre las fuerzas externas y las fuerzas
 internas), que es la adecuada para problemas no lineales.
-\item En lo sucesivo se considerará el caso de la elasticidad lineal, en el
-que si denominamos $\mathbf{C}$ a la matriz de módulos elásticos 
+\item En lo sucesivo se considerarÃ¡ el caso de la elasticidad lineal, en el
+que si denominamos $\mathbf{C}$ a la matriz de mÃ³dulos elÃ¡sticos 
 (o matriz constitutiva), resulta:
 \begin{equation}
 \bm{\sigma}^h(\bm{\varepsilon})=
 \mathbf{C} \mathbf{B}\bm{d}^e
 \end{equation}
-entonces la ecuación (\ref{resmef1}) se expresa:
+entonces la ecuaciÃ³n (\ref{resmef1}) se expresa:
 \begin{equation}
 \stackrel{n_{\textrm{elm}}}{\underset{e=1}{\mbox{\LARGE{\bf {\sf A}}}}} \left[
 \left(\int_{\Omega^e} \mathbf{B}^T \mathbf{C} \mathbf{B} \, d \Omega \right)
@@ -554,15 +554,15 @@ el sistema (\ref{linmef1}) se expresa:
 \end{align*}
 }\parbox{0.6\textwidth}{
 \begin{itemize}
-\item Módulo de corte:
+\item MÃ³dulo de corte:
 $$
 G=\frac{E}{2(1+\nu)}
 $$
-\item Deformación volumétrica
+\item DeformaciÃ³n volumÃ©trica
 $$
 e=\varepsilon_{ii}
 $$
-\item Módulo de def. volumétrica
+\item MÃ³dulo de def. volumÃ©trica
 \begin{align*}
 e&=\frac{1-2\nu}{E}\sigma_{ii} \Rightarrow p=-k e \\
 k&=\frac{E}{3(1-2\nu)}
@@ -572,9 +572,9 @@ k&=\frac{E}{3(1-2\nu)}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elasticidad 2D. Deformación plana}
+\frametitle{Elasticidad 2D. DeformaciÃ³n plana}
 \begin{itemize}
-\item La condición de deformación plana es $(\varepsilon_{zz}=0)$
+\item La condiciÃ³n de deformaciÃ³n plana es $(\varepsilon_{zz}=0)$
 \begin{align}
 \left\{
 \begin{array}{c}
@@ -599,7 +599,7 @@ k&=\frac{E}{3(1-2\nu)}
 \right\} \\
 \sigma_{zz}&=\nu (\sigma_{xx}+\sigma_{yy})
 \end{align}
-siendo $\lambda$ y $\mu$ los coeficientes de Lamé:
+siendo $\lambda$ y $\mu$ los coeficientes de LamÃ©:
 \begin{equation}
 \lambda=\frac{\nu E}{(1+\nu)(1-2\nu)}\qquad \mu=\frac{E}{2(1+\nu)}
 \end{equation}
@@ -607,14 +607,14 @@ siendo $\lambda$ y $\mu$ los coeficientes de Lamé:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Deformación plana: aplicaciones}
+\frametitle{DeformaciÃ³n plana: aplicaciones}
 \begin{center}
 \includegraphics[width=0.85\textwidth]{damgrav}
 \end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Deformación plana: aplicaciones}
+\frametitle{DeformaciÃ³n plana: aplicaciones}
 \begin{center}
 \includegraphics[width=0.40\textwidth]{dam2dm}
 \hfill
@@ -624,9 +624,9 @@ siendo $\lambda$ y $\mu$ los coeficientes de Lamé:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elasticidad 2D. Tensión plana}
+\frametitle{Elasticidad 2D. TensiÃ³n plana}
 \begin{itemize}
-\item La condición de tensión plana es  $(\sigma_{zz}=0)$
+\item La condiciÃ³n de tensiÃ³n plana es  $(\sigma_{zz}=0)$
 \begin{align}
 \left\{
 \begin{array}{c}
@@ -655,7 +655,7 @@ siendo $\lambda$ y $\mu$ los coeficientes de Lamé:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elasticidad 2D. Tensión plana}
+\frametitle{Elasticidad 2D. TensiÃ³n plana}
 \begin{center}
 \includegraphics[width=0.50\textwidth]{L3D}
 \hfill
@@ -664,24 +664,24 @@ siendo $\lambda$ y $\mu$ los coeficientes de Lamé:
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elasticidad 2D. Problemas axilsimétricos}
+\frametitle{Elasticidad 2D. Problemas axilsimÃ©tricos}
 \begin{itemize}
-\item Se expresa en términos de las coordenadas cilíndricas $r$ (radial),
+\item Se expresa en tÃ©rminos de las coordenadas cilÃ­ndricas $r$ (radial),
 $z$ (axial) y $\theta$ (circunferencial).
 
 \includegraphics{axisim1}
 
-\item Condición de simetría axial: todas las variables son independientes de 
+\item CondiciÃ³n de simetrÃ­a axial: todas las variables son independientes de 
 $\theta$ y
-además: $u_{\theta}$=0, $\varepsilon_{r \theta}=\varepsilon_{z \theta}=0$
+ademÃ¡s: $u_{\theta}$=0, $\varepsilon_{r \theta}=\varepsilon_{z \theta}=0$
 \item En todos los integrandos hay que considerar un factor de $2 \pi r$
 \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elasticidad 2D. Problemas axilsimétricos}
+\frametitle{Elasticidad 2D. Problemas axilsimÃ©tricos}
 \begin{itemize}
-\item Relación tensión - deformación
+\item RelaciÃ³n tensiÃ³n - deformaciÃ³n
 \begin{equation}
 \left\{
 \begin{array}{c}
@@ -708,7 +708,7 @@ además: $u_{\theta}$=0, $\varepsilon_{r \theta}=\varepsilon_{z \theta}=0$
 \end{array}
 \right\}
 \end{equation}
-\item La matriz $\mathbf{B}$ ( de interpolación del campo de deformaciones)
+\item La matriz $\mathbf{B}$ ( de interpolaciÃ³n del campo de deformaciones)
 es:
 \begin{equation}
 \mathbf{B}=
@@ -725,7 +725,7 @@ N_{a,z} & N_{a,r} \\
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Elasticidad 2D. Problemas axilsimétricos}
+\frametitle{Elasticidad 2D. Problemas axilsimÃ©tricos}
 \begin{center}
 \includegraphics[width=0.8\textwidth]{tn_lng_tank2}
 \end{center}
@@ -734,7 +734,7 @@ N_{a,z} & N_{a,r} \\
 \begin{frame}
 \frametitle{Elasticidad 3D}
 \begin{itemize}
-\item Relación tensión -  deformación
+\item RelaciÃ³n tensiÃ³n -  deformaciÃ³n
 \begin{small}
 \begin{equation}
 \left\{
