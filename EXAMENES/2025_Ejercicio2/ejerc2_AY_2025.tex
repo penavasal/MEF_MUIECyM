@@ -1,0 +1,191 @@
+\documentclass[a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CARGO LOS PAQUETES DE LATEX QUE VOY A NECESITAR - EL SEGUNDO GRUPO PUEDE VARIAR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+% Estos pueden variar segun tus necesidades
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CARGO EL PAQUETE automultiplechoice CON SUS OPCIONES 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[box,completemulti,lang=ES,separateanswersheet]{automultiplechoice}  
+  
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+\AMCtext{none}{Ninguna de estas respuestas es correcta}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  INICIO EL DOCUMENTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Numero semilla que uso para aleatorizar las preguntas
+\AMCrandomseed{1237893}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CARGO LAS PREGUNTAS DE LAS BIBLIOTECAS QUE VOY A USAR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \input{Test02_AY_2025.tex}
+\input{Test02_AY_2025.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINO LA ESTRATEGIA GLOBAL DE PUNTUACIÓN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estrategia para las preguntas con una respuesta correcta no
+% respuesta 0, bien +1, mal -1/(N-1)
+\scoringDefaultS{b=1,m=-1/(N-1)}
+% bien +1, mal 0 \scoringDefaultS{b=1,m=0} Estrategia para las
+% preguntas con multiples respuestas correctas bien +1, mal 0
+\scoringDefaultM{b=1,m=0}
+% bien +1, mal -1/(N-1) \scoringDefaultM{b=1,m=-1/(N-1)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INDICO EL NUMERO DE COPIAS A REALIZAR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\onecopy{1}{ \setcounter{figure}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % DEFINO EL ENCABEZADO DE LA HOJA DE PREGUNTAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\centering
+{\small\sc Escuela Técnica Superior de Ingenieros de Caminos, Canales y
+Puertos (Madrid)}\\*[4mm]
+{\Large\bf Método de los Elementos Finitos (Curso 25-26)}\\*[4mm]
+Ejercicio 2: Ecuación de difusión \\*[4mm]
+}
+\begin{center}\em
+  \textbf{Tiempo: 60 minutos.}
+
+  Está prohibido el uso de internet en el equipo y de teléfonos
+  móviles.
+
+  Todas las  preguntas tienen una única respuesta. Elija aquella que se
+  aproxime más a su solución.
+
+  Se atribuirá puntuación negativa a las respuestas incorrectas (-$1/3$ del valor de la pregunta).
+
+\end{center}
+\vspace{3mm}
+
+%%%%%
+\noindent
+
+Se dispone una presa sobre un terreno tal que aguas arriba se almacena el agua a una cierta altura. Aguas abajo de la presa el nivel de agua coincide con el terreno natural. Se instaló una pantalla impermeable ($EAC$) de espesor igual a 0.05m en la zona de aguas abajo, como muestra la figura.   
+El terreno está formado por tres materiales distintos, cuyas permeabilidades son respectivamente: $K_1$ = $1\cdot 10^{-4}$ m/s, $K_2$ = $1\cdot 10^{-3}$ m/s y $K_3$ = $5\cdot 10^{-3}$ m/s.
+
+Se asumirá que los contornos laterales del terreno, así como la base del mismo, son impermeables. Las unidades de la figura son en metros. 
+
+
+\vspace{0.2cm}
+
+\begin{center}
+\includegraphics[width=0.70\textwidth]{Ejer2._2025_cropped.pdf}
+\end{center}
+\vspace{0.2cm}
+
+Téngase en cuenta las siguientes consideraciones:
+
+\begin{itemize}
+\item 
+  Se usarán preferentemente elementos cuadriláteros (\emph{Quad dominated}) para la creación de la malla y la técnica de mallado \emph{Free}, con tamaño global de malla 1 m. e interpolación lineal (Elemento \emph{DC2D4}).
+\item Se considerará que el fluido es agua dulce con densidad $\rho_w=1000$
+  kg/m$^3$ y que el valor de la aceleración de la gravedad vale $g=9.81$ m/s$^2$.
+
+\end{itemize}
+\vspace{0.3cm}
+% vacio el grupo miprueba
+
+\cleargroup{miprueba}
+% baraja el grupo historia y copia las cuatro primeras preguntas en
+% miprueba
+\copygroup{test1}{miprueba}
+% baraja el grupo geografia y copia las tres primeras preguntas en
+% miprueba baraja "miprueba"
+\shufflegroup{miprueba}
+% inserta las preguntas seleccionadas en "miprueba"
+\insertgroup{miprueba}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FINALIZO LA HOJA DE PREGUNTAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AMCcleardoublepage % Si quiero que la hoja de respuestas sea impar (nuevo folio)
+% \clearpage % Si quiero que la hoja de respuestas este justo detras de
+% la ultima hoja de preguntas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INICIO LA HOJA DE RESPUESTAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AMCformBegin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INCLUYO UN CODIGO PARA ASIGNAR ALUMNOS CON HOJA DE EXAMEN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent\AMCcode{nummat}{4}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+  $\longleftarrow{}$ Escriba su número de matrícula marcando los
+  dígitos en los recuadros (con ceros a la izquierda si el número es
+  de menos de cuatro dígitos) y el nombre y apellidos debajo.
+
+  \vspace{3ex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % INCLUYO UN ESPACIO PARA QUE LOS ALUMNOS FIRMEN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \namefield{\fbox{
+      \begin{minipage}{.9\linewidth}
+        Apellidos, Nombre:
+
+        \vspace*{.5cm}\dotfill \vspace*{1mm}
+      \end{minipage}
+    }}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INCLUYO UN COMENTARIO A LA HOJA DE RESPUESTAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+  \bf\em Debe dar las respuestas exclusivamente en esta hoja (las
+  respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FINALIZO LA HOJA DE RESPUESTAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AMCform
+  
+\AMCcleardoublepage % Si quiero que la siguiente hoja de preguntas sea
+% impar (nuevo folio)
+% \clearpage % Si quiero que la siguiente hoja de preguntas este
+% justo detras de la ultima hoja de respuestas
+
+
+}
+
+\end{document}
+
+
