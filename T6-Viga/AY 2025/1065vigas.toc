@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Beam General Assumptions}{10}{0}{1}
+\beamer@sectionintoc {2}{Bernoulli--Euler Beam}{22}{0}{2}
+\beamer@subsectionintoc {2}{1}{Strong and Weak Formulations}{22}{0}{2}
+\beamer@subsectionintoc {2}{2}{Finite Element Approximation}{38}{0}{2}
+\beamer@sectionintoc {3}{Timoshenko Beam}{47}{0}{3}
+\beamer@subsectionintoc {3}{1}{Strong and Weak Formulations}{47}{0}{3}
+\beamer@subsectionintoc {3}{2}{Finite Element Approximation}{58}{0}{3}
+\beamer@sectionintoc {4}{Performance of beam models}{63}{0}{4}
+\beamer@subsectionintoc {4}{1}{Comparison of models}{63}{0}{4}
+\beamer@subsectionintoc {4}{2}{Locking and solutions}{72}{0}{4}
+\beamer@subsectionintoc {4}{3}{Continuum elements?}{87}{0}{4}
+\beamer@sectionintoc {5}{ABAQUS beam models}{96}{0}{5}
+\beamer@subsectionintoc {5}{1}{2D beams}{96}{0}{5}
