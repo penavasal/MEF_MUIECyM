@@ -1,0 +1,168 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemecolmenar}[2026/10/21 Plantilla Beamer Colmenar]
+
+% ==============================================================================
+% PAQUETES DE BASE Y LIBRERÍAS DE TIKZ
+% ==============================================================================
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[spanish]{babel}
+\RequirePackage{amsmath,amsfonts,amssymb}
+\RequirePackage{bm}
+\RequirePackage{xcolor}
+
+\RequirePackage{tikz}
+\usetikzlibrary{
+  shapes,
+  arrows,
+  arrows.meta,                % Flechas modernas y personalizables
+  calc,                       % Cálculo de coordenadas
+  decorations.pathmorphing,   % Muelles, ondas y deformaciones
+  decorations.pathreplacing,  % Llaves y cotas
+  patterns,                   % Sombreados de apoyos y terrenos
+  positioning,                % Posicionamiento relativo de nodos
+  angles,                     % Marcado de ángulos
+  quotes                      % Etiquetas en arcos y ángulos
+}
+
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% ==============================================================================
+% OPERADORES Y COMANDOS MATEMÁTICOS BÁSICOS
+% ==============================================================================
+\providecommand{\diver}{\operatorname{\mathbf{div}}}
+\providecommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+% ==============================================================================
+% PALETA DE COLORES (TECH DASHBOARD FLAT - ULTRA LIGERO)
+% ==============================================================================
+\definecolor{DarkSlate}{HTML}{0F2A2E}     % Verde pino muy oscuro (Estructura y Títulos)
+\definecolor{Turquoise}{HTML}{00A896}     % Turquesa limpio (Acentos)
+\definecolor{SoftMint}{HTML}{FAFCFB}      % Fondo aclarado al máximo (óptimo para proyector)
+\definecolor{BorderGray}{HTML}{CBD5E1}    % Borde sutil para tarjetas
+\definecolor{TextDark}{HTML}{1E293B}      % Texto slate oscuro
+\definecolor{YellowBC}{HTML}{D97706}      % Ámbar para condiciones de contorno / resaltados
+
+\setbeamercolor{background canvas}{bg=SoftMint}
+\setbeamercolor{normal text}{fg=TextDark}
+\setbeamercolor{structure}{fg=DarkSlate}
+\setbeamertemplate{navigation symbols}{}
+
+% Desactivar la numeración por defecto de Beamer para evitar duplicados
+\setbeamertemplate{page number in head/foot}{}
+
+% ==============================================================================
+% REDISEÑO DASHBOARD DEL ÍNDICE (FORMATO 4:3)
+% ==============================================================================
+\setbeamertemplate{section in toc}{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=BorderGray,
+    arc=1.5mm,
+    outer arc=1.5mm,
+    boxrule=0.6pt,
+    borderline west={3pt}{0pt}{Turquoise},
+    left=6pt, right=6pt, top=3pt, bottom=3pt
+  ]
+    {\small\bfseries\color{Turquoise}\ifnum\inserttocsectionnumber<10 0\fi\inserttocsectionnumber}\quad
+    {\small\bfseries\color{DarkSlate}\inserttocsection}
+  \end{tcolorbox}\vspace{-0.08cm}%
+}
+
+\setbeamertemplate{section in toc shaded}{%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=SoftMint!60!white,
+    colframe=BorderGray!60,
+    arc=1.5mm,
+    outer arc=1.5mm,
+    boxrule=0.4pt,
+    borderline west={3pt}{0pt}{BorderGray!80},
+    left=6pt, right=6pt, top=3pt, bottom=3pt
+  ]
+    {\small\bfseries\color{TextDark!35}\ifnum\inserttocsectionnumber<10 0\fi\inserttocsectionnumber}\quad
+    {\small\color{TextDark!40}\inserttocsection}
+  \end{tcolorbox}\vspace{-0.08cm}%
+}
+
+% ==============================================================================
+% MARCA DE AGUA (ESCUDO PARCIAL UPM - CONFIGURACIÓN ORIGINAL)
+% ==============================================================================
+\setbeamertemplate{background}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=south east, opacity=0.05, inner sep=0pt, xshift=0.1cm, yshift=-0.1cm]
+      at (current page.south east) {%
+        \IfFileExists{upm_cuarto.png}{\includegraphics[height=3.4cm]{upm_cuarto.png}}{%
+        \IfFileExists{escudo_upm.png}{\includegraphics[height=3.4cm]{escudo_upm.png}}{%
+        \IfFileExists{SFS54051.png}{\includegraphics[height=3.4cm]{SFS54051.png}}{%
+        \IfFileExists{upm.png}{\includegraphics[height=3.4cm]{upm.png}}{%
+        \IfFileExists{upm.pdf}{\includegraphics[height=3.4cm]{upm.pdf}}{}}}}}%
+      };
+  \end{tikzpicture}%
+}
+
+% ==============================================================================
+% CABECERA ESTILO DASHBOARD (ADAPTADA A 4:3)
+% ==============================================================================
+\setbeamertemplate{frametitle}{
+  \vspace*{0.15cm}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm,leftskip=0.6cm,rightskip=0.6cm]{}
+    \usebeamerfont{frametitle}\textcolor{DarkSlate}{\textbf{\insertframetitle}}
+    \ifx\insertframesubtitle\@empty\else
+      \hfill{\usebeamerfont{framesubtitle}\textcolor{Turquoise}{\small \insertframesubtitle}}
+    \fi
+    \vspace*{0.08cm}
+    \hrule height 1pt width \dimexpr\paperwidth-1.2cm\relax \color{BorderGray}
+  \end{beamercolorbox}
+}
+
+% ==============================================================================
+% NAVEGACIÓN Y CONTADOR TIPOGRÁFICO ÚNICO (FOOTLINE)
+% ==============================================================================
+\setbeamercolor{section in head/foot}{fg=DarkSlate}
+\setbeamercolor{section in head/foot shaded}{fg=TextDark!35}
+\setbeamercolor{mini frame}{fg=Turquoise, bg=BorderGray}
+
+\setbeamertemplate{footline}{%
+  \ifnum\insertframenumber>1
+    \vspace*{0.05cm}
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.45cm,dp=0.15cm,leftskip=0.4cm,rightskip=0.4cm]{}
+      \usebeamerfont{footline}%
+      \insertsectionnavigationhorizontal{\dimexpr\paperwidth-2.8cm\relax}{\hfil}{\hfil}
+      \hfill
+      {\small\bfseries \textcolor{Turquoise}{\insertframenumber}\,\textcolor{BorderGray}{/}\,\textcolor{DarkSlate!60}{\inserttotalframenumber}}
+    \end{beamercolorbox}
+    \vspace*{0.05cm}
+  \fi
+}
+
+% ==============================================================================
+% COMPONENTES DE INTERFAZ (TARJETAS Y VIÑETAS)
+% ==============================================================================
+\newtcolorbox{uicard}[1][]{
+  enhanced,
+  colback=white,
+  colframe=BorderGray,
+  arc=2mm,
+  outer arc=2mm,
+  boxrule=0.8pt,
+  borderline north={2.5pt}{0pt}{Turquoise},
+  left=12pt, right=12pt, top=8pt, bottom=10pt,
+  fonttitle=\bfseries\color{DarkSlate},
+  coltitle=DarkSlate,
+  attach title to upper={\par\vspace{0.2cm}},
+  #1
+}
+
+\setbeamertemplate{itemize item}{\textcolor{Turquoise}{$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\textcolor{DarkSlate}{$\bullet$}}
+\setbeamertemplate{bibliography item}[book]
+
+% Transición automática al iniciar sección
+\AtBeginSection[]
+{
+  \begin{frame}{Estructura del Tema}{Módulo en curso}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
