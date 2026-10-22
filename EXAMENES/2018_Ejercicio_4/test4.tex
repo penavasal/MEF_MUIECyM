@@ -1,0 +1,255 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\usepackage{bm}
+\usepackage{amsxtra} 
+\usepackage{amssymb}% to get the \mathbb alphabet
+\usepackage{amsmath}
+
+\usepackage[box,completemulti,separateanswersheet]{automultiplechoice}    
+\def\AMCformQuestion#1{\vspace{\AMCformVSpace}\par {\sc Pregunta #1:} }    
+\def\AMCbeginQuestion#1#2{\par\noindent{\bf Pregunta #1}#2\hspace*{1em}}
+\def\AMCcleardoublepage{\ifodd\thepage\clearpage\mbox{}\fi\clearpage}
+
+\begin{document}
+
+\AMCrandomseed{1237893}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p1}
+En la formulación de elementos finitos con integración selectiva-reducida:
+\begin{choices}
+	\correctchoice{La matriz de rigidez se descompone en una parte
+volumétrica, que se subintegra, y otra parte desviadora con integración
+completa.}
+	\wrongchoice{Las matrices de rigidez de los elementos con cargas aplicadas se subintegran.}
+	\wrongchoice{En una parte reducida de la malla, las matrices de
+rigidez elementales se integran con una cuadratura selectiva.}
+	\wrongchoice{Ninguna de las respuestas anteriores es correcta.}
+\end{choices}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p2}
+La formulación $\overline{\bm{B}}$ de elementos finitos:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Se basa en modificar la matriz de interpolación de
+deformaciones estándar $\bm{B}$}
+	\wrongchoice{Se basa en remplazar la matriz de interpolación de
+deformaciones por un vector de deformaciones libre de bloqueo}
+	\wrongchoice{Evita el problema de bloqueo por flexión pero no el
+bloqueo por incompresibilidad}
+	\wrongchoice{Evita el problema de bloqueo, pero no pasa la prueba de
+la parcela}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p3}
+Los elementos con formulación de modos incompatibles:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{Incorporan funciones de forma asociadas a grados de libertad internos (los desplazamientos asociados a las mismas son nulos en los
+nodos del elemento)}
+	\wrongchoice{Al igual que ciertos elementos mixtos, tienen grados
+de libertad de presión}
+	\wrongchoice{Son una clase de elementos isoparamétricos}
+	\wrongchoice{Ninguna de las respuestas anteriores es correcta}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p4}
+El valor del desplazamiento en dirección $X$ del nodo $A$,
+calculado con los elementos isoparamétricos, vale aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$-1.7$ mm}
+	\wrongchoice{$-2.8$ mm}
+	\wrongchoice{$-0.7$ mm}
+	\wrongchoice{$-0.2$ mm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p5}
+El valor del desplazamiento en dirección $X$ del nodo $A$,
+calculado con los elementos mixtos, vale aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$-1.9$ mm}
+	\wrongchoice{$-3.1$ mm}
+	\wrongchoice{$-1.0$ mm}
+	\wrongchoice{$-0.4$ mm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p6}
+El valor del desplazamiento en dirección $X$ del nodo $A$,
+calculado con los elementos de modos incompatibles, vale aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$-1.9$ mm}
+	\wrongchoice{$-3.1$ mm}
+	\wrongchoice{$-1.0$ mm}
+	\wrongchoice{$-0.4$ mm}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p7}
+Para evaluar la posible rotura del perfil, se visualizan 
+los contornos de la tensión de Von Mises ({\tt pstr,6}).
+Para los elementos isoparamétricos, el valor máximo es aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$47.7$ MPa}
+	\wrongchoice{$26.1$ MPa}
+	\wrongchoice{$58.2$ MPa}
+	\wrongchoice{$34.6$ MPa}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p8}
+Para evaluar la posible rotura del perfil, se visualizan 
+los contornos de la tensión de Von Mises ({\tt pstr,6}).
+Para los elementos con formulación mixta, el valor máximo es aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$50.2$ MPa}
+	\wrongchoice{$29.4$ MPa}
+	\wrongchoice{$63.1$ MPa}
+	\wrongchoice{$38.2$ MPa}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p9}
+Para evaluar la posible rotura del perfil, se visualizan 
+los contornos de la tensión de Von Mises ({\tt pstr,6}).
+Para los elementos con deformaciones mejoradas supuestas, el valor máximo es
+aproximadamente:
+\begin{multicols}{2}
+\begin{choices}
+	\correctchoice{$53.2$ MPa}
+	\wrongchoice{$27.4$ MPa}
+	\wrongchoice{$34.9$ MPa}
+	\wrongchoice{$48.6$ MPa}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\element{test1}{
+\begin{question}{p10}
+De acuerdo con los valores de los contornos de la tensión de
+Von Mises, la posible zona de rotura del perfil es:
+\begin{multicols}{2}
+\begin{choices}
+        \correctchoice{Con los tres modelos, en los puntos en que se aplican las cargas}
+        \wrongchoice{Con el modelo de elementos con deformaciones mejoradas
+supuestas, en los puntos en que se aplican las cargas. Con los modelos de
+elementos mixtos e isoparamétricos, en la zona central de la cara interna}
+        \wrongchoice{Con los modelos de elementos mixtos e isoparamétricos,
+en los puntos en que se aplican las cargas. Con el modelo de elementos con
+deformaciones mejoradas supuestas, en la zona central de la cara interna}
+        \wrongchoice{Con los tres modelos, en la zona central de la cara
+interna}
+\end{choices}
+\end{multicols}
+\end{question}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\scoringDefaultS{b=1,m=-1/(N-1)}
+
+\onecopy{1}{    
+
+%%% beginning of the test sheet header:    
+
+\noindent{\large\bf Método de los Elementos Finitos  \hfill MUECYM \hfill TEST \# 4}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+  \centering 11 nov 2016
+\end{minipage}
+
+\begin{center}\em
+Tiempo: 60 minutos.
+
+  %Está prohibido el uso de teléfonos móviles.
+
+  %Se atribuirá puntuación negativa a las respuestas incorrectas.
+
+\end{center}
+\vspace{1ex}
+
+%%% end of the header
+
+\shufflegroup{test1}
+\insertgroup{test1}
+
+\AMCcleardoublepage    
+%\clearpage
+
+\AMCformBegin    
+
+%%% beginning of the answer sheet header
+
+\noindent\AMCcode{nummat}{3}\hspace*{\fill}
+\begin{minipage}{.7\linewidth}
+$\longleftarrow{}$ Escriba su número de matrícula marcando los dígitos
+en los recuadros (con ceros a la izquierda si el número es de menos de tres dígitos) y el nombre y apellidos debajo.
+
+\vspace{3ex}
+
+\namefield{\fbox{
+   \begin{minipage}{.9\linewidth}
+     Apellidos, Nombre:
+
+     \vspace*{.5cm}\dotfill
+     \vspace*{1mm}
+   \end{minipage}
+ }}
+\end{minipage}
+
+\begin{center}
+ \bf\em Debe dar las respuestas exclusivamente en esta hoja (las respuestas en las demás hojas no serán tenidas en cuenta).
+\end{center}
+
+%%% end of the answer sheet header
+
+
+\AMCform    
+
+\AMCcleardoublepage    
+
+}  
+
+\end{document}

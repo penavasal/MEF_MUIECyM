@@ -1,0 +1,42 @@
+feap ** Driven Cavity Flow
+0,0,0,2,2,4
+
+PARAmeter
+a=1.0
+n=20
+
+BLOCk 1
+cart,n,n,1,1,
+1, 0.0,0.0
+2,   a,0.0
+3,   a,  a
+4, 0.0,  a
+
+EBOUndary
+1,0.0,1,1
+1,  a,1,1
+2,0.0,1,1
+2,  a,1,1
+
+DISP
+  (n+1)*n+1,,0.0,0.0
+(n+1)*(n+1),,0.0,0.0
+
+DISP
+(n+1)*n+2,1,1.0,0.0
+n*(n+2)  , ,1.0,0.0
+
+mate,1
+solid
+mixed
+elas,,1.0d0,0.499999
+
+end
+
+batc
+tang,,1
+end
+
+inte
+
+stop

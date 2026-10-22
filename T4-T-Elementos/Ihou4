@@ -1,0 +1,35 @@
+feap ** Elemento Q4: Ejemplo de subintegracion
+0,0,0,2,2,4
+
+PARAmeter
+m=20
+n=20
+
+BLOCk 1
+CARTesian,m,n,1,1,1,0,0
+1,0.0,0.0
+2,2.0,0.0 
+3,2.0,2.0
+4,0.0,2.0
+
+EBOUndary
+2,0.0,1,1
+
+FORC
+(m+1)*n+n/2+1,0,0.0,-1.0
+
+mate,1
+solid
+disp
+elastic,isotropic,206.9,0.29
+quad,,1
+
+end
+
+batc
+tang,,1
+end
+
+inte
+
+stop

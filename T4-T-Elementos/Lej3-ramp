@@ -1,0 +1,28 @@
+
+  --------------------------------- START OF FEAP LOG ----------------------------------
+
+  INPUT FILE NAME: Iej3-ramp                                                                                                                       
+
+  MESH INPUT RECORDS
+  ------------------
+     PARAmeter                      
+     BLOCk           1              
+     EBOUndary                      
+     DISP                           
+     DISP                           
+     mate            1              
+     end                            
+
+  --------------------------------- END OF MESH INPUTS ---------------------------------
+
+
+  SOLUTION SUMMARY
+  ----------------
+
+  Load    Total     Solution      Time     Residual Norm        Energy Norm     CPU Time
+  Step  Tang+Forms      Time      Incr.  Initial     Final   Initial     Final (Seconds)
+  --------------------------------------------------------------------------------------
+     0     1    0  0.000E+00  0.00E+00  8.33E+04            8.29E+04                0.17
+
+ Total     1    0
+  ---------------------------------- END OF FEAP LOG -----------------------------------
