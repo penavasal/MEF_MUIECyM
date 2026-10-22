@@ -1,0 +1,9 @@
+*.log
+.DS_Store
+*.sta
+*.com
+*.dat
+*.prt
+*.ipm
+*.msg
+*.rec
