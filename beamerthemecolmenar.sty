@@ -52,22 +52,22 @@
 \setbeamertemplate{page number in head/foot}{}
 
 % ==============================================================================
-% REDISEÑO DASHBOARD DEL ÍNDICE (FORMATO 4:3)
+% REDISEÑO DASHBOARD DEL ÍNDICE (ULTRA-COMPACTO Y ADAPTATIVO)
 % ==============================================================================
 \setbeamertemplate{section in toc}{%
   \begin{tcolorbox}[
     enhanced,
     colback=white,
     colframe=BorderGray,
-    arc=1.5mm,
-    outer arc=1.5mm,
-    boxrule=0.6pt,
-    borderline west={3pt}{0pt}{Turquoise},
-    left=6pt, right=6pt, top=3pt, bottom=3pt
+    arc=1mm,
+    outer arc=1mm,
+    boxrule=0.5pt,
+    borderline west={2.5pt}{0pt}{Turquoise},
+    left=5pt, right=5pt, top=1.5pt, bottom=1.5pt % Relleno mínimo para que quepan muchas secciones
   ]
-    {\small\bfseries\color{Turquoise}\ifnum\inserttocsectionnumber<10 0\fi\inserttocsectionnumber}\quad
-    {\small\bfseries\color{DarkSlate}\inserttocsection}
-  \end{tcolorbox}\vspace{-0.08cm}%
+    {\footnotesize\bfseries\color{Turquoise}\ifnum\inserttocsectionnumber<10 0\fi\inserttocsectionnumber}\quad
+    {\footnotesize\bfseries\color{DarkSlate}\inserttocsection}
+  \end{tcolorbox}\vspace{-0.12cm}% Espaciado negativo ajustado entre tarjetas
 }
 
 \setbeamertemplate{section in toc shaded}{%
@@ -75,15 +75,15 @@
     enhanced,
     colback=SoftMint!60!white,
     colframe=BorderGray!60,
-    arc=1.5mm,
-    outer arc=1.5mm,
+    arc=1mm,
+    outer arc=1mm,
     boxrule=0.4pt,
-    borderline west={3pt}{0pt}{BorderGray!80},
-    left=6pt, right=6pt, top=3pt, bottom=3pt
+    borderline west={2.5pt}{0pt}{BorderGray!80},
+    left=5pt, right=5pt, top=1.5pt, bottom=1.5pt
   ]
-    {\small\bfseries\color{TextDark!35}\ifnum\inserttocsectionnumber<10 0\fi\inserttocsectionnumber}\quad
-    {\small\color{TextDark!40}\inserttocsection}
-  \end{tcolorbox}\vspace{-0.08cm}%
+    {\footnotesize\bfseries\color{TextDark!35}\ifnum\inserttocsectionnumber<10 0\fi\inserttocsectionnumber}\quad
+    {\footnotesize\color{TextDark!40}\inserttocsection}
+  \end{tcolorbox}\vspace{-0.12cm}%
 }
 
 % ==============================================================================
